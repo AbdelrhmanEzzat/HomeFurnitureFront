@@ -56,7 +56,9 @@
       </div>
       <div class="section section-javascript">
         <div class="container">
-          <javascript-components></javascript-components>
+          <javascript-components >
+            
+          </javascript-components>
         </div>
       </div>
       <div class="section">
