@@ -7,6 +7,12 @@
       </div>
     </md-card-header>
 
+    <!--------------- Tab slot Added --------------->
+    <md-card-content>
+      <slot name="tabs"></slot>
+      <slot name="tab"></slot>
+    </md-card-content>
+
     <md-card-content>
       <slot name="description"></slot>
       <slot name="inputs"></slot>
@@ -24,12 +30,12 @@ export default {
   props: {
     headerColor: {
       type: String,
-      default: ""
-    }
+      default: "",
+    },
   },
   data() {
     return {
-      cardHidden: true
+      cardHidden: true,
     };
   },
   beforeMount() {
@@ -41,8 +47,8 @@ export default {
     },
     getClass: function(headerColor) {
       return "md-card-header-" + headerColor + "";
-    }
-  }
+    },
+  },
 };
 </script>
 
