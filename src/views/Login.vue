@@ -43,7 +43,7 @@
               <md-field class="md-form-group" slot="inputs">
                 <md-icon>lock_outline</md-icon>
                 <label>Password...</label>
-                <md-input v-model="password"></md-input>
+                <md-input v-model="password" type="password"></md-input>
               </md-field>
               <md-button slot="footer" class="md-simple md-success md-lg">
                 Get Started
@@ -61,29 +61,29 @@ import { LoginCard } from "@/components";
 
 export default {
   components: {
-    LoginCard
+    LoginCard,
   },
   bodyClass: "login-page",
   data() {
     return {
       firstname: null,
       email: null,
-      password: null
+      password: null,
     };
   },
   props: {
     header: {
       type: String,
-      default: require("@/assets/img/profile_city.jpg")
-    }
+      default: require("@/assets/img/profile_city.jpg"),
+    },
   },
   computed: {
     headerStyle() {
       return {
-        backgroundImage: `url(${this.header})`
+        backgroundImage: `url(${this.header})`,
       };
-    }
-  }
+    },
+  },
 };
 </script>
 
