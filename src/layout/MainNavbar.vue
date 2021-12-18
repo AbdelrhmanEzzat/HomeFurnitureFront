@@ -8,7 +8,7 @@
   >
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title">Vue Material Kit</h3>
+        <a href="/#/home"><h1 class="md-title">Home Furniture</h1></a>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -68,17 +68,26 @@
                 target="_blank"
                 v-if="showDownload"
               >
-                <i class="material-icons">content_paste</i>
-                <p>Documentation</p>
+                <i class="material-icons">store</i>
+                <p>Store</p>
               </md-list-item>
 
               <md-list-item
+                href="/#/login"
+                @click="scrollToElement()"
+                v-if="showDownload"
+              >
+                <i class="material-icons">login</i>
+                <p>login</p>
+              </md-list-item>
+
+               <md-list-item
                 href="javascript:void(0)"
                 @click="scrollToElement()"
                 v-if="showDownload"
               >
-                <i class="material-icons">cloud_download</i>
-                <p>Download</p>
+                <i class="material-icons">account_circle</i>
+                <p>profile</p>
               </md-list-item>
 
               <li class="md-list-item" v-else>

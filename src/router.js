@@ -8,6 +8,8 @@ import MainNavbar from "./layout/MainNavbar.vue";
 import MainFooter from "./layout/MainFooter.vue";
 
 import Home from "./views/Home.vue";
+import test from "./views/Test.vue";
+
 
 Vue.use(Router);
 
@@ -31,6 +33,15 @@ export default new Router({
         footer: { backgroundColor: "black" }
       }
     },
+    {
+      path: "/test",
+      name: "test",
+      components: { default: test, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: "black" }
+      }
+      },
     {
       path: "/landing",
       name: "landing",
