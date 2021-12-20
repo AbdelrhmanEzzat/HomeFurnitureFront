@@ -1,44 +1,55 @@
 <template>
   <div class="wrapper">
-       <carousel
-          :per-page="1"
-          loop
-          :speed="700"
-          autoplay
-          :autoplay-timeout="5000"
-          :mouse-drag="false"
-          navigationEnabled
-          navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
-          navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
-        >
-          <slide>
-            <div class="carousel-caption">
-              <h4>
-                <md-icon>location_on</md-icon>
-                Somewhere Beyond, United States
-              </h4>
-            </div>
-            <img :src="carousel1" alt="carousel1"  />
-          </slide>
-          <slide>
-            <div class="carousel-caption">
-              <h4>
-                <md-icon>location_on</md-icon>
-                Yellowstone National Park, United States
-              </h4>
-            </div>
-            <img :src="carousel2" alt="carousel2" />
-          </slide>
-          <slide>
-            <div class="carousel-caption">
-              <h4>
-                <md-icon>location_on</md-icon>
-                Yellowstone National Park, United States
-              </h4>
-            </div>
-            <img :src="carousel3" alt="carousel3" />
-          </slide>
-        </carousel>
+    <parallax class="h-car">
+      <carousel
+        :per-page="1"
+        loop
+        :speed="700"
+        
+        :autoplay-timeout="5000"
+        :mouse-drag="false"
+        navigationEnabled
+        navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
+        navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
+      >
+        <slide>
+          <div class="carousel-caption">
+            <h4>
+              <md-icon>location_on</md-icon>
+              Somewhere Beyond, United States
+            </h4>
+          </div>
+          <img :src="carousel1" alt="carousel1" class="car-img" style="height: 100%;" />
+          <div class="image-wrapper">
+            <img :src="leaf1" alt="leaf1" class="leaf1" v-show="leafShow" />
+          </div>
+        </slide>
+        <slide>
+          <div class="carousel-caption">
+            <h4>
+              <md-icon>location_on</md-icon>
+              Yellowstone National Park, United States
+            </h4>
+          </div>
+          <img :src="carousel2" alt="carousel2" class="car-img"  />
+          <div class="image-wrapper">
+            <img :src="leaf2" alt="leaf2" class="leaf2" v-show="leafShow" />
+          </div>
+        </slide>
+        <slide>
+          <div class="carousel-caption">
+            <h4>
+              <md-icon>location_on</md-icon>
+              Yellowstone National Park, United States
+            </h4>
+          </div>
+          <img :src="carousel3" alt="carousel3" class="car-img" />
+          <div class="image-wrapper">
+            <img :src="leaf3" alt="leaf3" class="leaf3" v-show="leafShow" />
+          </div>
+        </slide>
+      </carousel>
+    </parallax>
 
     <div class="main main-raised">
       <div class="section">
@@ -307,34 +318,30 @@ export default {
       type: String,
       default: require("@/assets/img/vue-mk-header.jpg"),
     },
-    leaf4: {
-      type: String,
-      default: require("@/assets/img/leaf4.png"),
-    },
     leaf3: {
       type: String,
-      default: require("@/assets/img/leaf3.png"),
+      default: require("@/assets/img/tab3.png"),
     },
     leaf2: {
       type: String,
-      default: require("@/assets/img/leaf2.png"),
+      default: require("@/assets/img/ch2.png"),
     },
     leaf1: {
       type: String,
-      default: require("@/assets/img/leaf1.png"),
+      default: require("@/assets/img/ch1.png"),
     },
-     teamImg1: {
+    teamImg1: {
       type: String,
-      default: require("@/assets/img/faces/avatar.jpg")
+      default: require("@/assets/img/faces/avatar.jpg"),
     },
     teamImg2: {
       type: String,
-      default: require("@/assets/img/faces/christian.jpg")
+      default: require("@/assets/img/faces/christian.jpg"),
     },
     teamImg3: {
       type: String,
-      default: require("@/assets/img/faces/kendall.jpg")
-    }
+      default: require("@/assets/img/faces/kendall.jpg"),
+    },
   },
   data() {
     return {
@@ -342,9 +349,9 @@ export default {
       email: null,
       password: null,
       leafShow: false,
-       carousel1: require("@/assets/img/car0.webp"),
-      carousel2: require("@/assets/img/car1.webp"),
-      carousel3: require("@/assets/img/car2.webp")
+      carousel1: require("@/assets/img/3.jpg"),
+      carousel2: require("@/assets/img/1.jpg"),
+      carousel3: require("@/assets/img/2.jpg"),
     };
   },
   methods: {
@@ -379,9 +386,14 @@ export default {
   }
 }
 
+
+
 @media all and (min-width: 991px) {
   .btn-container {
     display: flex;
   }
 }
 </style>
+
+
+

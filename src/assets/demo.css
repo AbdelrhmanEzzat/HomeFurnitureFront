@@ -175,7 +175,7 @@
 }
 
 .leaf4 {
-  right: 172px;
+  right: 200px;
   top: -122px;
   width: 17%;
   width: 32%;
@@ -183,24 +183,28 @@
 }
 
 .leaf3 {
-  top: 21px;
-  right: -69px;
   left: auto;
+  transform: rotate(0deg);
+  top: 330px;
+  right: 238px;
+  left: inheritauto;
   width: 24%;
-  transform: rotate(-13deg);
+
+  
 }
 
 .leaf2 {
-  width: 25%;
-  left: 170px;
-  top: -28px;
-  transform: rotate(90deg);
+    width: 25%;
+    left: 791px;
+    top: 318px;
+transform: rotate(0deg);
 }
 
 .leaf1 {
   transform: rotate(0deg);
   right: auto;
-  top: 25px;
-  width: 15%;
-  left: -11px;
+    top: 375px;
+    width: 20%;
+    left: 904px;
 }
+
