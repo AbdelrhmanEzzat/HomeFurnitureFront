@@ -30,11 +30,11 @@
                 <i class="fab fa-google-plus-g"></i>
               </md-button>
               <p slot="description" class="description">Or Be Classical</p>
-              <md-field class="md-form-group" slot="inputs">
+              <!-- <md-field class="md-form-group" slot="inputs">
                 <md-icon>face</md-icon>
                 <label>First Name...</label>
                 <md-input v-model="firstname"></md-input>
-              </md-field>
+              </md-field> -->
               <md-field class="md-form-group" slot="inputs">
                 <md-icon>email</md-icon>
                 <label>Email...</label>
@@ -47,6 +47,9 @@
               </md-field>
               <md-button slot="footer" class="md-simple md-success md-lg">
                 Get Started
+              </md-button>
+               <md-button href="/#/signup"  slot="footer" class="md-simple md-success md-lg"> 
+               Sign up
               </md-button>
             </login-card>
           </div>
@@ -74,7 +77,7 @@ export default {
   props: {
     header: {
       type: String,
-      default: require("@/assets/img/profile_city.jpg"),
+      default: require("@/assets/img/car2.webp"),
     },
   },
   computed: {

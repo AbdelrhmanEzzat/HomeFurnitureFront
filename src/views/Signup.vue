@@ -34,8 +34,8 @@
               <div class="md-layout" slot="tabs">
                 <div class="md-layout-item md-size-100 md-small-size-100">
                   <tabs
-                    :tab-name="['Customer', 'Employee']"
-                    :tab-icon="['account_circle', 'face']"
+                    :tab-name="['Customer', 'Desginer']"
+                    :tab-icon="['account_circle', 'architecture']"
                     plain
                     nav-pills-icons
                     color-button="normal"
@@ -62,13 +62,14 @@
                       </div>
 
                       <md-field class="md-form-group" slot="inputs">
-                        <md-icon>face</md-icon>
+                        <md-icon>man</md-icon>
                         <md-radio
                           style="padding-left: 10px;"
                           v-model="radio1"
                           :value="true"
                           >Male</md-radio
                         >
+                         <md-icon>woman</md-icon>
                         <md-radio v-model="radio1" :value="false"
                           >Female</md-radio
                         >
@@ -125,36 +126,46 @@
                       </div>
 
                       <md-field class="md-form-group" slot="inputs">
-                        <md-icon>face</md-icon>
+                        <md-icon>man</md-icon>
                         <md-radio
                           style="padding-left: 10px;"
                           v-model="radio1"
                           :value="true"
                           >Male</md-radio
                         >
+                        <md-icon>woman</md-icon>
                         <md-radio v-model="radio1" :value="false"
                           >Female</md-radio
                         >
                       </md-field>
 
                       <md-field class="md-form-group" slot="inputs">
-                        <md-icon>location_on</md-icon>
+                        <md-icon>work</md-icon>
+                        <label>Job title</label>
+                        <md-input v-model="city"></md-input>
+                      </md-field>
+                  <div class="row-address">
+                    <div class="col-auto-address">
+                      <md-field class="md-form-group" slot="inputs">
+                        <md-icon>location_city</md-icon>
                         <label>City...</label>
                         <md-input v-model="city"></md-input>
                       </md-field>
-
+                    </div>
+                    <div class="col-auto-address">
                       <md-field class="md-form-group" slot="inputs">
                         <md-icon>location_on</md-icon>
                         <label>Region...</label>
                         <md-input v-model="region"></md-input>
                       </md-field>
+                     </div>
+                    </div>
 
                       <md-field class="md-form-group" slot="inputs">
                         <md-icon>location_on</md-icon>
                         <label>Street...</label>
                         <md-input v-model="street"></md-input>
                       </md-field>
-
                       <md-field class="md-form-group" slot="inputs">
                         <md-icon>email</md-icon>
                         <label>Email...</label>
@@ -208,7 +219,7 @@ export default {
   props: {
     header: {
       type: String,
-      default: require("@/assets/img/profile_city.jpg"),
+      default: require("@/assets/img/cov1.webp"),
     },
   },
   computed: {
@@ -221,4 +232,13 @@ export default {
 };
 </script>
 
-<style lang="css"></style>
+<style lang="scss" scoped>
+ .col-auto-address{
+ display: inline-block;
+  width: 50%;
+ }
+</style>
+
+
+
+

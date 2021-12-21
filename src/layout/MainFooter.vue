@@ -9,7 +9,7 @@
         <ul>
           <li>
             <a href="https://www.creative-tim.com">
-              Creative Tim
+              Home Furniture
             </a>
           </li>
           <li>
@@ -17,21 +17,17 @@
               About Us
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="https:///blog.creative-tim.com">
               Blog
             </a>
-          </li>
-          <li>
-            <a href="https://www.creative-tim.com/license">
-              Licenses
-            </a>
-          </li>
+          </li> -->
+      
         </ul>
       </nav>
       <div class="copyright">
         &copy; {{ year }}, made with <md-icon>favorite</md-icon> by
-        <a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a>
+        <a href="/#/home" target="_blank">Home Furniture</a>
         for a better web.
       </div>
     </div>

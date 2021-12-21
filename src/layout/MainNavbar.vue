@@ -27,7 +27,7 @@
               <!-- Here you can add your items from the section-start of your toolbar -->
             </mobile-menu>
             <md-list>
-              <li class="md-list-item" v-if="!showDownload">
+              <!-- <li class="md-list-item" v-if="!showDownload">
                 <a
                   href="javascript:void(0)"
                   class="md-list-item-router md-list-item-container md-button-clean dropdown"
@@ -61,10 +61,10 @@
                     </drop-down>
                   </div>
                 </a>
-              </li>
+              </li> -->
 
               <md-list-item
-                href="https://demos.creative-tim.com/vue-material-kit/documentation/"
+                href="#"
                 target="_blank"
                 v-if="showDownload"
               >
@@ -82,7 +82,7 @@
               </md-list-item>
 
                <md-list-item
-                href="javascript:void(0)"
+                href="/#/profile"
                 @click="scrollToElement()"
                 v-if="showDownload"
               >
@@ -90,7 +90,7 @@
                 <p>profile</p>
               </md-list-item>
 
-              <li class="md-list-item" v-else>
+              <!-- <li class="md-list-item" v-else>
                 <a
                   href="javascript:void(0)"
                   class="md-list-item-router md-list-item-container md-button-clean dropdown"
@@ -128,7 +128,7 @@
                     </drop-down>
                   </div>
                 </a>
-              </li>
+              </li> -->
 
               <md-list-item
                 href="https://twitter.com/CreativeTim"
@@ -216,7 +216,7 @@ export default {
   },
   computed: {
     showDownload() {
-      const excludedRoutes = ["login", "landing", "profile"];
+      const excludedRoutes = [];
       return excludedRoutes.every(r => r !== this.$route.name);
     }
   },
