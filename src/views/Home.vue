@@ -13,10 +13,12 @@
       >
         <slide>
           <div class="carousel-caption">
-            <h4>
-              <md-icon>location_on</md-icon>
-              Somewhere Beyond, United States
-            </h4>
+            <h3 class="title" id="cap">
+              <md-icon>chair</md-icon>
+             Modern and contemporary furniture <br> to match your style and budget.
+            </h3>
+            <md-button class="md-primary md-round">desgin your home</md-button>
+
           </div>
           <img
             :src="carousel1"
@@ -26,14 +28,17 @@
           />
           <div class="image-wrapper">
             <img :src="leaf1" alt="leaf1" class="leaf1" v-show="leafShow" />
+            
           </div>
         </slide>
         <slide>
           <div class="carousel-caption">
-            <h4>
-              <md-icon>location_on</md-icon>
-              Yellowstone National Park, United States
-            </h4>
+            <h3 class="title" id="cap">
+              <md-icon>home</md-icon>
+              Desgin your Home and shop for new items
+            </h3>
+              <md-button class="md-primary md-round">visit store</md-button>
+
           </div>
           <img :src="carousel2" alt="carousel2" class="car-img" />
           <div class="image-wrapper">
@@ -42,10 +47,12 @@
         </slide>
         <slide>
           <div class="carousel-caption">
-            <h4>
-              <md-icon>location_on</md-icon>
-              Yellowstone National Park, United States
-            </h4>
+            <h3 class="title" id="cap">
+              <md-icon>post_add</md-icon>
+              Publish your work here as Designer
+            </h3>
+            <md-button class="md-primary md-round md-dark">add post</md-button>
+
           </div>
           <img :src="carousel3" alt="carousel3" class="car-img" />
           <div class="image-wrapper">
@@ -388,11 +395,17 @@ export default {
     margin-left: 5px;
   }
 }
+
+#cap {
+  color: #fff;
+}
+.md-round {
+  border-block-color: red;
+}
 // ------------------------------------------------------
 * {
   box-sizing: border-box;
 }
-
 .row {
   display: flex;
 
