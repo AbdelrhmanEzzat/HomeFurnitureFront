@@ -185,26 +185,26 @@
 .leaf3 {
   left: auto;
   transform: rotate(0deg);
-  top: 330px;
-  right: 238px;
+  width: 30%;
+  left: 700px;
+  top: 225px;
   left: inheritauto;
-  width: 24%;
 
   
 }
 
 .leaf2 {
-    width: 25%;
-    left: 791px;
-    top: 318px;
+    width: 30%;
+    left: 700px;
+    top: 225px;
 transform: rotate(0deg);
 }
 
 .leaf1 {
   transform: rotate(0deg);
   right: auto;
-    top: 375px;
-    width: 20%;
-    left: 904px;
+  width: 30%;
+  left: 700px;
+  top: 225px;
 }
 
