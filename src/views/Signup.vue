@@ -75,17 +75,22 @@
                         >
                       </md-field>
 
+                      <div class="row-address">
+                    <div class="col-auto-address">
                       <md-field class="md-form-group" slot="inputs">
-                        <md-icon>location_on</md-icon>
+                        <md-icon>location_city</md-icon>
                         <label>City...</label>
                         <md-input v-model="city"></md-input>
                       </md-field>
-
+                    </div>
+                    <div class="col-auto-address">
                       <md-field class="md-form-group" slot="inputs">
                         <md-icon>location_on</md-icon>
                         <label>Region...</label>
                         <md-input v-model="region"></md-input>
                       </md-field>
+                     </div>
+                    </div>
 
                       <md-field class="md-form-group" slot="inputs">
                         <md-icon>location_on</md-icon>
@@ -144,6 +149,7 @@
                         <label>Job title</label>
                         <md-input v-model="city"></md-input>
                       </md-field>
+
                   <div class="row-address">
                     <div class="col-auto-address">
                       <md-field class="md-form-group" slot="inputs">
