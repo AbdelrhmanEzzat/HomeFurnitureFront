@@ -9,7 +9,7 @@ import MainNavbar from "./layout/MainNavbar.vue";
 import MainFooter from "./layout/MainFooter.vue";
 
 import Home from "./views/Home.vue";
-
+import Shop from "./views/Shop.vue";
 
 Vue.use(Router);
 
@@ -62,6 +62,15 @@ export default new Router({
             path: "/signup",
             name: "signup",
             components: { default: Signup, header: MainNavbar, footer: MainFooter },
+            props: {
+                header: { colorOnScroll: 400 },
+                footer: { backgroundColor: "black" },
+            },
+        },
+        {
+            path: "/shop",
+            name: "shop",
+            components: { default: Shop, header: MainNavbar, footer: MainFooter },
             props: {
                 header: { colorOnScroll: 400 },
                 footer: { backgroundColor: "black" },
