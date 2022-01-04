@@ -71,6 +71,10 @@ export default new Router({
             path: "/shop",
             name: "shop",
             components: { default: Shop, header: MainNavbar, footer: MainFooter },
+
+            path: "/cart",
+            name: "cart",
+            components: { default: Login, header: MainNavbar, footer: MainFooter },
             props: {
                 header: { colorOnScroll: 400 },
                 footer: { backgroundColor: "black" },

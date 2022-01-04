@@ -81,14 +81,9 @@
                 <p>login</p>
               </md-list-item>
 
-               <md-list-item
-                href="/#/profile"
-                @click="scrollToElement()"
-                v-if="showDownload"
-              >
-                <i class="material-icons">account_circle</i>
-                <p>profile</p>
-              </md-list-item>
+              
+
+            
 
               <!-- <li class="md-list-item" v-else>
                 <a
@@ -154,11 +149,60 @@
                 href="https://www.instagram.com/CreativeTimOfficial"
                 target="_blank"
               >
-                <i class="fab fa-instagram"></i>
+                <i class="fab fa-instagram" ></i>
                 <p class="hidden-lg">Instagram</p>
                 <md-tooltip md-direction="bottom"
                   >Follow us on Instagram</md-tooltip
                 >
+              </md-list-item>
+
+<!-- for dashhh -->
+              <md-list-item  style="border-left-style: inset;border-color: white;">
+              </md-list-item>
+
+             
+                 <li class="md-list-item" >
+                       <a
+                          href="javascript:void(0)"
+                          class="md-list-item-router md-list-item-container md-button-clean dropdown"
+                        >
+                          <div class="md-list-item-content">
+                            <drop-down direction="down" class="profile-photo">
+                              <div
+                                class="profile-photo-small"
+                                slot="title"
+                                data-toggle="dropdown"
+                              >
+                                <img :src="img" alt="Circle Image" />
+                              </div>
+                              <ul class="dropdown-menu dropdown-menu-right">
+                                <li class="dropdown-header">Account</li>
+                                <li>
+                                  <a href="/#/profile" class="dropdown-item">Profile</a>
+                                </li>
+                                <!-- <li>
+                                  <a href="#pablo" class="dropdown-item"
+                                    >Settings and other stuff</a
+                                  >
+                                </li> -->
+                                <li>
+                                  <a href="#pablo" class="dropdown-item"
+                                    >Sign Out</a
+                                  >
+                                </li>
+                              </ul>
+                            </drop-down>
+                          </div>
+                        </a>
+                      </li>
+
+                       <md-list-item
+                href="/#/cart"
+                @click="scrollToElement()"
+                v-if="showDownload"
+              >
+                <i class="material-icons">shopping_cart</i>
+                <p>Cart</p>
               </md-list-item>
             </md-list>
           </div>
@@ -188,6 +232,10 @@ export default {
     MobileMenu
   },
   props: {
+    img: {
+      type: String,
+      default: require("@/assets/img/abdo.jpg"),
+    },
     type: {
       type: String,
       default: "white",
