@@ -61,22 +61,22 @@
                     <div class="flex-column">
                       <md-checkbox
                         style="  margin: 30% 30% 0% 0px;"
-                        v-model="checkbox1"
+                        v-model="checkbox5"
                         >Black</md-checkbox
                       >
                       <md-checkbox
                         style="  margin: 30% 30% 0% 0px;"
-                        v-model="checkbox2"
+                        v-model="checkbox6"
                         >Green</md-checkbox
                       >
                       <md-checkbox
                         style="  margin: 30% 30% 0% 0px;"
-                        v-model="checkbox3"
+                        v-model="checkbox7"
                         >Blue</md-checkbox
                       >
                       <md-checkbox
                         style="  margin: 30% 30% 0% 0px;"
-                        v-model="checkbox4"
+                        v-model="checkbox8"
                         >Red</md-checkbox
                       >
                     </div>
@@ -428,6 +428,11 @@ export default {
       checkbox2: null,
       checkbox3: null,
       checkbox4: null,
+      checkbox5: null,
+      checkbox6: null,
+      checkbox7: null,
+      checkbox8: null,
+
       sliders: {
         simple: 40,
         rangeSlider: [20, 60],
