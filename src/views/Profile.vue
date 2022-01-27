@@ -49,8 +49,8 @@
           </div>
           <div class="profile-tabs">
             <tabs
-              :tab-name="['Studio', 'Work', 'Favorite']"
-              :tab-icon="['camera', 'palette', 'favorite']"
+              :tab-name="['Studio', 'Work', 'Favorite', 'Add post']"
+              :tab-icon="['camera', 'palette', 'favorite', 'Post']"
               plain
               nav-pills-icons
               color-button="success"
@@ -82,6 +82,19 @@
                 </div>
               </template>
               <template slot="tab-pane-3">
+                <div class="md-layout">
+                  <div class="md-layout-item md-size-25 ml-auto">
+                    <img :src="tabPane3[0].image" class="rounded" />
+                    <img :src="tabPane3[1].image" class="rounded" />
+                  </div>
+                  <div class="md-layout-item md-size-25 mr-auto">
+                    <img :src="tabPane3[2].image" class="rounded" />
+                    <img :src="tabPane3[3].image" class="rounded" />
+                    <img :src="tabPane3[4].image" class="rounded" />
+                  </div>
+                </div>
+              </template>
+              <template slot="tab-pane-4">
                 <div class="md-layout">
                   <div class="md-layout-item md-size-25 ml-auto">
                     <img :src="tabPane3[0].image" class="rounded" />
@@ -140,7 +153,7 @@ export default {
     },
     img: {
       type: String,
-      default: require("@/assets/img/faces/christian.jpg")
+      default: require("@/assets/img/00.jpg")
     }
   },
   computed: {
