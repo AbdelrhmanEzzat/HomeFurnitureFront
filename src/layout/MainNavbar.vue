@@ -68,20 +68,7 @@
               </md-list-item>
 
               <md-list-item href="/#/shop" target="_blank" v-if="showDownload">
-              <md-list-item
-                href="/#/home"
-                target="_blank"
-                v-if="showDownload"
-              >
-                <i class="material-icons">home</i>
-                <p>Home</p>
-              </md-list-item>
-              <md-list-item
-                href="/#/shop"
-                target="_blank"
-                v-if="showDownload"
-              >
-                <i class="material-icons">store</i>
+                <i class="material-icons">shop</i>
                 <p>Store</p>
               </md-list-item>
 
