@@ -64,12 +64,21 @@
               </li> -->
 
               <md-list-item
-                href="#"
-                target="_blank"
+                href="/#/shop"
+                @click="scrollToElement()"
                 v-if="showDownload"
               >
                 <i class="material-icons">store</i>
                 <p>Store</p>
+              </md-list-item>
+
+              <md-list-item
+                href="/#/post"
+                @click="scrollToElement()"
+                v-if="showDownload"
+              >
+                <i class="material-icons">content_paste</i>
+                <p>Post</p>
               </md-list-item>
 
               <md-list-item
@@ -80,10 +89,6 @@
                 <i class="material-icons">login</i>
                 <p>login</p>
               </md-list-item>
-
-              
-
-            
 
               <!-- <li class="md-list-item" v-else>
                 <a
@@ -149,54 +154,53 @@
                 href="https://www.instagram.com/CreativeTimOfficial"
                 target="_blank"
               >
-                <i class="fab fa-instagram" ></i>
+                <i class="fab fa-instagram"></i>
                 <p class="hidden-lg">Instagram</p>
                 <md-tooltip md-direction="bottom"
                   >Follow us on Instagram</md-tooltip
                 >
               </md-list-item>
 
-<!-- for dashhh -->
-              <md-list-item  style="border-left-style: inset;border-color: white;">
+              <!-- for dashhh -->
+              <md-list-item
+                style="border-left-style: inset;border-color: white;"
+              >
               </md-list-item>
 
-             
-                 <li class="md-list-item" >
-                       <a
-                          href="javascript:void(0)"
-                          class="md-list-item-router md-list-item-container md-button-clean dropdown"
-                        >
-                          <div class="md-list-item-content">
-                            <drop-down direction="down" class="profile-photo">
-                              <div
-                                class="profile-photo-small"
-                                slot="title"
-                                data-toggle="dropdown"
-                              >
-                                <img :src="img" alt="Circle Image" />
-                              </div>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                <li class="dropdown-header">Account</li>
-                                <li>
-                                  <a href="/#/profile" class="dropdown-item">Profile</a>
-                                </li>
-                                <!-- <li>
+              <li class="md-list-item">
+                <a
+                  href="javascript:void(0)"
+                  class="md-list-item-router md-list-item-container md-button-clean dropdown"
+                >
+                  <div class="md-list-item-content">
+                    <drop-down direction="down" class="profile-photo">
+                      <div
+                        class="profile-photo-small"
+                        slot="title"
+                        data-toggle="dropdown"
+                      >
+                        <img :src="img" alt="Circle Image" />
+                      </div>
+                      <ul class="dropdown-menu dropdown-menu-right">
+                        <li class="dropdown-header">Account</li>
+                        <li>
+                          <a href="/#/profile" class="dropdown-item">Profile</a>
+                        </li>
+                        <!-- <li>
                                   <a href="#pablo" class="dropdown-item"
                                     >Settings and other stuff</a
                                   >
                                 </li> -->
-                                <li>
-                                  <a href="#pablo" class="dropdown-item"
-                                    >Sign Out</a
-                                  >
-                                </li>
-                              </ul>
-                            </drop-down>
-                          </div>
-                        </a>
-                      </li>
+                        <li>
+                          <a href="#pablo" class="dropdown-item">Sign Out</a>
+                        </li>
+                      </ul>
+                    </drop-down>
+                  </div>
+                </a>
+              </li>
 
-                       <md-list-item
+              <md-list-item
                 href="/#/cart"
                 @click="scrollToElement()"
                 v-if="showDownload"
@@ -229,7 +233,7 @@ function resizeThrottler(actualResizeHandler) {
 import MobileMenu from "@/layout/MobileMenu";
 export default {
   components: {
-    MobileMenu
+    MobileMenu,
   },
   props: {
     img: {
@@ -247,26 +251,26 @@ export default {
           "danger",
           "success",
           "warning",
-          "info"
+          "info",
         ].includes(value);
-      }
+      },
     },
     colorOnScroll: {
       type: Number,
-      default: 0
-    }
+      default: 0,
+    },
   },
   data() {
     return {
       extraNavClasses: "",
-      toggledClass: false
+      toggledClass: false,
     };
   },
   computed: {
     showDownload() {
       const excludedRoutes = [];
-      return excludedRoutes.every(r => r !== this.$route.name);
-    }
+      return excludedRoutes.every((r) => r !== this.$route.name);
+    },
   },
   methods: {
     bodyClick() {
@@ -312,13 +316,13 @@ export default {
       if (element_id) {
         element_id.scrollIntoView({ block: "end", behavior: "smooth" });
       }
-    }
+    },
   },
   mounted() {
     document.addEventListener("scroll", this.scrollListener);
   },
   beforeDestroy() {
     document.removeEventListener("scroll", this.scrollListener);
-  }
+  },
 };
 </script>

@@ -19,6 +19,69 @@
     <div class="main main-raised">
       <div class="section section-basic">
         <div class="container">
+          <md-toolbar
+            class="md-primary"
+            style="position: absolute; right: 2%; width: 12%; height: 0%; top: -5%;"
+          >
+            <div
+              class="md-toolbar-row"
+              style="padding-left: 0%; padding-right: 0%; position: absolute; margin-top: -5%;"
+            >
+              <md-list>
+                <li class="md-list-item">
+                  <a
+                    href="javascript:void(0)"
+                    class="md-list-item-router md-list-item-container md-button-clean dropdown"
+                  >
+                    <div class="md-list-item-content">
+                      <drop-down direction="down">
+                        <md-button
+                          slot="title"
+                          class="md-button md-button-link md-white md-simple dropdown-toggle"
+                          data-toggle="dropdown"
+                        >
+                          <p>Default Sorting</p>
+                        </md-button>
+                        <ul
+                          class="dropdown-menu"
+                          :class="{ 'dropdown-menu-right': responsive }"
+                        >
+                          <li class="dropdown-header">Dropdown header</li>
+                          <li>
+                            <a href="#pablo" class="dropdown-item"
+                              >Sort bu popularity</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#pablo" class="dropdown-item"
+                              >Sort by average rating</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#pablo" class="dropdown-item"
+                              >Sort by latest</a
+                            >
+                          </li>
+                          <li class="dropdown-divider"></li>
+                          <li>
+                            <a href="#pablo" class="dropdown-item"
+                              >Sort by price: low to high</a
+                            >
+                          </li>
+                          <li class="dropdown-divider"></li>
+                          <li>
+                            <a href="#pablo" class="dropdown-item"
+                              >Sort by price: high to low</a
+                            >
+                          </li>
+                        </ul>
+                      </drop-down>
+                    </div>
+                  </a>
+                </li>
+              </md-list>
+            </div>
+          </md-toolbar>
           <div class="grid-container">
             <div class="filter">
               <div class="filter-categories">
@@ -408,6 +471,35 @@
 </template>
 
 <script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%"; // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two0 images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%"; // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%"; // IE10
+    elements[i].style.flex = "25%";
+  }
+}
 import { Slider } from "@/components";
 import { Pagination } from "@/components";
 
@@ -508,6 +600,8 @@ body {
   color: #345645;
   background: #e3e3e3;
 }
+// ------------------------------Filter---------------------------------------------
+
 // ------------------------------Gallery Products-----------------------------------
 /* Container Flex */
 .gallery {

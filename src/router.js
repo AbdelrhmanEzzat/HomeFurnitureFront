@@ -10,6 +10,7 @@ import MainFooter from "./layout/MainFooter.vue";
 
 import Home from "./views/Home.vue";
 import Shop from "./views/Shop.vue";
+import Post from "./views/Post.vue";
 
 Vue.use(Router);
 
@@ -71,10 +72,20 @@ export default new Router({
             path: "/shop",
             name: "shop",
             components: { default: Shop, header: MainNavbar, footer: MainFooter },
-
+        },
+        {
             path: "/cart",
             name: "cart",
             components: { default: Login, header: MainNavbar, footer: MainFooter },
+            props: {
+                header: { colorOnScroll: 400 },
+                footer: { backgroundColor: "black" },
+            },
+        },
+        {
+            path: "/post",
+            name: "post",
+            components: { default: Post, header: MainNavbar, footer: MainFooter },
             props: {
                 header: { colorOnScroll: 400 },
                 footer: { backgroundColor: "black" },
