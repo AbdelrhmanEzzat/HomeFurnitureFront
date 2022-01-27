@@ -62,7 +62,6 @@
                   </div>
                 </a>
               </li> -->
-
               <md-list-item
                 href="/#/shop"
                 @click="scrollToElement()"
