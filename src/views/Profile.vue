@@ -49,8 +49,8 @@
           </div>
           <div class="profile-tabs">
             <tabs
-              :tab-name="['Studio', 'Work', 'Favorite', 'Add post']"
-              :tab-icon="['camera', 'palette', 'favorite', 'Post']"
+              :tab-name="['Studio', 'Work', 'Add post']"
+              :tab-icon="['camera', 'palette',  'Post']"
               plain
               nav-pills-icons
               color-button="success"
@@ -83,30 +83,10 @@
               </template>
               <template slot="tab-pane-3">
                 <div class="md-layout">
-                  <div class="md-layout-item md-size-25 ml-auto">
-                    <img :src="tabPane3[0].image" class="rounded" />
-                    <img :src="tabPane3[1].image" class="rounded" />
-                  </div>
-                  <div class="md-layout-item md-size-25 mr-auto">
-                    <img :src="tabPane3[2].image" class="rounded" />
-                    <img :src="tabPane3[3].image" class="rounded" />
-                    <img :src="tabPane3[4].image" class="rounded" />
-                  </div>
+                 
                 </div>
               </template>
-              <template slot="tab-pane-4">
-                <div class="md-layout">
-                  <div class="md-layout-item md-size-25 ml-auto">
-                    <img :src="tabPane3[0].image" class="rounded" />
-                    <img :src="tabPane3[1].image" class="rounded" />
-                  </div>
-                  <div class="md-layout-item md-size-25 mr-auto">
-                    <img :src="tabPane3[2].image" class="rounded" />
-                    <img :src="tabPane3[3].image" class="rounded" />
-                    <img :src="tabPane3[4].image" class="rounded" />
-                  </div>
-                </div>
-              </template>
+              
             </tabs>
           </div>
         </div>

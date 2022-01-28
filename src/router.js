@@ -12,6 +12,7 @@ import Home from "./views/Home.vue";
 import Shop from "./views/Shop.vue";
 import Post from "./views/Post.vue";
 
+
 Vue.use(Router);
 
 export default new Router({

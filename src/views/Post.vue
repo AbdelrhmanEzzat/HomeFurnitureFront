@@ -360,7 +360,8 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+
 body {
   padding-top: 0;
   font-size: 12px;
