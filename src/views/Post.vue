@@ -414,7 +414,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-<<<<<<< HEAD
 body {
   padding-top: 0;
   font-size: 12px;
@@ -495,8 +494,6 @@ body {
   -o-transition: all 0.4s ease;
 }
 
-=======
->>>>>>> 95fc9cd7ae3d592e26130ef0e7a4eb8e3f274ebd
 .post-like {
   float: right;
   cursor: pointer;
