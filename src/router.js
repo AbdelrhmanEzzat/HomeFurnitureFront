@@ -12,7 +12,10 @@ import Home from "./views/Home.vue";
 import Shop from "./views/Shop.vue";
 import Post from "./views/Post.vue";
 import PostDetail from "./views/PostDetail.vue";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 95fc9cd7ae3d592e26130ef0e7a4eb8e3f274ebd
 
 Vue.use(Router);
 
