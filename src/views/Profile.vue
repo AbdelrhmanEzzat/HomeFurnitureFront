@@ -49,26 +49,14 @@
           </div>
           <div class="profile-tabs">
             <tabs
-              :tab-name="['Studio', 'Work', 'Add post']"
-              :tab-icon="['camera', 'palette',  'Post']"
+              :tab-name="['Work', 'My Posts', 'Add post']"
+              :tab-icon="['palette','library_books' ,  'post_add']"
               plain
               nav-pills-icons
               color-button="success"
             >
               <!-- here you can add your content for tab-content -->
               <template slot="tab-pane-1">
-                <div class="md-layout">
-                  <div class="md-layout-item md-size-25 ml-auto">
-                    <img :src="tabPane1[0].image" class="rounded" />
-                    <img :src="tabPane1[1].image" class="rounded" />
-                  </div>
-                  <div class="md-layout-item md-size-25 mr-auto">
-                    <img :src="tabPane1[3].image" class="rounded" />
-                    <img :src="tabPane1[2].image" class="rounded" />
-                  </div>
-                </div>
-              </template>
-              <template slot="tab-pane-2">
                 <div class="md-layout">
                   <div class="md-layout-item md-size-25 ml-auto">
                     <img :src="tabPane2[0].image" class="rounded" />
@@ -81,7 +69,59 @@
                   </div>
                 </div>
               </template>
+              
+              <template slot="tab-pane-2">
+               <!-- Here we add the posts for profile -->
+              </template>
+
               <template slot="tab-pane-3">
+                  <form>
+                    <md-field>
+                      <label>Title</label>
+                      <md-input v-model="regular" md-counter="30"></md-input>
+                    </md-field>
+            
+             <div class="row-address">
+                <div class="col-auto-address">
+                  <md-field>
+                    <label>Upload files</label>
+                    <md-file v-model="placeholder" placeholder="1st image" />
+                  </md-field>
+                </div>
+
+               <div class="col-auto-address">
+                  <md-field>
+                    <label>Upload files</label>
+                    <md-file v-model="placeholder" placeholder="2nd image" />
+                  </md-field>
+                </div>
+
+                <div class="col-auto-address">
+                  <md-field>
+                    <label>Upload files</label>
+                    <md-file v-model="placeholder" placeholder="3rd image" />
+                  </md-field>
+                </div>
+                
+               <div class="col-auto-address">
+                  <md-field>
+                    <label>Upload files</label>
+                    <md-file v-model="placeholder" placeholder="1st Vedio" />
+                  </md-field>
+                </div>
+             </div> 
+             
+                 <md-field>
+                    <label>Post Content</label>
+                    <md-textarea v-model="textarea" md-counter="80"></md-textarea>
+                      <md-icon>description</md-icon>
+                  </md-field>
+
+
+
+                    <br><md-button class="md-success" type="reset">RESET</md-button>
+                    <md-button class="md-success" type="reset" style="float: right;">Post</md-button>
+                  </form>
                 <div class="md-layout">
                  
                 </div>
@@ -98,6 +138,14 @@
 <script>
 import { Tabs } from "@/components";
 export default {
+   name: 'Counters',
+    data: () => ({
+      regular: null,
+      maxLength: null,
+      disabled: null,
+      autogrow: null,
+      textarea: null
+    }),
   components: {
     Tabs
   },
@@ -149,7 +197,13 @@ export default {
 <style lang="scss" scoped>
 .section {
   padding: 0;
+  
+ .col-auto-address{
+ display: inline-block;
+  width: 50%;
+ }
 }
+
 
 .profile-tabs::v-deep {
   .md-card-tabs .md-list {
