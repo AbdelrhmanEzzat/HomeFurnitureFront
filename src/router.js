@@ -11,6 +11,7 @@ import MainFooter from "./layout/MainFooter.vue";
 import Home from "./views/Home.vue";
 import Shop from "./views/Shop.vue";
 import Post from "./views/Post.vue";
+import PostDetail from "./views/PostDetail.vue";
 
 
 Vue.use(Router);
@@ -91,6 +92,19 @@ export default new Router({
             path: "/post",
             name: "post",
             components: { default: Post, header: MainNavbar, footer: MainFooter },
+            props: {
+                header: { colorOnScroll: 400 },
+                footer: { backgroundColor: "black" },
+            },
+        },
+        {
+            path: "/postdetail",
+            name: "postdetail",
+            components: {
+                default: PostDetail,
+                header: MainNavbar,
+                footer: MainFooter,
+            },
             props: {
                 header: { colorOnScroll: 400 },
                 footer: { backgroundColor: "black" },
