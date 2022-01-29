@@ -18,7 +18,7 @@
                   />
                 </div>
                 <div class="name">
-                  <h3 class="title">Carla Hortensia</h3>
+                  <h3 class="title">Abdelrahman Ezzat</h3>
                   <h6>Designer</h6>
                   <md-button
                     href="javascript:void(0)"
@@ -50,7 +50,7 @@
           <div class="profile-tabs">
             <tabs
               :tab-name="['Work', 'My Posts', 'Add post']"
-              :tab-icon="['palette','library_books' ,  'post_add']"
+              :tab-icon="['palette', 'library_books', 'post_add']"
               plain
               nav-pills-icons
               color-button="success"
@@ -69,64 +69,211 @@
                   </div>
                 </div>
               </template>
-              
+
               <template slot="tab-pane-2">
-               <!-- Here we add the posts for profile -->
+                <!-- Here we add the posts for profile -->
+                <div class="container">
+                  <div class="team" style="width: 45%;margin: 0 auto;">
+                    <div class="md-layout">
+                      <!-- Card1 -->
+                      <div class="team-player">
+                        <md-card
+                          class="md-card-plain"
+                          style="border: 1.5px solid #e8e8e8;margin-bottom: 10%;"
+                        >
+                          <div class="md-layout md-size-50 mx-auto">
+                            <div class="hovereffect">
+                              <a href="#/Post">
+                                <img
+                                  src="/img/c1.103b8e23.jpeg"
+                                  alt=""
+                                  class=""
+                                />
+                              </a>
+                            </div>
+                          </div>
+                          <div class="desc" style="margin: 0% 4%;">
+                            <h5
+                              style="font-weight: bold;margin-top: -5px;margin-bottom: -5px;"
+                            >
+                              SÖDERHAMN Living Room
+                            </h5>
+                            <md-card-content>
+                              <h7
+                                class="card-description"
+                                style="font-weight: bolder;"
+                              >
+                                Armchairs and chaise lounges with a sleek and
+                                modular design that you can combine in many
+                                ways...
+                              </h7>
+                              <a href="#/SinglePost">Read More</a>
+                              <div
+                                class="row"
+                                style="width:100%; padding-top: 2%;"
+                              >
+                                <div
+                                  class="col-sm-3"
+                                  style="width:15%;padding:1%"
+                                >
+                                  <img
+                                    :src="img"
+                                    alt="Circle Image"
+                                    class="rounded-circle"
+                                    style=""
+                                  />
+                                </div>
+                                <div class="col-sm-9" style="margin-left: 2%;">
+                                  <h6 style="font-weight: 700;color: darkred;">
+                                    Abdelrahman Ezzat
+                                  </h6>
+                                  <p>
+                                    January 20,2022
+                                  </p>
+                                </div>
+                              </div>
+                            </md-card-content>
+                          </div>
+                        </md-card>
+                      </div>
+
+                      <!-- Card2 -->
+                      <div class="team-player">
+                        <md-card
+                          class="md-card-plain"
+                          style="border: 1.5px solid #e8e8e8;margin-bottom: 10%;"
+                        >
+                          <div class="md-layout md-size-50 mx-auto">
+                            <div class="hovereffect">
+                              <a href="#/Post">
+                                <img
+                                  src="https://hongo.b-cdn.net/wp-content/uploads/2018/09/blog-details-img25.jpg.webp"
+                                  alt=""
+                                  class=""
+                                />
+                              </a>
+                            </div>
+                          </div>
+                          <div class="desc" style="margin: 0% 4%;">
+                            <h5
+                              style="font-weight: bold;margin-top: -5px;margin-bottom: -5px;"
+                            >
+                              WOODEN DISH
+                            </h5>
+                            <md-card-content>
+                              <h7
+                                class="card-description"
+                                style="font-weight: bolder;"
+                              >
+                                Lorem Ipsum is simply text of the printing and
+                                typesetting industry lorem Ipsum has been
+                                standard dummy lorem Ipsum has been standard
+                                dummy text.
+                              </h7>
+                              <a href="#/SinglePost">Read More</a>
+                              <div
+                                class="row"
+                                style="width:100%; padding-top: 2%;"
+                              >
+                                <div
+                                  class="col-sm-3"
+                                  style="width:15%;padding:1%"
+                                >
+                                  <img
+                                    :src="img"
+                                    alt="Circle Image"
+                                    class="rounded-circle"
+                                    style=""
+                                  />
+                                </div>
+                                <div class="col-sm-9" style="margin-left: 2%;">
+                                  <h6 style="font-weight: 700;color: darkred;">
+                                    Abdelrahman Ezzat
+                                  </h6>
+                                  <p>
+                                    February 1,2022
+                                  </p>
+                                </div>
+                              </div>
+                            </md-card-content>
+                          </div>
+                        </md-card>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </template>
 
               <template slot="tab-pane-3">
-                  <form>
-                    <md-field>
-                      <label>Title</label>
-                      <md-input v-model="regular" md-counter="30"></md-input>
-                    </md-field>
-            
-             <div class="row-address">
-                <div class="col-auto-address">
+                <form>
                   <md-field>
-                    <label>Upload files</label>
-                    <md-file v-model="placeholder" placeholder="1st image" />
+                    <label>Title</label>
+                    <md-input v-model="regular" md-counter="30"></md-input>
                   </md-field>
-                </div>
 
-               <div class="col-auto-address">
-                  <md-field>
-                    <label>Upload files</label>
-                    <md-file v-model="placeholder" placeholder="2nd image" />
-                  </md-field>
-                </div>
+                  <div class="row-address">
+                    <div class="col-auto-address">
+                      <md-field>
+                        <label>Upload files</label>
+                        <md-file
+                          v-model="placeholder"
+                          placeholder="1st image"
+                        />
+                      </md-field>
+                    </div>
 
-                <div class="col-auto-address">
+                    <div class="col-auto-address">
+                      <md-field>
+                        <label>Upload files</label>
+                        <md-file
+                          v-model="placeholder"
+                          placeholder="2nd image"
+                        />
+                      </md-field>
+                    </div>
+
+                    <div class="col-auto-address">
+                      <md-field>
+                        <label>Upload files</label>
+                        <md-file
+                          v-model="placeholder"
+                          placeholder="3rd image"
+                        />
+                      </md-field>
+                    </div>
+
+                    <div class="col-auto-address">
+                      <md-field>
+                        <label>Upload files</label>
+                        <md-file
+                          v-model="placeholder"
+                          placeholder="1st Vedio"
+                        />
+                      </md-field>
+                    </div>
+                  </div>
+
                   <md-field>
-                    <label>Upload files</label>
-                    <md-file v-model="placeholder" placeholder="3rd image" />
-                  </md-field>
-                </div>
-                
-               <div class="col-auto-address">
-                  <md-field>
-                    <label>Upload files</label>
-                    <md-file v-model="placeholder" placeholder="1st Vedio" />
-                  </md-field>
-                </div>
-             </div> 
-             
-                 <md-field>
                     <label>Post Content</label>
-                    <md-textarea v-model="textarea" md-counter="80"></md-textarea>
-                      <md-icon>description</md-icon>
+                    <md-textarea
+                      v-model="textarea"
+                      md-counter="80"
+                    ></md-textarea>
+                    <md-icon>description</md-icon>
                   </md-field>
 
-
-
-                    <br><md-button class="md-success" type="reset">RESET</md-button>
-                    <md-button class="md-success" type="reset" style="float: right;">Post</md-button>
-                  </form>
-                <div class="md-layout">
-                 
-                </div>
+                  <br /><md-button class="md-success" type="reset"
+                    >RESET</md-button
+                  >
+                  <md-button
+                    class="md-success"
+                    type="reset"
+                    style="float: right;"
+                    >Post</md-button
+                  >
+                </form>
+                <div class="md-layout"></div>
               </template>
-              
             </tabs>
           </div>
         </div>
@@ -138,16 +285,16 @@
 <script>
 import { Tabs } from "@/components";
 export default {
-   name: 'Counters',
-    data: () => ({
-      regular: null,
-      maxLength: null,
-      disabled: null,
-      autogrow: null,
-      textarea: null
-    }),
+  name: "Counters",
+  data: () => ({
+    regular: null,
+    maxLength: null,
+    disabled: null,
+    autogrow: null,
+    textarea: null,
+  }),
   components: {
-    Tabs
+    Tabs,
   },
   bodyClass: "profile-page",
   data() {
@@ -156,54 +303,53 @@ export default {
         { image: require("@/assets/img/examples/studio-1.jpg") },
         { image: require("@/assets/img/examples/studio-2.jpg") },
         { image: require("@/assets/img/examples/studio-4.jpg") },
-        { image: require("@/assets/img/examples/studio-5.jpg") }
+        { image: require("@/assets/img/examples/studio-5.jpg") },
       ],
       tabPane2: [
         { image: require("@/assets/img/examples/olu-eletu.jpg") },
         { image: require("@/assets/img/examples/clem-onojeghuo.jpg") },
         { image: require("@/assets/img/examples/cynthia-del-rio.jpg") },
         { image: require("@/assets/img/examples/mariya-georgieva.jpg") },
-        { image: require("@/assets/img/examples/clem-onojegaw.jpg") }
+        { image: require("@/assets/img/examples/clem-onojegaw.jpg") },
       ],
       tabPane3: [
         { image: require("@/assets/img/examples/mariya-georgieva.jpg") },
         { image: require("@/assets/img/examples/studio-3.jpg") },
         { image: require("@/assets/img/examples/clem-onojeghuo.jpg") },
         { image: require("@/assets/img/examples/olu-eletu.jpg") },
-        { image: require("@/assets/img/examples/studio-1.jpg") }
-      ]
+        { image: require("@/assets/img/examples/studio-1.jpg") },
+      ],
     };
   },
   props: {
     header: {
       type: String,
-      default: require("@/assets/img/car2.webp")
+      default: require("@/assets/img/car2.webp"),
     },
     img: {
       type: String,
-      default: require("@/assets/img/00.jpg")
-    }
+      default: require("@/assets/img/00.jpg"),
+    },
   },
   computed: {
     headerStyle() {
       return {
-        backgroundImage: `url(${this.header})`
+        backgroundImage: `url(${this.header})`,
       };
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .section {
   padding: 0;
-  
- .col-auto-address{
- display: inline-block;
-  width: 50%;
- }
-}
 
+  .col-auto-address {
+    display: inline-block;
+    width: 50%;
+  }
+}
 
 .profile-tabs::v-deep {
   .md-card-tabs .md-list {

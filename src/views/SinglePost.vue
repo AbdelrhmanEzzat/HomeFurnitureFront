@@ -101,7 +101,7 @@
                           alt="Popular Post"
                         />
                       </div>
-                      <div class="col-sm-4">
+                      <div class="col-sm-4" style="width:103%">
                         <div class="col-sm">
                           <img
                             src="https://hongo.b-cdn.net/furniture/wp-content/uploads/sites/4/2018/09/blog-details-img21.jpg.webp"
@@ -109,16 +109,22 @@
                           />
                         </div>
                         <div class="col-sm">
-                          <p style="padding-top: 3%">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit. Ad ratione perspiciatis cumque. Corrupti
-                            veniam laborum, fugiat ad labore consequatur
-                            blanditiis quod necessitatibus autem minus molestias
-                            asperiores inventore. Odio, inventore molestias.
+                          <h5 style="font-weight:500">
+                            The interior of the house personifies the private
+                            world the exterior of it is part of the outside
+                            world
+                          </h5>
+                          <p>
+                            The standard chunk of Lorem Ipsum used since the
+                            1500s is reproduced below for those interested.
+                            Sections from “de Finibus Bonorum et Malorum” by
+                            Cicero are also reproduced in their exact original
+                            form.
                           </p>
                         </div>
                       </div>
                     </div>
+
                     <br />
                     <hr />
 
@@ -200,7 +206,7 @@
                           </div>
                           <div class="text-box col-md-10 col-8 p-l-0 p-r0">
                             <a href="#/Profile">
-                              <h5 class="m-b-0">Kendall Jenner</h5></a
+                              <h5 class="m-b-0">Abdelrahman Ezzat</h5></a
                             >
                             <p>
                               Very nice and informative article. In all the
@@ -238,28 +244,23 @@
                       style="margin-top: 10%;    margin-bottom: 7%;"
                     >
                       <div class="row" style="    padding: 2% 5%;">
-                        <div class="col-sm-3">
+                        <div class="col-sm-3" style="width:15%">
                           <img
-                            src="	https://hongo.themezaa.com/furniture/wp-content/uploads/sites/4/2019/03/avtar.jpg.webp"
+                            :src="img"
                             alt="Circle Image"
                             class="rounded-circle"
-                            style="padding: 7% 3%;"
+                            style=""
                           />
                         </div>
                         <div class="col-sm-9">
                           <div class="detail" style="    padding: 0% 3%;">
                             <h6 style="font-weight: 700;">
-                              ALEXIS RICHARDS
+                              Abdelrahman Ezzat
                             </h6>
                             <p>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry. <br />
-                              Lorem Ipsum has been the industry's standard dummy
-                              text ever since the 1500s, <br />
-                              when an unknown printer took a galley of type
-                              <br />
-                              and scrambled it to make a type specimen book. It
-                              has survived not only five centuries.
+                              There is no passion to be found playing small in
+                              settling for a life that is less than the one you
+                              are capable of living.
                             </p>
                           </div>
                         </div>
@@ -291,17 +292,18 @@
                       <a href="#/profile" target="_blank">
                         <center>
                           <img
-                            src="	https://hongo.themezaa.com/furniture/wp-content/uploads/sites/4/2019/03/avtar.jpg.webp"
+                            width="50%"
+                            :src="img"
                             alt="Circle Image"
                             class="rounded-circle"
                             style="padding: 4% 4%;"
                           />
                         </center>
                       </a>
-                      <h5 style="text-align: center;">Melo Mario</h5>
+                      <h5 style="text-align: center;">Abdelrahman Ezzet</h5>
                       <p style="text-align: center; padding: 5% 8%;">
                         Welcome to everyday my lifestyle <br />
-                        I'm melody rose printing & typesetting industry.
+                        I'm Abdo designer & engineering.
                       </p>
 
                       <!-- Social icon -->
@@ -454,12 +456,16 @@
 <script>
 export default {
   components: {},
-  name: "postdetail",
-  bodyClass: "postdetail-page",
+  name: "singlepost",
+  bodyClass: "singlepost-page",
   props: {
     image: {
       type: String,
       default: require("@/assets/img/postdetail.jpg"),
+    },
+    img: {
+      type: String,
+      default: require("@/assets/img/abdo.jpg"),
     },
   },
   data() {

@@ -23,7 +23,6 @@
         <div class="container">
           <div class="container bootstrap snippets bootdey">
             <div class="row">
-              <!------------- Post1 ------------->
               <div
                 class="col-lg-8 col-md-12 left-box"
                 style="width: 75%; padding: 0% 3%;"
@@ -52,20 +51,24 @@
                           </slide>
                         </carousel>
                       </div>
+                      <!-------- Post1 -------->
                       <div class="widget-blog-author">
                         <div class="widget-blog-author-image">
                           <img
-                            src="https://biographyspy.com/images/profile/1588827914_1_Katie%20Cullen%20&%20Katie.jpg"
+                            style="width:60px; height:60px"
+                            :src="img"
                             alt=""
                           />
                         </div>
                       </div>
-                      <!-------- Post1 -------->
-                      <h4>Shiny Living Room</h4>
+                      <h4>SÖDERHAMN Living Room</h4>
                       <div class="text">
                         <small class="text-muted"
-                          >By <a href="#"><strong>Emy Tony</strong></a> | Post
-                          on July 22, 2021 | 70 comments</small
+                          >By
+                          <a href="#/Profile"
+                            ><strong>Abdelraman Ezzet</strong></a
+                          >
+                          | Post on January 20, 2022 | 70 comments</small
                         >
                         <p class="m-top-sm m-bottom-sm">
                           Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -76,7 +79,7 @@
                           lacinia suscipit eu quis purus. Vivamus tristique est
                           non ipsum dapibus lacinia sed nec metus.
                         </p>
-                        <a href="./#/PostDetail " style="color: firebrick"
+                        <a href="./#/SinglePost " style="color: firebrick"
                           ><i class="fa fa-angle-double-right"></i> Continue
                           reading</a
                         >
@@ -140,7 +143,7 @@
                           lacinia suscipit eu quis purus. Vivamus tristique est
                           non ipsum dapibus lacinia sed nec metus.
                         </p>
-                        <a href="./#/PostDetail" style="color: firebrick">
+                        <a href="./#/SinglePost" style="color: firebrick">
                           <i class="fa fa-angle-double-right"></i>
                           Continue reading</a
                         >
@@ -189,7 +192,7 @@
                           lacinia suscipit eu quis purus. Vivamus tristique est
                           non ipsum dapibus lacinia sed nec metus.
                         </p>
-                        <a href="./#/PostDetail" style="color: firebrick">
+                        <a href="./#/SinglePost" style="color: firebrick">
                           <i class="fa fa-angle-double-right"></i>
                           Continue reading</a
                         >
@@ -205,7 +208,74 @@
                     </div>
                   </div>
                 </div>
+                <!------------- Post4 ------------->
+                <div class="card" style="  background: #fcfcfc;">
+                  <div class="panel-blog-container">
+                    <div class="panel-body">
+                      <div class="image-wrapper">
+                        <carousel
+                          :per-page="1"
+                          loop
+                          :speed="700"
+                          :autoplay-timeout="5000"
+                          :mouse-drag="false"
+                          navigationEnabled
+                          navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
+                          navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
+                        >
+                          <slide>
+                            <div class="carousel-caption"></div>
+                            <img :src="carousel5" alt="carousel5" />
+                          </slide>
+                          <slide>
+                            <div class="carousel-caption"></div>
+                            <img :src="carousel6" alt="carousel6" />
+                          </slide>
+                        </carousel>
+                      </div>
+                      <div class="widget-blog-author">
+                        <div class="widget-blog-author-image">
+                          <img
+                            :src="img"
+                            style="width:60px;height:60px"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <h4>WOODEN DISH</h4>
+                      <div class="text">
+                        <small class="text-muted"
+                          >By
+                          <a href="#"><strong> Abdelrahman Ezzet</strong></a> |
+                          Post on February 1, 2021 | 33 comments</small
+                        >
+                        <p class="m-top-sm m-bottom-sm">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Nullam eros nibh, viverra a dui a, gravida
+                          varius velit. Nunc vel tempor nisi. Aenean id
+                          pellentesque mi, non placerat mi. Integer luctus
+                          accumsan tellus. Vivamus quis elit sit amet nibh
+                          lacinia suscipit eu quis purus. Vivamus tristique est
+                          non ipsum dapibus lacinia sed nec metus.
+                        </p>
+                        <a href="./#/SinglePost" style="color: firebrick">
+                          <i class="fa fa-angle-double-right"></i>
+                          Continue reading</a
+                        >
+                        <span
+                          class="post-like text-muted tooltip-test"
+                          data-toggle="tooltip"
+                          data-original-title="I like this post!"
+                        >
+                          <i class="fa fa-heart" style="color: #e31c1c;"></i>
+                          <span class="like-count">47</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+
               <!-- -------------------Right Sidebar---------------------- -->
               <div
                 class="col-lg-8 col-md-12 right-box"
@@ -345,6 +415,7 @@
               </div>
             </div>
           </div>
+
           <!-- --------------------Pagination------------------------- -->
           <ul
             class="pagination pagination-primary"
@@ -393,6 +464,10 @@ export default {
       type: String,
       default: require("@/assets/img/leaf7.jpg"),
     },
+    img: {
+      type: String,
+      default: require("@/assets/img/abdo.jpg"),
+    },
   },
   data() {
     return {
@@ -400,6 +475,8 @@ export default {
       carousel2: require("@/assets/img/c2.jpeg"),
       carousel3: require("@/assets/img/c3.jpg"),
       carousel4: require("@/assets/img/c4.jpg"),
+      carousel5: require("@/assets/img/blog-details-img25.jpg"),
+      carousel6: require("@/assets/img/blog-details-img26.jpg"),
     };
   },
   methods: {},
@@ -414,86 +491,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-body {
-  padding-top: 0;
-  font-size: 12px;
-  color: #777;
-  background: #f9f9f9;
-  font-family: "Open Sans", sans-serif;
-  margin-top: 20px;
-}
-
-.panel {
-  position: relative;
-  background: #fff;
-}
-
-.image-wrapper {
-  position: relative;
-  display: block;
-  overflow: hidden;
-}
-
-.blog-container a:not(.btn) {
-  color: #999;
-  transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-}
-
-.image-wrapper img {
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-}
-
-.image-wrapper:hover .image-overlay {
-  opacity: 0.9;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transform: translateX(0%);
-  -webkit-transform: translateX(0%);
-  -moz-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  -o-transform: translateX(0%);
-}
-
-.image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 99%;
-  height: 100%;
-  opacity: 0;
-  background-color: #3c8dbc;
-  background-image: -moz-linear-gradient(top, #5fa4cc, #3c8dbc);
-  background-image: -webkit-gradient(
-    linear,
-    0 0,
-    0 100%,
-    from(#5fa4cc),
-    to(#3c8dbc)
-  );
-  background-image: -webkit-linear-gradient(top, #5fa4cc, #3c8dbc);
-  background-image: -o-linear-gradient(top, #5fa4cc, #3c8dbc);
-  background-image: linear-gradient(to bottom, #5fa4cc, #3c8dbc);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#5fa4cc, endColorstr=#3c8dbc, GradientType=0);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-  border: 6px solid #296282;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-}
-
 .post-like {
   float: right;
   cursor: pointer;
