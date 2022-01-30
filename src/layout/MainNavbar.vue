@@ -62,11 +62,13 @@
                   </div>
                 </a>
               </li> -->
+
               <md-list-item
                 href="/#/home"
                 @click="scrollToElement()"
                 v-if="showDownload"
               >
+                <i class="material-icons">home</i>
                 <p>Home</p>
               </md-list-item>
 
@@ -75,8 +77,9 @@
                 @click="scrollToElement()"
                 v-if="showDownload"
               >
-
-         
+                <i class="material-icons">shop</i>
+                <p>Shop</p>
+              </md-list-item>
 
               <md-list-item
                 href="/#/post"
