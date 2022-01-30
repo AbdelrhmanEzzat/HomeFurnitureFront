@@ -15,10 +15,10 @@
           <div class="carousel-caption">
             <h3 class="title" id="cap">
               <md-icon>chair</md-icon>
-             Modern and contemporary furniture <br> to match your style and budget.
+              Modern and contemporary furniture <br />
+              to match your style and budget.
             </h3>
             <md-button class="md-primary md-round">desgin your home</md-button>
-
           </div>
           <img
             :src="carousel1"
@@ -28,7 +28,6 @@
           />
           <div class="image-wrapper">
             <img :src="leaf1" alt="leaf1" class="leaf1" v-show="leafShow" />
-            
           </div>
         </slide>
         <slide>
@@ -37,8 +36,7 @@
               <md-icon>home</md-icon>
               Desgin your Home and shop for new items
             </h3>
-              <md-button class="md-primary md-round">visit store</md-button>
-
+            <md-button class="md-primary md-round">visit store</md-button>
           </div>
           <img :src="carousel2" alt="carousel2" class="car-img" />
           <div class="image-wrapper">
@@ -52,7 +50,6 @@
               Publish your work here as Designer
             </h3>
             <md-button class="md-primary md-round md-dark">add post</md-button>
-
           </div>
           <img :src="carousel3" alt="carousel3" class="car-img" />
           <div class="image-wrapper">
@@ -151,18 +148,14 @@
                   <div class="info">
                     <div class="icon">
                       <a href="">
-                        <img
-                          class="im"
-                          src="	https://www.ikea.com/eg/en/images/products/strandm…djuparp-dark-green__0531300_pe647255_s5.jpg?f=xxs"
-                          alt=""
-                        />
+                        <img class="im" :src="img4" alt="" />
                       </a>
                     </div>
                     <h4 class="info-title" style="font-size: medium;">
                       <hr />
                       Paloma Chair
                     </h4>
-                    <p>EGP 11,150</p>
+                    <p>$550,000</p>
                   </div>
                 </div>
               </div>
@@ -172,17 +165,14 @@
                   <div class="info">
                     <div class="icon">
                       <a href="">
-                        <img
-                          src="https://www.ikea.com/eg/en/images/products/soederh…-end-samsta-orange__0802720_pe768564_s5.jpg?f=xxs"
-                          alt=""
-                        />
+                        <img :src="img6" alt="" />
                       </a>
                     </div>
                     <h4 class="info-title" style="font-size: medium;">
                       <hr />
-                      ÖDERHAMN
+                      Trinetic Work Chair
                     </h4>
-                    <p>EGP 27,285</p>
+                    <p>$540,000</p>
                   </div>
                 </div>
               </div>
@@ -192,17 +182,14 @@
                   <div class="info">
                     <div class="icon">
                       <a href="">
-                        <img
-                          src="	https://www.ikea.com/eg/en/images/products/remsta-…mchair-hakebo-beige__0908599_pe783322_s5.jpg?f=xs"
-                          alt=""
-                        />
+                        <img :src="img3" alt="" />
                       </a>
                     </div>
                     <h4 class="info-title" style="font-size: medium;">
                       <hr />
-                      REMSTA
+                      Paloma Lounge
                     </h4>
-                    <p>EGP 3,995</p>
+                    <p>$750,000</p>
                   </div>
                 </div>
               </div>
@@ -212,17 +199,14 @@
                   <div class="info">
                     <div class="icon">
                       <a href="">
-                        <img
-                          src="https://www.ikea.com/eg/en/images/products/stockho…ofa-seglora-natural__0183763_pe334809_s5.jpg?f=xs"
-                          alt=""
-                        />
+                        <img :src="img12" alt="" />
                       </a>
                     </div>
                     <h4 class="info-title" style="font-size: medium;">
                       <hr />
-                      STOCKHOLM
+                      Kruze Lounge
                     </h4>
-                    <p>EGP 39,995</p>
+                    <p>$1,350,00</p>
                   </div>
                 </div>
               </div>
@@ -232,17 +216,14 @@
                   <div class="info">
                     <div class="icon">
                       <a href="">
-                        <img
-                          src="	https://www.ikea.com/eg/en/images/products/poaeng-…neer-hillared-beige__0497125_pe628952_s5.jpg?f=xs"
-                          alt=""
-                        />
+                        <img :src="img5" alt="" />
                       </a>
                     </div>
                     <h4 class="info-title" style="font-size: medium;">
                       <hr />
-                      STRANDMON
+                      DNA Lounge Chair
                     </h4>
-                    <p>EGP 5,750</p>
+                    <p>$1,340.00</p>
                   </div>
                 </div>
               </div>
@@ -252,17 +233,14 @@
                   <div class="info">
                     <div class="icon">
                       <a href="">
-                        <img
-                          src="https://www.ikea.com/eg/en/images/products/landskr…ed-light-green-wood__0602122_pe680191_s5.jpg?f=xs"
-                          alt=""
-                        />
+                        <img :src="img2" alt="" />
                       </a>
                     </div>
                     <h4 class="info-title" style="font-size: medium;">
                       <hr />
-                      LANDSKRONA
+                      Bodie Lounge
                     </h4>
-                    <p>EGP 14,745</p>
+                    <p>$1,750.00</p>
                   </div>
                 </div>
               </div>
@@ -274,6 +252,7 @@
           >
             <md-button class="md-primary">View all</md-button>
           </div>
+
           <!-- --------------------------Row------------------------------ -->
           <div class="row" style="padding-top:5%;">
             <div class="columnleft">
@@ -351,6 +330,38 @@ export default {
     teamImg3: {
       type: String,
       default: require("@/assets/img/faces/kendall.jpg"),
+    },
+    homeimg1: {
+      type: String,
+      default: require("@/assets/img/home/Home1.jpg"),
+    },
+    homeimg2: {
+      type: String,
+      default: require("@/assets/img/home/Home2.jpg"),
+    },
+    img2: {
+      type: String,
+      default: require("@/assets/img/shop/2.jpg"),
+    },
+    img3: {
+      type: String,
+      default: require("@/assets/img/shop/3.jpg"),
+    },
+    img4: {
+      type: String,
+      default: require("@/assets/img/shop/4.jpg"),
+    },
+    img5: {
+      type: String,
+      default: require("@/assets/img/shop/5.jpg"),
+    },
+    img6: {
+      type: String,
+      default: require("@/assets/img/shop/6.jpg"),
+    },
+    img12: {
+      type: String,
+      default: require("@/assets/img/shop/12.jpg"),
     },
   },
   data() {
@@ -559,5 +570,36 @@ export default {
   .btn-container {
     display: flex;
   }
+}
+/*fadeup */
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content {
+  width: 300px;
+  margin: 10px auto 0;
+  padding: 0 30px 30px;
+  border: #666 1px solid;
+  -webkit-animation: fadeInUp 4s infinite alternate; /* Safari & Chrome */
+  animation: fadeInUp 4s infinite alternate;
 }
 </style>
