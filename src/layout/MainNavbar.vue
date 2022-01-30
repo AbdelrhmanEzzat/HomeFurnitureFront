@@ -77,7 +77,7 @@
                 @click="scrollToElement()"
                 v-if="showDownload"
               >
-                <i class="material-icons">shop</i>
+                <i class="material-icons">store</i>
                 <p>Shop</p>
               </md-list-item>
 

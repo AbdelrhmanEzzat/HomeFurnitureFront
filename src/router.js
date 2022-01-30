@@ -11,6 +11,7 @@ import MainFooter from "./layout/MainFooter.vue";
 import Home from "./views/Home.vue";
 import Shop from "./views/Shop.vue";
 import Post from "./views/Post.vue";
+import Cart from "./views/Cart.vue";
 import SinglePost from "./views/SinglePost.vue";
 import SingleProduct from "./views/SingleProduct.vue";
 
@@ -82,7 +83,7 @@ export default new Router({
         {
             path: "/cart",
             name: "cart",
-            components: { default: Profile, header: MainNavbar, footer: MainFooter },
+            components: { default: Cart, header: MainNavbar, footer: MainFooter },
             props: {
                 header: { colorOnScroll: 400 },
                 footer: { backgroundColor: "black" },
