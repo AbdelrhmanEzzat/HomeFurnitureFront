@@ -15,453 +15,643 @@
         </div>
       </div>
     </parallax>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css"
+      rel="stylesheet"
+    />
+
     <!-- ----------------------------Filter---------------------------------- -->
     <div class="main main-raised">
       <div class="section section-basic">
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+          integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA="
+          crossorigin="anonymous"
+        />
+
         <div class="container">
-          <md-toolbar
-            class="md-primary"
-            style="position: absolute; right: 2%; width: 12%; height: 0%; top: -5%;"
-          >
-            <div
-              class="md-toolbar-row"
-              style="padding-left: 0%; padding-right: 0%; position: absolute; margin-top: -5%;"
-            >
-              <md-list>
-                <li class="md-list-item">
-                  <a
-                    href="javascript:void(0)"
-                    class="md-list-item-router md-list-item-container md-button-clean dropdown"
-                  >
-                    <div class="md-list-item-content">
-                      <drop-down direction="down">
-                        <md-button
-                          slot="title"
-                          class="md-button md-button-link md-white md-simple dropdown-toggle"
-                          data-toggle="dropdown"
-                        >
-                          <p>Default Sorting</p>
-                        </md-button>
-                        <ul
-                          class="dropdown-menu"
-                          :class="{ 'dropdown-menu-right': responsive }"
-                        >
-                          <li class="dropdown-header">Dropdown header</li>
-                          <li>
-                            <a href="#pablo" class="dropdown-item"
-                              >Sort bu popularity</a
-                            >
-                          </li>
-                          <li>
-                            <a href="#pablo" class="dropdown-item"
-                              >Sort by average rating</a
-                            >
-                          </li>
-                          <li>
-                            <a href="#pablo" class="dropdown-item"
-                              >Sort by latest</a
-                            >
-                          </li>
-                          <li class="dropdown-divider"></li>
-                          <li>
-                            <a href="#pablo" class="dropdown-item"
-                              >Sort by price: low to high</a
-                            >
-                          </li>
-                          <li class="dropdown-divider"></li>
-                          <li>
-                            <a href="#pablo" class="dropdown-item"
-                              >Sort by price: high to low</a
-                            >
-                          </li>
-                        </ul>
-                      </drop-down>
-                    </div>
-                  </a>
-                </li>
-              </md-list>
-            </div>
-          </md-toolbar>
-          <div class="grid-container">
-            <div class="filter">
-              <div class="filter-categories">
-                <div id="checkRadios">
-                  <div
-                    class="md-layout-item md-size-25 md-xsmall-size-100 md-small-size-50 md-medium-size-25"
-                  >
-                    <h5 style="width: 590%;">Filter By Categories</h5>
-                    <div class="flex-column">
-                      <md-checkbox
-                        style="  margin: 30% 30% 0% 0px;"
-                        v-model="checkbox1"
-                        >Classic chair</md-checkbox
-                      >
-                      <md-checkbox
-                        style="  margin: 30% 30% 0% 0px;"
-                        v-model="checkbox2"
-                        >Modern chair</md-checkbox
-                      >
-                      <md-checkbox
-                        style="  margin: 30% 30% 0% 0px;"
-                        v-model="checkbox3"
-                        >Simple chair</md-checkbox
-                      >
-                      <md-checkbox
-                        style="  margin: 30% 30% 0% 0px;"
-                        v-model="checkbox4"
-                        >Flat chair</md-checkbox
-                      >
-                    </div>
+          <div class="row" style="width:100%">
+            <div class="col-lg-3">
+              <div class="sidebar">
+                <div class="widget border-0">
+                  <div class="search">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Search Keywords"
+                    />
                   </div>
                 </div>
-                <hr style="width: 100%; margin-top: 10%; margin-bottom:15%;" />
-                <!-- ------------------------Filter-------------------------- -->
-                <div id="checkRadios">
-                  <div
-                    class="md-layout-item md-size-25 md-xsmall-size-100 md-small-size-50 md-medium-size-25"
-                  >
-                    <h5 style="width: 423%;">Filter By Color</h5>
-                    <div class="flex-column">
-                      <md-checkbox
-                        style="  margin: 30% 30% 0% 0px;"
-                        v-model="checkbox5"
-                        >Black</md-checkbox
-                      >
-                      <md-checkbox
-                        style="  margin: 30% 30% 0% 0px;"
-                        v-model="checkbox6"
-                        >Green</md-checkbox
-                      >
-                      <md-checkbox
-                        style="  margin: 30% 30% 0% 0px;"
-                        v-model="checkbox7"
-                        >Blue</md-checkbox
-                      >
-                      <md-checkbox
-                        style="  margin: 30% 30% 0% 0px;"
-                        v-model="checkbox8"
-                        >Red</md-checkbox
-                      >
-                    </div>
-                  </div>
-                </div>
-                <hr style="width: 100%; margin-top: 10%; margin-bottom:15%;" />
-                <!------------------------ Sliders --------------------------->
-                <div id="sliders">
-                  <div
-                    class="md-layout-item md-size-150 md-xsmall-size-200"
-                    style="width: 100%;height:50%;"
-                  >
-                    <h5 style="width: 55%;">Filter By Price</h5>
 
-                    <slider
-                      v-model="sliders.rangeSlider"
-                      type="info"
-                      :connect="true"
+                <div class="widget">
+                  <div class="widget-title widget-collapse">
+                    <h6>Filter By Categories</h6>
+                    <a
+                      class="ml-auto"
+                      data-toggle="collapse"
+                      href="#dateposted"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="dateposted"
                     >
-                    </slider>
-                    <h6 style=" padding-right: 43%;">
-                      Price: £0 — £4,000
-                    </h6>
+                    </a>
+                  </div>
+                  <div class="collapse show" id="dateposted">
+                    <div class="widget-content">
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="dateposted1"
+                        />
+                        <label class="custom-control-label" for="dateposted1"
+                          >Last hour</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="dateposted2"
+                        />
+                        <label class="custom-control-label" for="dateposted2"
+                          >Last 24 hour</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="dateposted3"
+                        />
+                        <label class="custom-control-label" for="dateposted3"
+                          >Last 7 days</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="dateposted4"
+                        />
+                        <label class="custom-control-label" for="dateposted4"
+                          >Last 14 days</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="dateposted5"
+                        />
+                        <label class="custom-control-label" for="dateposted5"
+                          >Last 30 days</label
+                        >
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <!-- end sliders -->
-                <hr style="width: 100%; margin-top: 10%; margin-bottom:15%;" />
+                <div class="widget">
+                  <div class="widget-title widget-collapse">
+                    <h6>Filter By Color</h6>
+                    <a
+                      class="ml-auto"
+                      data-toggle="collapse"
+                      href="#specialism"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="specialism"
+                    >
+                    </a>
+                  </div>
+                  <div class="collapse show" id="specialism">
+                    <div class="widget-content">
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="specialism1"
+                        />
+                        <label class="custom-control-label" for="specialism1"
+                          >Red</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="specialism2"
+                        />
+                        <label class="custom-control-label" for="specialism2"
+                          >Green</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="specialism3"
+                        />
+                        <label class="custom-control-label" for="specialism3">
+                          Blue</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="specialism4"
+                        />
+                        <label class="custom-control-label" for="specialism4"
+                          >Silver</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="specialism5"
+                        />
+                        <label class="custom-control-label" for="specialism5"
+                          >Black</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="specialism5"
+                        />
+                        <label class="custom-control-label" for="specialism5"
+                          >Brown</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="widget">
+                  <div class="widget-title widget-collapse">
+                    <h6>Filter By Fabric</h6>
+                    <a
+                      class="ml-auto"
+                      data-toggle="collapse"
+                      href="#jobtype"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="jobtype"
+                    >
+                    </a>
+                  </div>
+                  <div class="collapse show" id="jobtype">
+                    <div class="widget-content">
+                      <div class="custom-control custom-checkbox fulltime-job">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="jobtype1"
+                        />
+                        <label class="custom-control-label" for="jobtype1"
+                          >Alpaca wollen fabric</label
+                        >
+                      </div>
+
+                      <div class="custom-control custom-checkbox freelance-job">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="jobtype3"
+                        />
+                        <label class="custom-control-label" for="jobtype3"
+                          >Boiled wollen fabric</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox temporary-job">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="jobtype4"
+                        />
+                        <label class="custom-control-label" for="jobtype4"
+                          >Crepe Fabric</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox temporary-job">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="jobtype4"
+                        />
+                        <label class="custom-control-label" for="jobtype4"
+                          >Jute fabric</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox temporary-job">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="jobtype4"
+                        />
+                        <label class="custom-control-label" for="jobtype4"
+                          >Wollen fabric</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="widget">
+                  <div class="widget-title widget-collapse">
+                    <h6>Filter By Price</h6>
+
+                    <a
+                      class="ml-auto"
+                      data-toggle="collapse"
+                      href="#jobtype"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="jobtype"
+                    >
+                    </a>
+                  </div>
+                  <div class="collapse show" id="jobtype">
+                    <div class="widget-content">
+                      <div class="custom-control custom-checkbox fulltime-job">
+                        <div id="sliders">
+                          <div
+                            class="md-layout-item md-size-150 md-xsmall-size-200"
+                            style="width: 100%;height:50%;"
+                          >
+                            <slider
+                              v-model="sliders.rangeSlider"
+                              type="info"
+                              :connect="true"
+                            >
+                            </slider>
+                            <h6>
+                              Price: £0 — £4,000
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- --------------------------Gallery Products---------------------------- -->
-            <div>
-              <div class="gallery">
-                <div class="gallery__item">
-                  <img
-                    src="//cdn.shopify.com/s/files/1/0399/1126/0318/products/BossatHomeProduct-Maysa7.jpg?v=1593722446"
-                    alt="Img"
-                  />
-                  <div>
-                    <a
-                      href="https://hongo.themezaa.com/furniture/product/wood-finish-chair/"
-                      class="hongo-LoopProduct-link"
-                      ><h5 class="woocommerce-loop-product__title">
-                        Wood Finish Chair
-                      </h5>
-                    </a>
-                    <div>
-                      <span class="price">
-                        <del aria-hidden="true">
-                          <span>
-                            <bdi style="padding-right:5%"
-                              ><span>£</span>150.00</bdi
-                            ></span
-                          >
-                        </del>
-                        <ins>
-                          <span>
-                            <bdi><span>£</span>120.00</bdi></span
-                          >
-                        </ins>
-                      </span>
+            <!-- ------------------- -->
+            <div class="col-md-9">
+              <div class="row product-list">
+                <div class="col-md-4">
+                  <div class="product-grid7">
+                    <div class="product-image7">
+                      <a href="#/SingleProduct">
+                        <img class="pic-1" :src="img1" />
+                        <img class="pic-2" :src="img01" />
+                      </a>
+                      <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                      </ul>
+                      <span class="product-new-label">New</span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title"><a href="#">Maysa Lounge</a></h3>
+                      <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="price">
+                        £2,040.00
+                        <span>£2,750.00</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="gallery__item">
-                  <img
-                    src="//cdn.shopify.com/s/files/1/0399/1126/0318/products/BossatHomeProduct-Bodie14.jpg?v=1593608579"
-                    alt="Img"
-                  />
-                  <div>
-                    <a
-                      href="https://hongo.themezaa.com/furniture/product/wood-finish-chair/"
-                      class="hongo-LoopProduct-link"
-                      ><h5 class="woocommerce-loop-product__title">
-                        Wood Finish Chair
-                      </h5>
-                    </a>
-                    <div>
-                      <span class="price">
-                        <del aria-hidden="true">
-                          <span>
-                            <bdi style="padding-right:5%"
-                              ><span>£</span>150.00</bdi
-                            ></span
-                          >
-                        </del>
-                        <ins>
-                          <span>
-                            <bdi><span>£</span>120.00</bdi></span
-                          >
-                        </ins>
-                      </span>
+                <div class="col-md-4">
+                  <div class="product-grid7">
+                    <div class="product-image7">
+                      <a href="#">
+                        <img class="pic-1" :src="img2" />
+                        <img class="pic-2" :src="img02" />
+                      </a>
+                      <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                      </ul>
+                      <span class="product-new-label">New</span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title"><a href="#">Bodie Lounge</a></h3>
+                      <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="price">
+                        £1,760.00
+                        <span>£1,930.00</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="gallery__item">
-                  <img
-                    src="//cdn.shopify.com/s/files/1/0399/1126/0318/products/BossatHomeProduct-Mr_Mrs3.jpg?v=1593618756"
-                    alt="Img"
-                  />
-                  <div>
-                    <a
-                      href="https://hongo.themezaa.com/furniture/product/wood-finish-chair/"
-                      class="hongo-LoopProduct-link"
-                      ><h5 class="woocommerce-loop-product__title">
-                        Wood Finish Chair
-                      </h5>
-                    </a>
-                    <div>
-                      <span class="price">
-                        <del aria-hidden="true">
-                          <span>
-                            <bdi style="padding-right:5%"
-                              ><span>£</span>150.00</bdi
-                            ></span
-                          >
-                        </del>
-                        <ins>
-                          <span>
-                            <bdi><span>£</span>120.00</bdi></span
-                          >
-                        </ins>
-                      </span>
+                <div class="col-md-4">
+                  <div class="product-grid7">
+                    <div class="product-image7">
+                      <a href="#">
+                        <img class="pic-1" :src="img3" />
+                        <img class="pic-2" :src="img3" />
+                      </a>
+                      <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                      </ul>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title"><a href="#">Paloma Lounge</a></h3>
+                      <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="price">
+                        £750.00
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="gallery__item">
-                  <img
-                    src="//cdn.shopify.com/s/files/1/0399/1126/0318/products/paloma3.jpg?v=1593594684"
-                    alt="Img"
-                  />
-                  <div>
-                    <a
-                      href="https://hongo.themezaa.com/furniture/product/wood-finish-chair/"
-                      class="hongo-LoopProduct-link"
-                      ><h5 class="woocommerce-loop-product__title">
-                        Wood Finish Chair
-                      </h5>
-                    </a>
-                    <div>
-                      <span class="price">
-                        <del aria-hidden="true">
-                          <span>
-                            <bdi style="padding-right:5%"
-                              ><span>£</span>150.00</bdi
-                            ></span
-                          >
-                        </del>
-                        <ins>
-                          <span>
-                            <bdi><span>£</span>120.00</bdi></span
-                          >
-                        </ins>
-                      </span>
+                <div class="col-md-4">
+                  <div class="product-grid7">
+                    <div class="product-image7">
+                      <a href="#">
+                        <img class="pic-1" :src="img4" />
+                        <img class="pic-2" :src="img4" />
+                      </a>
+                      <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                      </ul>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title"><a href="#">Paloma Chair</a></h3>
+                      <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="price">
+                        £550.00
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="gallery__item">
-                  <img
-                    src="//cdn.shopify.com/s/files/1/0399/1126/0318/products/BossatHomeProduct-KruzeLounge2.jpg?v=1593703097"
-                    alt="Img"
-                  />
-                  <div>
-                    <a
-                      href="https://hongo.themezaa.com/furniture/product/wood-finish-chair/"
-                      class="hongo-LoopProduct-link"
-                      ><h5 class="woocommerce-loop-product__title">
-                        Wood Finish Chair
-                      </h5>
-                    </a>
-                    <div>
-                      <span class="price">
-                        <del aria-hidden="true">
-                          <span>
-                            <bdi style="padding-right:5%"
-                              ><span>£</span>150.00</bdi
-                            ></span
-                          >
-                        </del>
-                        <ins>
-                          <span>
-                            <bdi><span>£</span>120.00</bdi></span
-                          >
-                        </ins>
-                      </span>
+                <div class="col-md-4">
+                  <div class="product-grid7">
+                    <div class="product-image7">
+                      <a href="#">
+                        <img class="pic-1" :src="img5" />
+                        <img class="pic-2" :src="img5" />
+                      </a>
+                      <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                      </ul>
+                      <span class="product-new-label">New</span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title"><a href="#">DNA Lounge Chair</a></h3>
+                      <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="price">
+                        £1,340.00
+                        <span>£1,600.00</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="gallery__item">
-                  <img
-                    src="//cdn.shopify.com/s/files/1/0399/1126/0318/products/BossatHomeProduct-DNA6.jpg?v=1594214952"
-                    alt="Img"
-                  />
-
-                  <div>
-                    <a
-                      href="https://hongo.themezaa.com/furniture/product/wood-finish-chair/"
-                      class="hongo-LoopProduct-link"
-                      ><h5 class="woocommerce-loop-product__title">
-                        Wood Finish Chair
-                      </h5>
-                    </a>
-                    <div>
-                      <span class="price">
-                        <del aria-hidden="true">
-                          <span>
-                            <bdi style="padding-right:5%"
-                              ><span>£</span>150.00</bdi
-                            ></span
-                          >
-                        </del>
-                        <ins>
-                          <span>
-                            <bdi><span>£</span>120.00</bdi></span
-                          >
-                        </ins>
-                      </span>
+                <div class="col-md-4">
+                  <div class="product-grid7">
+                    <div class="product-image7">
+                      <a href="#">
+                        <img class="pic-1" :src="img6" />
+                        <img class="pic-2" :src="img06" />
+                      </a>
+                      <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                      </ul>
+                      <span class="product-new-label">New</span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title"><a href="#">Trinetic Work Chair</a></h3>
+                      <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="price">
+                        £540,00
+                        <span>£730,00</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="gallery__item">
-                  <img
-                    src="//cdn.shopify.com/s/files/1/0399/1126/0318/products/BossatHomeProduct-Fairfax7.jpg?v=1594227183"
-                    alt="Img"
-                  />
-                  <div>
-                    <a
-                      href="https://hongo.themezaa.com/furniture/product/wood-finish-chair/"
-                      class="hongo-LoopProduct-link"
-                      ><h5 class="woocommerce-loop-product__title">
-                        Wood Finish Chair
-                      </h5>
-                    </a>
-                    <div>
-                      <span class="price">
-                        <del aria-hidden="true">
-                          <span>
-                            <bdi style="padding-right:5%"
-                              ><span>£</span>150.00</bdi
-                            ></span
-                          >
-                        </del>
-                        <ins>
-                          <span>
-                            <bdi><span>£</span>120.00</bdi></span
-                          >
-                        </ins>
-                      </span>
+                <div class="col-md-4">
+                  <div class="product-grid7">
+                    <div class="product-image7">
+                      <a href="#">
+                        <img class="pic-1" :src="img7" />
+                        <img class="pic-2" :src="img07" />
+                      </a>
+                      <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                      </ul>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title"><a href="#">Coza Work Chair</a></h3>
+                      <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="price">
+                        £440,00
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="gallery__item">
-                  <img
-                    src="https://cdn.shopify.com/s/files/1/0399/1126/0318/products/BossatHomeProduct-Mango5.jpg?v=1598272528"
-                    alt="Img"
-                  />
-                  <div>
-                    <a
-                      href="https://hongo.themezaa.com/furniture/product/wood-finish-chair/"
-                      class="hongo-LoopProduct-link"
-                      ><h5 class="woocommerce-loop-product__title">
-                        Wood Finish Chair
-                      </h5>
-                    </a>
-                    <div>
-                      <span class="price">
-                        <del aria-hidden="true">
-                          <span>
-                            <bdi style="padding-right:5%"
-                              ><span>£</span>150.00</bdi
-                            ></span
-                          >
-                        </del>
-                        <ins>
-                          <span>
-                            <bdi><span>£</span>120.00</bdi></span
-                          >
-                        </ins>
-                      </span>
+                <div class="col-md-4">
+                  <div class="product-grid7">
+                    <div class="product-image7">
+                      <a href="#">
+                        <img class="pic-1" :src="img8" />
+                        <img class="pic-2" :src="img8" />
+                      </a>
+                      <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                      </ul>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title"><a href="#">Delphi Work Chair</a></h3>
+                      <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="price">
+                        £680,00
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="gallery__item">
-                  <img
-                    src="//cdn.shopify.com/s/files/1/0399/1126/0318/products/BossatHomeProduct-Kruze10.jpg?v=1593445099"
-                    alt="Img"
-                  />
-                  <div>
-                    <a
-                      href="https://hongo.themezaa.com/furniture/product/wood-finish-chair/"
-                      class="hongo-LoopProduct-link"
-                      ><h5 class="woocommerce-loop-product__title">
-                        Wood Finish Chair
-                      </h5>
-                    </a>
-                    <div>
-                      <span class="price">
-                        <del aria-hidden="true">
-                          <span>
-                            <bdi style="padding-right:5%"
-                              ><span>£</span>150.00</bdi
-                            ></span
-                          >
-                        </del>
-                        <ins>
-                          <span>
-                            <bdi><span>£</span>120.00</bdi></span
-                          >
-                        </ins>
-                      </span>
+                <div class="col-md-4">
+                  <div class="product-grid7">
+                    <div class="product-image7">
+                      <a href="#">
+                        <img class="pic-1" :src="img9" />
+                        <img class="pic-2" :src="img9" />
+                      </a>
+                      <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                      </ul>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title"><a href="#">Coza Work Chair</a></h3>
+                      <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="price">
+                        £440,00
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-grid7">
+                    <div class="product-image7">
+                      <a href="#">
+                        <img class="pic-1" :src="img10" />
+                        <img class="pic-2" :src="img010" />
+                      </a>
+                      <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                      </ul>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title"><a href="#">Orten Lounge</a></h3>
+                      <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="price">
+                        £1,630.00
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-grid7">
+                    <div class="product-image7">
+                      <a href="#">
+                        <img class="pic-1" :src="img11" />
+                        <img class="pic-2" :src="img11" />
+                      </a>
+                      <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                      </ul>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title"><a href="#">Agent Chair</a></h3>
+                      <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="price">
+                        £415.00
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-grid7">
+                    <div class="product-image7">
+                      <a href="#">
+                        <img class="pic-1" :src="img12" />
+                        <img class="pic-2" :src="img012" />
+                      </a>
+                      <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                      </ul>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title"><a href="#">Kruze Lounge</a></h3>
+                      <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="price">
+                        £1,350.00
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- --------------------Pagination------------------------ -->
-              <pagination
-                class="pagination-info"
-                style="margin-left: auto;margin-right: auto; width: 30%;"
-                v-model="infoPagination"
-                with-text
-                :page-count="5"
-              >
-              </pagination>
             </div>
           </div>
         </div>
@@ -469,62 +659,97 @@
     </div>
   </div>
 </template>
-
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"
+></script>
 <script>
-// Get the elements with class="column"
-var elements = document.getElementsByClassName("column");
-
-// Declare a loop variable
-var i;
-
-// Full-width images
-function one() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.msFlex = "100%"; // IE10
-    elements[i].style.flex = "100%";
-  }
-}
-
-// Two0 images side by side
-function two() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.msFlex = "50%"; // IE10
-    elements[i].style.flex = "50%";
-  }
-}
-
-// Four images side by side
-function four() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.msFlex = "25%"; // IE10
-    elements[i].style.flex = "25%";
-  }
-}
 import { Slider } from "@/components";
-import { Pagination } from "@/components";
 
 export default {
-  components: { Slider, Pagination },
-  name: "shop",
-  bodyClass: "shop-page",
+  components: { Slider },
+  name: "test",
+  bodyClass: "test-page",
   props: {
     image: {
       type: String,
       default: require("@/assets/img/leaf5.jpg"),
     },
+    img1: {
+      type: String,
+      default: require("@/assets/img/shop/1.jpg"),
+    },
+    img01: {
+      type: String,
+      default: require("@/assets/img/shop/1+.jpg"),
+    },
+    img2: {
+      type: String,
+      default: require("@/assets/img/shop/2.jpg"),
+    },
+    img02: {
+      type: String,
+      default: require("@/assets/img/shop/2+.jpg"),
+    },
+    img3: {
+      type: String,
+      default: require("@/assets/img/shop/3.jpg"),
+    },
+    img4: {
+      type: String,
+      default: require("@/assets/img/shop/4.jpg"),
+    },
+    img5: {
+      type: String,
+      default: require("@/assets/img/shop/5.jpg"),
+    },
+    img6: {
+      type: String,
+      default: require("@/assets/img/shop/6.jpg"),
+    },
+    img06: {
+      type: String,
+      default: require("@/assets/img/shop/6+.jpg"),
+    },
+    img7: {
+      type: String,
+      default: require("@/assets/img/shop/7.jpg"),
+    },
+    img07: {
+      type: String,
+      default: require("@/assets/img/shop/7+.jpg"),
+    },
+    img8: {
+      type: String,
+      default: require("@/assets/img/shop/8.jpg"),
+    },
+    img9: {
+      type: String,
+      default: require("@/assets/img/shop/9.jpg"),
+    },
+    img10: {
+      type: String,
+      default: require("@/assets/img/shop/10.jpg"),
+    },
+    img010: {
+      type: String,
+      default: require("@/assets/img/shop/10+.jpg"),
+    },
+    img11: {
+      type: String,
+      default: require("@/assets/img/shop/11.jpg"),
+    },
+    img12: {
+      type: String,
+      default: require("@/assets/img/shop/12.jpg"),
+    },
+    img012: {
+      type: String,
+      default: require("@/assets/img/shop/12+.jpg"),
+    },
   },
   data() {
     return {
-      initial: null,
-      checkbox1: null,
-      checkbox2: null,
-      checkbox3: null,
-      checkbox4: null,
-      checkbox5: null,
-      checkbox6: null,
-      checkbox7: null,
-      checkbox8: null,
-
       sliders: {
         simple: 40,
         rangeSlider: [20, 60],
@@ -541,154 +766,153 @@ export default {
   },
 };
 </script>
+
 <style lang="scss">
-.section-download {
-  .md-button + .md-button {
-    margin-left: 5px;
-  }
-}
-// ---------------------------Title--------------------------
+/* Title */
 .shoptitle {
   color: white;
   position: absolute;
-  transform: translate(-50%, 0);
   left: 50%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+
   align-items: center;
   text-align: center;
-  z-index: 10;
   width: 90%;
 }
 .shopmain {
   align-items: center;
   text-align: center;
   color: white;
-  font-family: -webkit-body;
-}
-// ----------------------------Container---------------------------------
-.container-fluid-with-padding {
-  //   padding-left: 15px;
-  //   padding-right: 15px;
-  margin-left: 0px;
-  margin-right: 0px;
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: 20% auto;
-  grid-gap: 20px;
-  padding: 10px;
 }
 
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: auto auto;
-  font-size: 30px;
+/* checkbox */
+.widget .widget-content {
+  margin-top: 10px;
 }
-/* Reset */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.widget .widget-content .custom-checkbox {
+  margin-bottom: 8px;
 }
 
-body {
-  color: #345645;
-  background: #e3e3e3;
-}
-// ------------------------------Filter---------------------------------------------
+/* Job Detail */
 
-// ------------------------------Gallery Products-----------------------------------
-/* Container Flex */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  /* Flex-wrap: quebrar a linha quando um item não puder mais compactar o seu conteúdo */
-  max-width: 499px;
+.widget .jobster-company-view ul li:last-child {
+  margin-bottom: 0;
 }
 
-/* Flex Item */
-.gallery__item {
-  width: 100%;
-  margin-bottom: 7%;
+.sidebar .widget {
+  border: 1px solid #e7e6eb;
+  margin-bottom: 30px;
+  width: 85%;
+}
+.sidebar .widget .widget-title {
+  border-bottom: 1px solid #eeeeee;
+  padding: 14px 20px;
 }
 
-.gallery__item > img {
+.sidebar .widget .widget-content {
+  padding: 14px 20px;
+}
+.custom-control-label {
+  padding-left: 5%;
+}
+/* Shopping Demo */
+.product-grid7 .product-image7 {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  perspective: 1500px;
+  position: relative;
+}
+.product-grid7 .product-image7 a {
   display: block;
-  margin: 0 auto;
+}
+.product-grid7 .product-image7 img {
   width: 100%;
-  //   border-radius: 0.25rem;
-  //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.75);
+  height: auto;
 }
 
-.gallery__item > img:hover {
-  cursor: pointer;
+.product-grid7 .pic-2 {
+  opacity: 0;
+  transform: rotateY(-90deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease-out 0s;
+}
+.product-grid7:hover .pic-2 {
+  opacity: 1;
+  transform: rotateY(0);
+}
+.product-grid7 .social {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  bottom: 3px;
+  left: -20%;
+  z-index: 1;
+  transition: all 0.5s ease 0s;
+}
+.product-grid7:hover .social {
+  left: 17px;
+}
+.product-grid7 .social li a {
+  color: #fff;
+  background-color: #333;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  margin: 15px 0;
+  border-radius: 50%;
+  display: block;
+}
+.product-grid7 .social li a:hover {
+  color: #fff;
+  background-color: #bdbdbd;
+}
+.product-grid7 .product-new-label {
+  color: #fff;
+  background-color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.product-grid7 .product-content {
+  text-align: center;
+  padding: 20px 0 0;
+}
+.product-grid7 .title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 10px;
 }
 
-/* Responsive */
-@media only screen and (min-width: 500px) {
-  .gallery {
-    max-width: 719px;
-  }
-
-  .gallery__item {
-    width: calc((100% / 2) - 10px);
-    /* Cada item terá o seu valor máximo disponível,
-		divido por 2, menos 10px, cada item terá menos 10px,
-		ou seja, 2 itens por linha, 10px + 10px = 20px,
-		estes 20px serão usados como margin-left abaixo */
-  }
-
-  .gallery__item:nth-child(even) {
-    margin-left: 20px;
-    /* Cada item par, terá uma margem esquerda de 20px,
-		os 20px foram os que sobraram da .gallery__item */
-  }
+.product-grid7 .rating {
+  color: #b60c0c;
+  font-size: 12px;
+  padding: 0;
+  margin: 0 0 10px;
+  list-style: none;
 }
-
-@media only screen and (min-width: 720px) {
-  .gallery {
-    max-width: 100%;
-    /* Agora sem padding-left */
-  }
-
-  .gallery__item {
-    width: calc((100% / 3) - 20px);
-    /* Agora que o container .gallery não possui
-		mais padding-left, e os item ímpares serão os
-		que ficaram na lateral esquerda, retiro 20px
-		de cada item, e adiciono como margin-left
-		nos ímpares abaixo */
-  }
-
-  .gallery__item:nth-child(odd) {
-    margin-left: 20px;
-    /* Cada item ímpar, terá uma
-		margem esquerda de 20px */
-  }
+.product-grid7 .price {
+  color: #333;
+  font-size: 20px;
+  font-family: Lora, serif;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+  transition: all 0.3s;
 }
-.price {
-  font-size: initial;
-}
-.woocommerce-loop-product__title {
-  margin-bottom: 1%;
-  margin-top: 7%;
-}
-// --------------------CheckBox----------------------------
-.md-radio {
-  display: flex;
-  margin-bottom: 0.5rem;
-}
-.md-checkbox-label {
-  width: 95px;
-}
-@media all and (min-width: 991px) {
-  .btn-container {
-    display: flex;
-  }
+.product-grid7 .price span {
+  color: #999;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: line-through;
+  margin-left: 7px;
+  display: inline-block;
 }
 </style>

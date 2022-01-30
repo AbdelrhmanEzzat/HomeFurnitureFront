@@ -5,126 +5,189 @@
         <div class="md-layout-item">
           <div class="image-wrapper">
             <div class="brand">
-              <div class="shoptitle"></div>
-              <h1 class="shopmain">Product</h1>
-              <h3 class="shopmain">
-                Contemporary Seating Collection - Sustainably made in the UK
-              </h3>
+              <div style=" text-align: center; color: white;">
+                <h1 class="smain">Maysa Lounge</h1>
+                <p class="smain">
+                  The timeless luxury and craftsmanship, an elegant soft <br />
+                  seating and coffee table collection to enhance any space.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </parallax>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css"
+      rel="stylesheet"
+    />
     <!-- ------------------------------------------ -->
     <div class="main main-raised">
-      <div class="section section-basic">
+      <div class="section section-basic" style="background-color: #EDECE8;">
         <div class="container">
           <div class="row" style="width:100%">
-            <div class="col-sm-8">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0399/1126/0318/products/BossatHomeProduct-KruzeLounge2.jpg?v=1593703097.webp"
-                alt=""
-              />
+            <div class="col-sm-8" style="width:60%">
+              <carousel
+                :per-page="1"
+                loop
+                :speed="700"
+                :autoplay-timeout="5000"
+                :mouse-drag="false"
+                navigationEnabled
+                navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
+                navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
+              >
+                <slide>
+                  <div class="carousel-caption"></div>
+                  <img :src="carousel1" alt="carousel1" />
+                </slide>
+                <slide>
+                  <div class="carousel-caption"></div>
+                  <img :src="carousel2" alt="carousel2" />
+                </slide>
+                <slide>
+                  <div class="carousel-caption"></div>
+                  <img :src="carousel3" alt="carousel3" />
+                </slide>
+                <slide>
+                  <div class="carousel-caption"></div>
+                  <img :src="carousel4" alt="carousel4" />
+                </slide>
+              </carousel>
             </div>
-            <div class="col-sm-8" style="margin-left: 4%;">
-              <h3 style="font-weight: 600;">Designing Folding Chair</h3>
-              <h5 style="font-size: larger;">$250</h5>
-              <hr />
-              <br />
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
-                ut officia ab aliquid tempora eius, mollitia repellendus
-                voluptate laboriosam, tempore porro amet magni quasi laudantium
-                error officiis voluptas aut. Autem?
-              </p>
-              <br />
-              <hr />
-              <!-- Add to cart -->
-              <div class="col-sm-4">
-                <div class="cart-op" style="padding-top:3%">
-                  <span class="letter">-</span>
-                  <span class="letter" style="font-weight:300;font-size:20px"
-                    >1</span
-                  >
-                  <span class="letter">+</span>
+            <div class="col-sm-8" style="width: 40%;">
+              <div class="clearfix">
+                <div class="pull-right">
+                  <h2 class="mt-5">
+                    $2,040.00<small class="text-success">(15%off)</small>
+                  </h2>
                 </div>
-              </div>
-              <div class="col-sm-4">
-                <md-button
-                  class=""
-                  style="width: 30%;float: right;margin-top: auto;"
-                  >ADD TO CART</md-button
-                >
-              </div>
-              <!-- Wisthlist -->
-              <div style="padding: 12% 1%;">
-                <span
-                  class="post-like text-muted tooltip-test"
-                  data-toggle="tooltip"
-                  data-original-title="I like this post!"
-                >
-                  <a href="">
-                    <i
-                      class="fa fa-heart"
-                      style="color: #e31c1c;float: left;"
-                    ></i>
-                    <p style="margin: -1%;color:black">ADD TO WISHLIST</p>
-                  </a>
+                <span class="h4">
+                  <strong class="text-success">Maysa Lounge</strong><br />
+                  <small>70 Available</small>
                 </span>
               </div>
-              <!-- Categories -->
-              <div class="row" style="width:100%">
-                <div class="col-sm-4">
+              <hr />
+              <p>
+                The timeless luxury and craftmanship of Maysa creates an elegant
+                soft seating and coffee table collection that enhances any home.
+              </p>
+              <p>
+                Maysa has an inviting form that has been designed with comfort,
+                craftsmanship, elegance, and luxurious detail at its heart. Its
+                upholstery has a softness which has been designed to contrast
+                against the angular slim-line timber frame, whilst still
+                retaining the level of engineered ergonomic comfort we demand.
+              </p>
+              <p>
+                The generously proportioned arms, combined with panels and seams
+                that flow around the body, accentuate the curvature and overall
+                roundness of the body of Maysa, creating a form that commands
+                attention in any room.
+              </p>
+
+              <hr />
+              <button
+                class="btn btn-dark btn-rounded mr-1"
+                data-toggle="tooltip"
+                title=""
+                data-original-title="Add to cart"
+              >
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+              <button class="btn btn-primary btn-rounded">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section-basic" style="    padding: 0;">
+        <div class="row" style="width:100%">
+          <div class="col-sm-8" style="width:50%;text-align:center">
+            <div class="titleSP">
+              <h5 style="font-weight: bold;">Inspired by Nature</h5>
+              <p style="padding-top: 3%;">
+                Described as ‘islands in the sky’, mesas are a bridge between
+                worlds. So it’s only fitting that the Maysa family should be
+                warm and welcoming as well as strong and sleek - the composite
+                foam upper complementing the legs’ sense of unshakable poise.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-8" style="width:50%">
+            <img :src="img1" alt="img1" />
+          </div>
+        </div>
+      </div>
+      <div
+        class="section section-basic"
+        style="background-color: #EDECE8;    padding: 20px;"
+      >
+        <div class="features text-center" style="">
+          <h2 class="title text-center" style="margin-bottom: 0px;">
+            Related Products
+          </h2>
+
+          <div class="md-layout" style="padding: 0% 5%;">
+            <div class="md-layout-item md-medium-size-33 md-small-size">
+              <div class="cards">
+                <div class="info">
+                  <div class="icon">
+                    <a href="">
+                      <img class="im" :src="img2" alt="" />
+                    </a>
+                  </div>
+                  <h4 class="info-title" style="font-size: medium;">
+                    <hr />
+                    Paloma Chair
+                  </h4>
                   <p>
-                    <span style="font-weight:bold">CATEGORIES: </span>
-                    <a href=""> ACCESSORIES COLLECTION</a>,
-                    <a href=""
-                      >COMBINED <br />
-                      MINI DRESS</a
-                    >, <a href="">DESIGNER CHAIR </a>, <br />
-                    <a href="">SHOP MODERN</a>, <a href="">STUDENT chair</a>
+                    £1,760.00
                   </p>
                 </div>
-                <div class="col-sm-4">
-                  <!-- Social icon -->
-                  <div
-                    class="social-icon"
-                    style="float:left;padding: 0% 30%;margin: -13% 30%;"
-                  >
-                    <md-list-item
-                      style="float:left"
-                      href="https://twitter.com/CreativeTim"
-                      target="_blank"
-                    >
-                      <i class="fab fa-twitter"></i>
-                      <p class="hidden-lg">Twitter</p>
-                      <md-tooltip md-direction="bottom"
-                        >Follow us on Twitter</md-tooltip
-                      >
-                    </md-list-item>
-                    <md-list-item
-                      style="float:inherit"
-                      href="https://www.facebook.com/CreativeTim"
-                      target="_blank"
-                    >
-                      <i class="fab fa-facebook-square"></i>
-                      <p class="hidden-lg">Facebook</p>
-                      <md-tooltip md-direction="bottom"
-                        >Like us on Facebook</md-tooltip
-                      >
-                    </md-list-item>
-                    <md-list-item
-                      style="float:inherit;"
-                      href="https://www.instagram.com/CreativeTimOfficial"
-                      target="_blank"
-                    >
-                      <i class="fab fa-instagram"></i>
-                      <p class="hidden-lg">Instagram</p>
-                      <md-tooltip md-direction="bottom"
-                        >Follow us on Instagram</md-tooltip
-                      >
-                    </md-list-item>
+              </div>
+            </div>
+
+            <div class="md-layout-item md-medium-size-33 md-small-size-100">
+              <div class="cards">
+                <div class="info">
+                  <div class="icon">
+                    <a href="">
+                      <img :src="img10" alt="" />
+                    </a>
                   </div>
+                  <h4 class="info-title" style="font-size: medium;">
+                    <hr />
+                    Orten Lounge
+                  </h4>
+                  <p>£1,630.00</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="md-layout-item md-medium-size-33 md-small-size-100">
+              <div class="cards">
+                <div class="info">
+                  <div class="icon">
+                    <a href="">
+                      <img :src="img11" alt="" />
+                    </a>
+                  </div>
+                  <h4 class="info-title" style="font-size: medium;">
+                    <hr />
+                    Fairfax Lounge
+                  </h4>
+                  <p>£1,600.00</p>
                 </div>
               </div>
             </div>
@@ -134,7 +197,10 @@
     </div>
   </div>
 </template>
-
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"
+></script>
 <script>
 export default {
   components: {},
@@ -143,11 +209,32 @@ export default {
   props: {
     image: {
       type: String,
-      default: require("@/assets/img/leaf5.jpg"),
+      default: require("@/assets/img/singleproduct/singleproduct.jpg"),
+    },
+    img1: {
+      type: String,
+      default: require("@/assets/img/singleproduct/00001.jpg"),
+    },
+    img2: {
+      type: String,
+      default: require("@/assets/img/shop/2.jpg"),
+    },
+    img10: {
+      type: String,
+      default: require("@/assets/img/shop/10.jpg"),
+    },
+    img11: {
+      type: String,
+      default: require("@/assets/img/shop/11.jpg"),
     },
   },
   data() {
-    return {};
+    return {
+      carousel1: require("@/assets/img/singleproduct/1.jpg"),
+      carousel2: require("@/assets/img/singleproduct/01.jpg"),
+      carousel3: require("@/assets/img/singleproduct/001.jpg"),
+      carousel4: require("@/assets/img/singleproduct/0001.jpg"),
+    };
   },
   methods: {},
   computed: {
@@ -161,23 +248,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.letter {
-  border-radius: 4px;
-  border: 1px solid #e2e2e2;
-  float: left;
-  font-size: 46px;
-  margin: 0 2px 0 0;
-  text-align: center;
-  font-size: 24px;
-  height: 41px;
-  line-height: 8px;
-  padding: 15px 0;
-  width: 47px;
-  font-weight: 600;
-}
-.textcenter {
-  text-align: center;
-  padding-bottom: 6%;
-  padding-top: 2%;
+.titleSP {
+  padding-top: 35%;
+  padding-bottom: 35%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 </style>

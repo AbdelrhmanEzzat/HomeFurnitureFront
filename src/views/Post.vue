@@ -307,7 +307,7 @@
                   >
                     Categories Clouds
                   </h4>
-                  <div class="body widget">
+                  <div class="body widget" style="padding:0%">
                     <ul class="list-unstyled categories-clouds m-b-0">
                       <li>
                         <a

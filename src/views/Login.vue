@@ -48,8 +48,12 @@
               <md-button slot="footer" class="md-simple md-success md-lg">
                 Get Started
               </md-button>
-               <md-button href="/#/signup"  slot="footer" class="md-simple md-success md-lg"> 
-               Sign up
+              <md-button
+                href="/#/signup"
+                slot="footer"
+                class="md-simple md-success md-lg"
+              >
+                Sign up
               </md-button>
             </login-card>
           </div>
@@ -90,4 +94,8 @@ export default {
 };
 </script>
 
-<style lang="css"></style>
+<style lang="css">
+.flex-column .tab-content {
+  padding-left: 0px;
+}
+</style>
