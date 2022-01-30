@@ -12,6 +12,7 @@ import Home from "./views/Home.vue";
 import Shop from "./views/Shop.vue";
 import Post from "./views/Post.vue";
 import Cart from "./views/Cart.vue";
+import Chat from "./views/Chat.vue";
 import SinglePost from "./views/SinglePost.vue";
 import SingleProduct from "./views/SingleProduct.vue";
 
@@ -89,6 +90,15 @@ export default new Router({
                 footer: { backgroundColor: "black" },
             },
         },
+        {
+          path: "/chat",
+          name: "chat",
+          components: { default: Chat, header: MainNavbar, footer: MainFooter },
+          props: {
+              header: { colorOnScroll: 400 },
+              footer: { backgroundColor: "black" },
+          },
+      },
         {
             path: "/post",
             name: "post",

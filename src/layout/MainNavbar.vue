@@ -200,6 +200,10 @@
                                     >Settings and other stuff</a
                                   >
                                 </li> -->
+                          <li>
+                          <a href="/#/chat" class="dropdown-item">Messenger</a>
+                        </li>
+                        
                         <li>
                           <a href="#pablo" class="dropdown-item">Sign Out</a>
                         </li>
