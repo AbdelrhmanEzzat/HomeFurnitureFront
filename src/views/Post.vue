@@ -466,7 +466,7 @@ export default {
     },
     img: {
       type: String,
-      default: require("@/assets/img/abdo.jpg"),
+      default: require("@/assets/img/00.jpg"),
     },
   },
   data() {
