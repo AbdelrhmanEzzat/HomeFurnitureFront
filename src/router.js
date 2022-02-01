@@ -15,6 +15,7 @@ import Cart from "./views/Cart.vue";
 import Chat from "./views/Chat.vue";
 import SinglePost from "./views/SinglePost.vue";
 import SingleProduct from "./views/SingleProduct.vue";
+import Categories from "./views/Categories.vue";
 
 Vue.use(Router);
 
@@ -91,14 +92,14 @@ export default new Router({
             },
         },
         {
-          path: "/chat",
-          name: "chat",
-          components: { default: Chat, header: MainNavbar, footer: MainFooter },
-          props: {
-              header: { colorOnScroll: 400 },
-              footer: { backgroundColor: "black" },
-          },
-      },
+            path: "/chat",
+            name: "chat",
+            components: { default: Chat, header: MainNavbar, footer: MainFooter },
+            props: {
+                header: { colorOnScroll: 400 },
+                footer: { backgroundColor: "black" },
+            },
+        },
         {
             path: "/post",
             name: "post",
@@ -126,6 +127,19 @@ export default new Router({
             name: "singleproduct",
             components: {
                 default: SingleProduct,
+                header: MainNavbar,
+                footer: MainFooter,
+            },
+            props: {
+                header: { colorOnScroll: 400 },
+                footer: { backgroundColor: "black" },
+            },
+        },
+        {
+            path: "/categories",
+            name: "categories",
+            components: {
+                default: Categories,
                 header: MainNavbar,
                 footer: MainFooter,
             },

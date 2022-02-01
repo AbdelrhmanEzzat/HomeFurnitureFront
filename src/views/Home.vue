@@ -36,7 +36,9 @@
               <md-icon>home</md-icon>
               Desgin your Home and shop for new items
             </h3>
-            <md-button class="md-primary md-round">visit store</md-button>
+            <a href="#/categories">
+              <md-button class="md-primary md-round">visit store</md-button>
+            </a>
           </div>
           <img :src="carousel2" alt="carousel2" class="car-img" />
           <div class="image-wrapper">
@@ -49,7 +51,11 @@
               <md-icon>post_add</md-icon>
               Publish your work here as Designer
             </h3>
-            <md-button class="md-primary md-round md-dark">add post</md-button>
+            <a href="#/Profile">
+              <md-button class="md-primary md-round md-dark"
+                >add post</md-button
+              >
+            </a>
           </div>
           <img :src="carousel3" alt="carousel3" class="car-img" />
           <div class="image-wrapper">
@@ -67,18 +73,20 @@
               class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
             >
               <h2 class="title text-center">Let's talk product</h2>
-              <h4 class="description">
+              <h3 style="font-weight:300;margin: 5%;">
                 Home Furniture Store was created for the new ways we live and
                 work.We make beautifully designed, sustainable furniture in the
                 UK. Human centric furniture, designed for living.
-              </h4>
+              </h3>
             </div>
           </div>
           <div
             class="md-layout-item md-medium-size-33 md-small-size-100"
             style="display: block;margin-left: auto;margin-right: auto"
           >
-            <md-button class="md-primary">Our Collection</md-button>
+            <a href="#/categories">
+              <md-button class="md-primary">Our Collection</md-button>
+            </a>
           </div>
           <!-- ------------------------Sections--------------------------------- -->
           <div class="features text-center">
@@ -137,7 +145,11 @@
             </div>
           </div>
           <!-- --------------------------Featured products--------------------------------- -->
-          <div class="features text-center" style="padding-top: 5%;">
+
+          <div
+            class="features text-center"
+            style="padding-top: 5%; padding-bottom:5%"
+          >
             <h2 class="title text-center" style="margin-bottom: 0px;">
               Featured products
             </h2>
@@ -147,15 +159,15 @@
                 <div class="cards">
                   <div class="info">
                     <div class="icon">
-                      <a href="">
-                        <img class="im" :src="img4" alt="" />
+                      <a href="#/singleproduct">
+                        <img class="im" :src="img1" alt="" />
                       </a>
                     </div>
                     <h4 class="info-title" style="font-size: medium;">
                       <hr />
-                      Paloma Chair
+                      Maysa Lounge
                     </h4>
-                    <p>$550,000</p>
+                    <p>$2,040.00</p>
                   </div>
                 </div>
               </div>
@@ -246,12 +258,12 @@
               </div>
             </div>
           </div>
-          <div
+          <!-- <div
             class="md-layout-item md-medium-size-33 md-small-size-100"
             style="display: block;margin-left: auto;margin-right: auto"
           >
             <md-button class="md-primary">View all</md-button>
-          </div>
+          </div> -->
 
           <!-- --------------------------Row------------------------------ -->
           <div class="row" style="padding-top:5%;">
@@ -263,7 +275,9 @@
                 Designed and made in the UK Boss atHome has collaborated with,
                 designers, architects and creatives to develop a collection of
                 furniture which brings the office to the home or the home to the
-                office. <br /><br />
+                office.
+              </p>
+              <p style="font-size: medium;">
                 UK manufacturing facility is a hybrid of twenty first century
                 technology with with traditional skills and methods to produce a
                 consistently beautiful product.
@@ -275,15 +289,17 @@
           <div class="row1">
             <div class="columnleft1">
               <h3 class="info-title" style="margin-bottom:5%">
-                Designing your Home Office
+                Designing your Home
               </h3>
               <p style="font-size: medium;">
                 Our collections offer all the ergonomic experience of one of the
                 UK's leading workplace furniture design and manufactures. We
                 understand the science of comfort and are passionate about
-                design.<br /><br />
-                Our Home Office Collections are about creating the right home
-                work balance.
+                design.
+              </p>
+              <p style="font-size: medium;">
+                Our Home Collections are about creating the right home work
+                balance.
               </p>
             </div>
             <div class="columnright1"></div>
@@ -347,9 +363,9 @@ export default {
       type: String,
       default: require("@/assets/img/shop/3.jpg"),
     },
-    img4: {
+    img1: {
       type: String,
-      default: require("@/assets/img/shop/4.jpg"),
+      default: require("@/assets/img/shop/1.jpg"),
     },
     img5: {
       type: String,
@@ -496,26 +512,11 @@ export default {
   height: 40%;
   left: 5%;
   top: 25%;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: scale(0, 1);
-  -ms-transform: scale(0, 1);
-  transform: scale(0, 1);
-}
-
-.hovereffect:hover .overlay {
-  opacity: 1;
-  filter: alpha(opacity=100);
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
 }
 
 .hovereffect img {
   display: block;
   position: relative;
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
 }
 
 .hovereffect:hover img {

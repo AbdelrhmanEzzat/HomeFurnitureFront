@@ -77,7 +77,7 @@
                           id="dateposted1"
                         />
                         <label class="custom-control-label" for="dateposted1"
-                          >Last hour</label
+                          >Dining Chair</label
                         >
                       </div>
                       <div class="custom-control custom-checkbox">
@@ -87,7 +87,7 @@
                           id="dateposted2"
                         />
                         <label class="custom-control-label" for="dateposted2"
-                          >Last 24 hour</label
+                          >Lounge Chair</label
                         >
                       </div>
                       <div class="custom-control custom-checkbox">
@@ -97,7 +97,7 @@
                           id="dateposted3"
                         />
                         <label class="custom-control-label" for="dateposted3"
-                          >Last 7 days</label
+                          >Office Chair</label
                         >
                       </div>
                       <div class="custom-control custom-checkbox">
@@ -107,17 +107,7 @@
                           id="dateposted4"
                         />
                         <label class="custom-control-label" for="dateposted4"
-                          >Last 14 days</label
-                        >
-                      </div>
-                      <div class="custom-control custom-checkbox">
-                        <input
-                          type="checkbox"
-                          class="custom-control-input"
-                          id="dateposted5"
-                        />
-                        <label class="custom-control-label" for="dateposted5"
-                          >Last 30 days</label
+                          >Bedroom Chair</label
                         >
                       </div>
                     </div>

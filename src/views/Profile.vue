@@ -59,13 +59,28 @@
               <template slot="tab-pane-1">
                 <div class="md-layout">
                   <div class="md-layout-item md-size-25 ml-auto">
-                    <img :src="tabPane2[0].image" class="rounded" />
-                    <img :src="tabPane2[1].image" class="rounded" />
-                    <img :src="tabPane2[2].image" class="rounded" />
+                    <img
+                      src="https://images.pexels.com/photos/6636287/pexels-photo-6636287.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                      class="rounded"
+                    />
+                    <img
+                      src="https://images.pexels.com/photos/6843246/pexels-photo-6843246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                      class="rounded"
+                    />
+                    <img
+                      src="https://images.pexels.com/photos/6394545/pexels-photo-6394545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                      class="rounded"
+                    />
                   </div>
                   <div class="md-layout-item md-size-25 mr-auto">
-                    <img :src="tabPane2[3].image" class="rounded" />
-                    <img :src="tabPane2[4].image" class="rounded" />
+                    <img
+                      src="https://images.pexels.com/photos/6843254/pexels-photo-6843254.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                      class="rounded"
+                    />
+                    <img
+                      src="https://images.pexels.com/photos/5490907/pexels-photo-5490907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                      class="rounded"
+                    />
                   </div>
                 </div>
               </template>
