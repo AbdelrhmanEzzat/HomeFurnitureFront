@@ -298,4 +298,7 @@ export default {
   background-clip: padding-box;
   box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
 }
+.fw-bold{
+  color :rgb(191, 164, 106)
+}
 </style>
