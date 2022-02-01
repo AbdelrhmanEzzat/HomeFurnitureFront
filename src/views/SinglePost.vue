@@ -52,37 +52,29 @@
                       </carousel>
                     </div>
 
-                    <h3 style="font-weight: 400;">Shiny Living Room</h3>
+                    <h3 style="font-weight: 400;">SÖDERHAMN Living Room</h3>
 
                     <div class="text">
                       <p class="m-top-sm m-bottom-sm">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry’s standard dummy text ever since the, when an
-                        unknown printer took a galley of type and scrambled it
-                        to make a type specimen book. It has survived not only
-                        five centuries, but also the leap into electronic
-                        typesetting, remaining essentially unchanged. It was
-                        popularised in the with the release of letraset sheets
-                        containing lorem ipsum passages, and more recently with
-                        desktop publishing software like aldus pagemaker
-                        including versions.
+                        Inspired by refined comfort and the minimalist aesthetic
+                        of Scandinavian Modernism, Bodie has been created to
+                        provide practical luxury in a softer space. Bodie
+                        creates an enduring first impression. Characterised by
+                        the smooth curve of the sofa’s cushions, which
+                        seamlessly combines a strong structure with a simple,
+                        organic expression. Appearing compact and neat within
+                        space, yet spacious and with generous comfort.
                       </p>
                       <p class="m-top-sm m-bottom-sm">
-                        There are many variations of passages of lorem ipsum
-                        available, but the majority have suffered alteration in
-                        some form, by injected humour, or randomised words which
-                        don’t look even slightly believable. If you are going to
-                        use a passage of lorem ipsum, you need to be sure there
-                        isn’t anything embarrassing hidden in the middle of
-                        text. All the lorem ipsum generators on the internet
-                        tend to repeat predefined chunks as necessary, making
-                        this the first true generator on the internet. It uses a
-                        dictionary of over 200 Latin words, combined with a
-                        handful of model sentence structures, to generate Lorem
-                        Ipsum which looks reasonable. The generated Lorem Ipsum
-                        is therefore always free from repetition, injected
-                        humour.
+                        “People are migrating away from their desks looking for
+                        kinds of spaces that they feel comfortable in. We wanted
+                        to disrupt the mediocre with an encounter that will
+                        provide a quality experience.” Tom Potts Furniture
+                        Designer. <br />
+                        Designed, crafted and stitched by our master craftsmen
+                        in Cheltenham; Bodie is the perfect choice for spaces
+                        where low maintenance and high comfort is required with
+                        an exquisite attention to detail.
                       </p>
                       <span
                         class="post-like text-muted tooltip-test"
@@ -115,11 +107,12 @@
                             world
                           </h5>
                           <p>
-                            The standard chunk of Lorem Ipsum used since the
-                            1500s is reproduced below for those interested.
-                            Sections from “de Finibus Bonorum et Malorum” by
-                            Cicero are also reproduced in their exact original
-                            form.
+                            Interior design is all about how we experience
+                            spaces. It’s a powerful, essential part of our daily
+                            lives and affects how we live, work, play, and even
+                            heal. Comfortable homes, functional workplaces,
+                            beautiful public spaces—that’s interior design at
+                            work.
                           </p>
                         </div>
                       </div>
@@ -206,7 +199,7 @@
                           </div>
                           <div class="text-box col-md-10 col-8 p-l-0 p-r0">
                             <a href="#/Profile">
-                              <h5 class="m-b-0">Abdelrahman Ezzat</h5></a
+                              <h5 class="m-b-0">Tony Marko</h5></a
                             >
                             <p>
                               Very nice and informative article. In all the

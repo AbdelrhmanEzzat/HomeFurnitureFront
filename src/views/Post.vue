@@ -71,13 +71,10 @@
                           | Post on January 20, 2022 | 70 comments</small
                         >
                         <p class="m-top-sm m-bottom-sm">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Nullam eros nibh, viverra a dui a, gravida
-                          varius velit. Nunc vel tempor nisi. Aenean id
-                          pellentesque mi, non placerat mi. Integer luctus
-                          accumsan tellus. Vivamus quis elit sit amet nibh
-                          lacinia suscipit eu quis purus. Vivamus tristique est
-                          non ipsum dapibus lacinia sed nec metus.
+                          Inspired by refined comfort and the minimalist
+                          aesthetic of Scandinavian Modernism, Bodie has been
+                          created to provide practical luxury in a softer space.
+                          Bodie creates an enduring first impression.
                         </p>
                         <a href="./#/SinglePost " style="color: firebrick"
                           ><i class="fa fa-angle-double-right"></i> Continue
@@ -135,26 +132,30 @@
                           on Dec 10, 2021 | 32 comments</small
                         >
                         <p class="m-top-sm m-bottom-sm">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Nullam eros nibh, viverra a dui a, gravida
-                          varius velit. Nunc vel tempor nisi. Aenean id
-                          pellentesque mi, non placerat mi. Integer luctus
-                          accumsan tellus. Vivamus quis elit sit amet nibh
-                          lacinia suscipit eu quis purus. Vivamus tristique est
-                          non ipsum dapibus lacinia sed nec metus.
+                          Our Office Collection was created for the new way we
+                          live and work,providing beautify designed, ergonomic,
+                          and sustainably made furniture for the home. Designed
+                          by john doe and engineered by Home Furniture Design’s
+                          expert team, it is an elegant, fluid table that sits
+                          stylishly in any space.The luxuriously soft padding
+                          adds extra comfort, while its fine seam patterned
+                          upholstery and striking sleek chrome arms demonstrate
+                          the refined detail we strive for. The polished
+                          aluminum 4-star swivel base and glides for hard or
+                          soft floors.
+                          <a href="./#/SinglePost" style="color: firebrick">
+                            <i class="fa fa-angle-double-right"></i>
+                            Continue reading</a
+                          >
+                          <span
+                            class="post-like text-muted tooltip-test"
+                            data-toggle="tooltip"
+                            data-original-title="I like this post!"
+                          >
+                            <i class="fa fa-heart" style="color: #e31c1c;"></i>
+                            <span class="like-count">68</span>
+                          </span>
                         </p>
-                        <a href="./#/SinglePost" style="color: firebrick">
-                          <i class="fa fa-angle-double-right"></i>
-                          Continue reading</a
-                        >
-                        <span
-                          class="post-like text-muted tooltip-test"
-                          data-toggle="tooltip"
-                          data-original-title="I like this post!"
-                        >
-                          <i class="fa fa-heart" style="color: #e31c1c;"></i>
-                          <span class="like-count">68</span>
-                        </span>
                       </div>
                     </div>
                   </div>
@@ -177,20 +178,23 @@
                           />
                         </div>
                       </div>
-                      <h4>Modern Living Sofa</h4>
+                      <h4>Fairfax Living Room</h4>
                       <div class="text">
                         <small class="text-muted"
                           >By <a href="#"><strong> Devid lio</strong></a> | Post
                           on Oct 30, 2021 | 58 comments</small
                         >
                         <p class="m-top-sm m-bottom-sm">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Nullam eros nibh, viverra a dui a, gravida
-                          varius velit. Nunc vel tempor nisi. Aenean id
-                          pellentesque mi, non placerat mi. Integer luctus
-                          accumsan tellus. Vivamus quis elit sit amet nibh
-                          lacinia suscipit eu quis purus. Vivamus tristique est
-                          non ipsum dapibus lacinia sed nec metus.
+                          The Fairfax collection has a confident and
+                          contemporary aesthetic. The elegant low back design,
+                          linear form and deep buttoned, tapered seat cushion,
+                          delivers a refined range with an impressive level of
+                          comfort. The elegant low back design, linear form and
+                          deep buttoned, tapered seat cushion, delivers a
+                          refined range with an impressive level of comfort. The
+                          armchair, two and three seat sofas have delightful
+                          attention to detail with luxurious upholstery that
+                          would enhance any space.
                         </p>
                         <a href="./#/SinglePost" style="color: firebrick">
                           <i class="fa fa-angle-double-right"></i>
@@ -250,13 +254,14 @@
                           Post on February 1, 2021 | 33 comments</small
                         >
                         <p class="m-top-sm m-bottom-sm">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Nullam eros nibh, viverra a dui a, gravida
-                          varius velit. Nunc vel tempor nisi. Aenean id
-                          pellentesque mi, non placerat mi. Integer luctus
-                          accumsan tellus. Vivamus quis elit sit amet nibh
-                          lacinia suscipit eu quis purus. Vivamus tristique est
-                          non ipsum dapibus lacinia sed nec metus.
+                          This versatile offering is ideally suited to the home,
+                          perfect for an office, dining and lounge environment.
+                          To achieve the comfort levels for there is a generous
+                          scoop to the seat, whilst the lounge chair offers a
+                          slight back recline. An incredibly hard-wearing and
+                          robust construction finished in Black American Walnut
+                          or European Oak, complimented by fine fabric
+                          upholstery in a range of colours.
                         </p>
                         <a href="./#/SinglePost" style="color: firebrick">
                           <i class="fa fa-angle-double-right"></i>

@@ -146,10 +146,7 @@
           </div>
           <!-- --------------------------Featured products--------------------------------- -->
 
-          <div
-            class="features text-center"
-            style="padding-top: 5%; padding-bottom:5%"
-          >
+          <div class="features text-center" style="padding-top: 5%;">
             <h2 class="title text-center" style="margin-bottom: 0px;">
               Featured products
             </h2>
@@ -258,15 +255,17 @@
               </div>
             </div>
           </div>
-          <!-- <div
+          <div
             class="md-layout-item md-medium-size-33 md-small-size-100"
-            style="display: block;margin-left: auto;margin-right: auto"
+            style="display: block;margin-left: auto;margin-right: auto; padding-bottom:5%"
           >
-            <md-button class="md-primary">View all</md-button>
-          </div> -->
+            <a href="#/shop">
+              <md-button class="md-primary">View all</md-button>
+            </a>
+          </div>
 
           <!-- --------------------------Row------------------------------ -->
-          <div class="row" style="padding-top:5%;">
+          <div class="row" style="padding-top:8%;">
             <div class="columnleft">
               <h3 class="info-title" style="margin-bottom:5%">
                 Its all in the details
@@ -470,7 +469,7 @@ export default {
   display: flex;
   width: 111.3%;
   flex-direction: row-reverse;
-  margin-top: -3.6%;
+  margin-top: -2.4%;
 }
 .columnleft1 {
   width: 80%;
