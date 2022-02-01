@@ -83,7 +83,7 @@
               </md-list-item>
               <li class="md-list-item">
                 <a
-                  href="/#/chair"
+                  href="javascript:void(0)"
                   class="md-list-item-router md-list-item-container md-button-clean dropdown"
                 >
                   <div class="md-list-item-content">
