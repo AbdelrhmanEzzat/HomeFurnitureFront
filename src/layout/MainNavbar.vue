@@ -391,6 +391,10 @@ export default {
     padding: 3px;
     margin: 5px;
 }
+.md-list-item-content{
+margin-left: -24px;
+
+}
 </style>
 
 <!-- position: initial;
