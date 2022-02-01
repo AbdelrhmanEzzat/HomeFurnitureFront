@@ -94,14 +94,14 @@
               <div class="info">
                 <div class="hovereffect">
                   <img
-                    src="https://cdn.shopify.com/s/files/1/0399/1126/0318/collections/hero_eafa3f87-3f78-4352-86ac-139dfef3512a_389x250.jpg?v=1596788896"
+                    src="https://cdn.shopify.com/s/files/1/0399/1126/0318/collections/Boss_atHome_Product_-_Ola4_1920x1200.jpg?v=1601544830"
                     alt="Rounded Image"
                     class="img-raised rounded img-fluid"
-                    style="width: 100%;height: auto;"
+                    style="width: 100%;height:225px"
                   />
                   <div class="overlay">
                     <h2>
-                      <a href="#">Home Office</a>
+                      <a href="#/shop">Chairs</a>
                     </h2>
                   </div>
                 </div>

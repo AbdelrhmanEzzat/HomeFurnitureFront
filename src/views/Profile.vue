@@ -118,9 +118,10 @@
                                 class="card-description"
                                 style="font-weight: bolder;"
                               >
-                                Armchairs and chaise lounges with a sleek and
-                                modular design that you can combine in many
-                                ways...
+                                Inspired by refined comfort and the minimalist
+                                aesthetic of Scandinavian Modernism, Bodie has
+                                been created to provide practical luxury in a
+                                softer space....
                               </h7>
                               <a href="#/SinglePost">Read More</a>
                               <div
@@ -180,10 +181,9 @@
                                 class="card-description"
                                 style="font-weight: bolder;"
                               >
-                                Lorem Ipsum is simply text of the printing and
-                                typesetting industry lorem Ipsum has been
-                                standard dummy lorem Ipsum has been standard
-                                dummy text.
+                                This versatile offering is ideally suited to the
+                                home, perfect for an office, dining and lounge
+                                environment. To achieve the comfort..
                               </h7>
                               <a href="#/SinglePost">Read More</a>
                               <div
