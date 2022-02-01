@@ -306,6 +306,87 @@
                   <div class="product-grid7">
                     <div class="product-image7">
                       <a href="#">
+                        <img class="pic-1" :src="img7" />
+                        <img class="pic-2" :src="img07" />
+                      </a>
+                      <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                      </ul>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title"><a href="#">Coza Work Chair</a></h3>
+                      <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="price">
+                        £440,00
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-grid7">
+                    <div class="product-image7">
+                      <a href="#">
+                        <img class="pic-1" :src="img8" />
+                        <img class="pic-2" :src="img8" />
+                      </a>
+                      <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                      </ul>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title"><a href="#">Delphi Work Chair</a></h3>
+                      <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="price">
+                        £680,00
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-grid7">
+                    <div class="product-image7">
+                      <a href="#">
+                        <img class="pic-1" :src="img9" />
+                        <img class="pic-2" :src="img9" />
+                      </a>
+                      <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                      </ul>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title"><a href="#">Coza Work Chair</a></h3>
+                      <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="price">
+                        £440,00
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-grid7">
+                    <div class="product-image7">
+                      <a href="#">
                         <img class="pic-1" :src="img4" />
                         <img class="pic-2" :src="img4" />
                       </a>
@@ -389,87 +470,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="product-grid7">
-                    <div class="product-image7">
-                      <a href="#">
-                        <img class="pic-1" :src="img7" />
-                        <img class="pic-2" :src="img07" />
-                      </a>
-                      <ul class="social">
-                        <li><a href="" class="fa fa-search"></a></li>
-                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                      </ul>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="title"><a href="#">Coza Work Chair</a></h3>
-                      <ul class="rating">
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                      </ul>
-                      <div class="price">
-                        £440,00
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="product-grid7">
-                    <div class="product-image7">
-                      <a href="#">
-                        <img class="pic-1" :src="img8" />
-                        <img class="pic-2" :src="img8" />
-                      </a>
-                      <ul class="social">
-                        <li><a href="" class="fa fa-search"></a></li>
-                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                      </ul>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="title"><a href="#">Delphi Work Chair</a></h3>
-                      <ul class="rating">
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                      </ul>
-                      <div class="price">
-                        £680,00
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="product-grid7">
-                    <div class="product-image7">
-                      <a href="#">
-                        <img class="pic-1" :src="img9" />
-                        <img class="pic-2" :src="img9" />
-                      </a>
-                      <ul class="social">
-                        <li><a href="" class="fa fa-search"></a></li>
-                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                      </ul>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="title"><a href="#">Coza Work Chair</a></h3>
-                      <ul class="rating">
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                      </ul>
-                      <div class="price">
-                        £440,00
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
                 <div class="col-md-4">
                   <div class="product-grid7">
                     <div class="product-image7">
@@ -500,64 +501,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="product-grid7">
-                    <div class="product-image7">
-                      <a href="#">
-                        <img class="pic-1" :src="img2" />
-                        <img class="pic-2" :src="img2" />
-                      </a>
-                      <ul class="social">
-                        <li><a href="" class="fa fa-search"></a></li>
-                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                      </ul>
-                      <span class="product-new-label">New</span>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="title"><a href="#">Ola Chair</a></h3>
-                      <ul class="rating">
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                      </ul>
-                      <div class="price">
-                        £160,00
-                        <span>£180,00</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="product-grid7">
-                    <div class="product-image7">
-                      <a href="#">
-                        <img class="pic-1" :src="img3" />
-                        <img class="pic-2" :src="img3" />
-                      </a>
-                      <ul class="social">
-                        <li><a href="" class="fa fa-search"></a></li>
-                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                      </ul>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="title"><a href="#">Saint Chair</a></h3>
-                      <ul class="rating">
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                      </ul>
-                      <div class="price">
-                        £140.00
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
                 <div class="col-md-4">
                   <div class="product-grid7">
                     <div class="product-image7">
@@ -638,6 +581,63 @@
                       </ul>
                       <div class="price">
                         £1,350.00
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-grid7">
+                    <div class="product-image7">
+                      <a href="#">
+                        <img class="pic-1" :src="img2" />
+                        <img class="pic-2" :src="img2" />
+                      </a>
+                      <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                      </ul>
+                      <span class="product-new-label">New</span>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title"><a href="#">Ola Chair</a></h3>
+                      <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="price">
+                        £160,00
+                        <span>£180,00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-grid7">
+                    <div class="product-image7">
+                      <a href="#">
+                        <img class="pic-1" :src="img3" />
+                        <img class="pic-2" :src="img3" />
+                      </a>
+                      <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                      </ul>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="title"><a href="#">Saint Chair</a></h3>
+                      <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                      </ul>
+                      <div class="price">
+                        £140.00
                       </div>
                     </div>
                   </div>
