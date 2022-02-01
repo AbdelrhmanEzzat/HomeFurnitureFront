@@ -6,7 +6,7 @@
           <div class="image-wrapper">
             <div class="brand">
               <div class="shoptitle"></div>
-              <h1 class="shopmain">Shop</h1>
+              <h1 class="shopmain">Chairs</h1>
               <h3 class="shopmain">
                 Contemporary Seating Collection - Sustainably made in the UK
               </h3>

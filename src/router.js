@@ -10,6 +10,7 @@ import MainFooter from "./layout/MainFooter.vue";
 
 import Home from "./views/Home.vue";
 import Shop from "./views/Shop.vue";
+import Chair from "./views/Chair.vue";
 import Post from "./views/Post.vue";
 import Cart from "./views/Cart.vue";
 import Chat from "./views/Chat.vue";
@@ -77,6 +78,15 @@ export default new Router({
             path: "/shop",
             name: "shop",
             components: { default: Shop, header: MainNavbar, footer: MainFooter },
+            props: {
+                header: { colorOnScroll: 400 },
+                footer: { backgroundColor: "black" },
+            },
+        },
+        {
+            path: "/chair",
+            name: "chair",
+            components: { default: Chair, header: MainNavbar, footer: MainFooter },
             props: {
                 header: { colorOnScroll: 400 },
                 footer: { backgroundColor: "black" },

@@ -79,7 +79,34 @@
               >
                 <i class="material-icons">store</i>
                 <p>Shop</p>
+
               </md-list-item>
+              <li class="md-list-item">
+                <a
+                  href="javascript:void(0)"
+                  class="md-list-item-router md-list-item-container md-button-clean dropdown"
+                >
+                  <div class="md-list-item-content">
+                    <drop-down direction="down" class="profile-photo">
+                    
+                      <ul class="dropdown-menu dropdown-menu-right">
+                        <li class="dropdown-header">Categories</li>
+                        <li>
+                          <a href="/#/chair" class="dropdown-item">Chair</a>
+                        </li>
+                        
+                          <li>
+                          <a href="/#/chat" class="dropdown-item">Tables</a>
+                        </li>
+                        
+                        <li>
+                          <a href="#pablo" class="dropdown-item">Loung</a>
+                        </li>
+                      </ul>
+                    </drop-down>
+                  </div>
+                </a>
+              </li>
 
               <md-list-item
                 href="/#/post"
