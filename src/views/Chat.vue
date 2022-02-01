@@ -287,7 +287,7 @@ export default {
   background: -webkit-linear-gradient(to bottom right, rgba(252, 203, 144, 1), rgba(213, 126, 235, 1));
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to bottom right, rgb(26, 95, 29), rgb(160, 245, 174))
+  background: linear-gradient(to bottom right, rgb(23,34,54), rgb(97,129,144))
 }
 
 .mask-custom {
