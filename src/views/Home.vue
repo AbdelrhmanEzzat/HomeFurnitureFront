@@ -73,11 +73,11 @@
               class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
             >
               <h2 class="title text-center">Let's talk product</h2>
-              <h3 style="font-weight:300;margin: 5%;">
+              <h4 style="font-weight:400;margin: 5%;">
                 Home Furniture Store was created for the new ways we live and
                 work.We make beautifully designed, sustainable furniture in the
                 UK. Human centric furniture, designed for living.
-              </h3>
+              </h4>
             </div>
           </div>
           <div

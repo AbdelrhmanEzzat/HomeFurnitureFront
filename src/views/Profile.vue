@@ -422,7 +422,7 @@ export default {
   props: {
     header: {
       type: String,
-      default: require("@/assets/img/car2.webp"),
+      default: require("@/assets/img/car5.webp"),
     },
     img: {
       type: String,

@@ -7,11 +7,7 @@
             <div class="brand">
               <div class="shoptitle"></div>
               <h1 class="shopmain">Post</h1>
-              <h3 class="shopmain">
-                The real journey of discovery does not require going to a new
-                land, but <br />
-                rather it requires seeing with new eyes.
-              </h3>
+              <h3 class="shopmain"></h3>
             </div>
           </div>
         </div>
