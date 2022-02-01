@@ -36,7 +36,7 @@
               <md-icon>home</md-icon>
               Desgin your Home and shop for new items
             </h3>
-            <a href="#/categories">
+            <a href="#/shop">
               <md-button class="md-primary md-round">visit store</md-button>
             </a>
           </div>

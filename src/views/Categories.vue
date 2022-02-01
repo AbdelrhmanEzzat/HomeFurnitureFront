@@ -36,7 +36,7 @@
             <div class="col-sm-8" style="width:50%">
               <div class="bg-image">
                 <div class="hov">
-                  <a href="#/Shop">
+                  <a href="#/chair">
                     <img :src="img1" alt="Sample" />
                     <div
                       class="mask"

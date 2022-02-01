@@ -391,7 +391,7 @@
         @include tabs-color($brand-info);
     }
     .active.md-list-item.md-success .md-list-item-button {
-        @include tabs-color($brand-success);
+        @include tabs-color(rgb(243, 109, 31));
     }
     .active.md-list-item.md-danger .md-list-item-button {
         @include tabs-color($brand-danger);
