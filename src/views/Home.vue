@@ -101,7 +101,7 @@
                   />
                   <div class="overlay">
                     <h2>
-                      <a href="#/shop">Chairs</a>
+                      <a href="#/chair" style="color: antiquewhite">Chairs</a>
                     </h2>
                   </div>
                 </div>
@@ -118,7 +118,9 @@
                     />
                     <div class="overlay">
                       <h2>
-                        <a href="#">Dining Tables and Chairs</a>
+                        <a href="#" style="color: antiquewhite"
+                          >Dining Tables and Chairs</a
+                        >
                       </h2>
                     </div>
                   </div>
@@ -136,7 +138,7 @@
                     />
                     <div class="overlay">
                       <h2>
-                        <a href="#">Lounge</a>
+                        <a href="#" style="color: antiquewhite">Lounge</a>
                       </h2>
                     </div>
                   </div>
