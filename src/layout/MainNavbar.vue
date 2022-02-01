@@ -83,7 +83,7 @@
               </md-list-item>
               <li class="md-list-item">
                 <a
-                  href="javascript:void(0)"
+                  href="/#/chair"
                   class="md-list-item-router md-list-item-container md-button-clean dropdown"
                 >
                   <div class="md-list-item-content">
@@ -96,11 +96,11 @@
                         </li>
                         
                           <li>
-                          <a href="/#/chat" class="dropdown-item">Tables</a>
+                          <a href="javascript:void(0" class="dropdown-item">Tables</a>
                         </li>
                         
                         <li>
-                          <a href="#pablo" class="dropdown-item">Loung</a>
+                          <a href="javascript:void(0)" class="dropdown-item">Loung</a>
                         </li>
                       </ul>
                     </drop-down>
