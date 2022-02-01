@@ -7,9 +7,7 @@
             <div class="brand">
               <div class="shoptitle"></div>
               <h1 class="shopmain">Shop</h1>
-              <h3 class="shopmain">
-                Contemporary Seating Collection - Sustainably made in the UK
-              </h3>
+              <h3 class="shopmain"></h3>
             </div>
           </div>
         </div>
@@ -663,7 +661,7 @@ export default {
   props: {
     image: {
       type: String,
-      default: require("@/assets/img/leaf5.jpg"),
+      default: require("@/assets/img/shopback.jpg"),
     },
     img1: {
       type: String,
