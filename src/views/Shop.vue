@@ -298,343 +298,39 @@
               </div>
             </div>
             <!-- ------------------- -->
-            <div class="col-md-9">
-              <div class="row product-list">
-                <div class="col-md-4">
-                  <div class="product-grid7">
-                    <div class="product-image7">
-                      <a href="#/SingleProduct">
-                        <img class="pic-1" :src="img1" />
-                        <img class="pic-2" :src="img01" />
-                      </a>
-                      <ul class="social">
-                        <li><a href="" class="fa fa-search"></a></li>
-                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                      </ul>
-                      <span class="product-new-label">New</span>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="title"><a href="#">Maysa Lounge</a></h3>
-                      <ul class="rating">
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                      </ul>
-                      <div class="price">
-                        £2,040.00
-                        <span>£2,750.00</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="product-grid7">
-                    <div class="product-image7">
-                      <a href="#">
-                        <img class="pic-1" :src="img2" />
-                        <img class="pic-2" :src="img02" />
-                      </a>
-                      <ul class="social">
-                        <li><a href="" class="fa fa-search"></a></li>
-                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                      </ul>
-                      <span class="product-new-label">New</span>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="title"><a href="#">Bodie Lounge</a></h3>
-                      <ul class="rating">
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                      </ul>
-                      <div class="price">
-                        £1,760.00
-                        <span>£1,930.00</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="product-grid7">
-                    <div class="product-image7">
-                      <a href="#">
-                        <img class="pic-1" :src="img3" />
-                        <img class="pic-2" :src="img3" />
-                      </a>
-                      <ul class="social">
-                        <li><a href="" class="fa fa-search"></a></li>
-                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                      </ul>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="title"><a href="#">Paloma Lounge</a></h3>
-                      <ul class="rating">
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                      </ul>
-                      <div class="price">
-                        £750.00
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="product-grid7">
-                    <div class="product-image7">
-                      <a href="#">
-                        <img class="pic-1" :src="img4" />
-                        <img class="pic-2" :src="img4" />
-                      </a>
-                      <ul class="social">
-                        <li><a href="" class="fa fa-search"></a></li>
-                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                      </ul>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="title"><a href="#">Paloma Chair</a></h3>
-                      <ul class="rating">
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                      </ul>
-                      <div class="price">
-                        £550.00
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="product-grid7">
-                    <div class="product-image7">
-                      <a href="#">
-                        <img class="pic-1" :src="img5" />
-                        <img class="pic-2" :src="img5" />
-                      </a>
-                      <ul class="social">
-                        <li><a href="" class="fa fa-search"></a></li>
-                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                      </ul>
-                      <span class="product-new-label">New</span>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="title"><a href="#">DNA Lounge Chair</a></h3>
-                      <ul class="rating">
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                      </ul>
-                      <div class="price">
-                        £1,340.00
-                        <span>£1,600.00</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="product-grid7">
-                    <div class="product-image7">
-                      <a href="#">
-                        <img class="pic-1" :src="img6" />
-                        <img class="pic-2" :src="img06" />
-                      </a>
-                      <ul class="social">
-                        <li><a href="" class="fa fa-search"></a></li>
-                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                      </ul>
-                      <span class="product-new-label">New</span>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="title"><a href="#">Trinetic Work Chair</a></h3>
-                      <ul class="rating">
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                      </ul>
-                      <div class="price">
-                        £540,00
-                        <span>£730,00</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="product-grid7">
-                    <div class="product-image7">
-                      <a href="#">
-                        <img class="pic-1" :src="img7" />
-                        <img class="pic-2" :src="img07" />
-                      </a>
-                      <ul class="social">
-                        <li><a href="" class="fa fa-search"></a></li>
-                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                      </ul>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="title"><a href="#">Coza Work Chair</a></h3>
-                      <ul class="rating">
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                      </ul>
-                      <div class="price">
-                        £440,00
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="product-grid7">
-                    <div class="product-image7">
-                      <a href="#">
-                        <img class="pic-1" :src="img8" />
-                        <img class="pic-2" :src="img8" />
-                      </a>
-                      <ul class="social">
-                        <li><a href="" class="fa fa-search"></a></li>
-                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                      </ul>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="title"><a href="#">Delphi Work Chair</a></h3>
-                      <ul class="rating">
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                      </ul>
-                      <div class="price">
-                        £680,00
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="product-grid7">
-                    <div class="product-image7">
-                      <a href="#">
-                        <img class="pic-1" :src="img9" />
-                        <img class="pic-2" :src="img9" />
-                      </a>
-                      <ul class="social">
-                        <li><a href="" class="fa fa-search"></a></li>
-                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                      </ul>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="title"><a href="#">Coza Work Chair</a></h3>
-                      <ul class="rating">
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                      </ul>
-                      <div class="price">
-                        £440,00
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="product-grid7">
-                    <div class="product-image7">
-                      <a href="#">
-                        <img class="pic-1" :src="img10" />
-                        <img class="pic-2" :src="img010" />
-                      </a>
-                      <ul class="social">
-                        <li><a href="" class="fa fa-search"></a></li>
-                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                      </ul>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="title"><a href="#">Orten Lounge</a></h3>
-                      <ul class="rating">
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                      </ul>
-                      <div class="price">
-                        £1,630.00
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="product-grid7">
-                    <div class="product-image7">
-                      <a href="#">
-                        <img class="pic-1" :src="img11" />
-                        <img class="pic-2" :src="img11" />
-                      </a>
-                      <ul class="social">
-                        <li><a href="" class="fa fa-search"></a></li>
-                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                      </ul>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="title"><a href="#">Agent Chair</a></h3>
-                      <ul class="rating">
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                      </ul>
-                      <div class="price">
-                        £415.00
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="product-grid7">
-                    <div class="product-image7">
-                      <a href="#">
-                        <img class="pic-1" :src="img12" />
-                        <img class="pic-2" :src="img012" />
-                      </a>
-                      <ul class="social">
-                        <li><a href="" class="fa fa-search"></a></li>
-                        <li><a href="" class="fa fa-shopping-bag"></a></li>
-                        <li><a href="" class="fa fa-shopping-cart"></a></li>
-                      </ul>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="title"><a href="#">Kruze Lounge</a></h3>
-                      <ul class="rating">
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                        <li class="fa fa-star"></li>
-                      </ul>
-                      <div class="price">
-                        £1,350.00
+            <div class="col-lg-9">
+              <div class="row mt-4">
+                <div
+                  class="col-lg-4 col-md-6 mb-4"
+                  v-for="item in list"
+                  v-bind:key="item.id"
+                  v-bind:item="item"
+                >
+                  <div class="card h-100">
+                    <div class="product-grid7">
+                      <div class="product-image7">
+                        <a href="#/SingleProduct">
+                          <img class="pic-1" :src="img1" />
+                          <img class="pic-2" :src="img01" />
+                        </a>
+                        <ul class="social">
+                          <li><a href="" class="fa fa-search"></a></li>
+                          <li><a href="" class="fa fa-shopping-bag"></a></li>
+                          <li><a href="" class="fa fa-shopping-cart"></a></li>
+                        </ul>
+                        <!-- <span class="product-new-label">New</span> -->
+                        <div class="card-body">
+                          <h5 class="card-title">
+                            <a href="#">{{ item.product_name }}</a>
+                          </h5>
+                          <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                          </ul>
+                          <h5>{{ item.cost }}</h5>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -647,17 +343,23 @@
     </div>
   </div>
 </template>
+
 <script
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"
 ></script>
+
 <script>
+import Vue from "vue";
+import axios from "axios";
+import VueAxios from "vue-axios";
+Vue.use(VueAxios, axios);
 import { Slider } from "@/components";
 
 export default {
   components: { Slider },
-  name: "test",
-  bodyClass: "test-page",
+  name: "shop",
+  bodyClass: "shop-page",
   props: {
     image: {
       type: String,
@@ -671,70 +373,6 @@ export default {
       type: String,
       default: require("@/assets/img/shop/1+.jpg"),
     },
-    img2: {
-      type: String,
-      default: require("@/assets/img/shop/2.jpg"),
-    },
-    img02: {
-      type: String,
-      default: require("@/assets/img/shop/2+.jpg"),
-    },
-    img3: {
-      type: String,
-      default: require("@/assets/img/shop/3.jpg"),
-    },
-    img4: {
-      type: String,
-      default: require("@/assets/img/shop/4.jpg"),
-    },
-    img5: {
-      type: String,
-      default: require("@/assets/img/shop/5.jpg"),
-    },
-    img6: {
-      type: String,
-      default: require("@/assets/img/shop/6.jpg"),
-    },
-    img06: {
-      type: String,
-      default: require("@/assets/img/shop/6+.jpg"),
-    },
-    img7: {
-      type: String,
-      default: require("@/assets/img/shop/7.jpg"),
-    },
-    img07: {
-      type: String,
-      default: require("@/assets/img/shop/7+.jpg"),
-    },
-    img8: {
-      type: String,
-      default: require("@/assets/img/shop/8.jpg"),
-    },
-    img9: {
-      type: String,
-      default: require("@/assets/img/shop/9.jpg"),
-    },
-    img10: {
-      type: String,
-      default: require("@/assets/img/shop/10.jpg"),
-    },
-    img010: {
-      type: String,
-      default: require("@/assets/img/shop/10+.jpg"),
-    },
-    img11: {
-      type: String,
-      default: require("@/assets/img/shop/11.jpg"),
-    },
-    img12: {
-      type: String,
-      default: require("@/assets/img/shop/12.jpg"),
-    },
-    img012: {
-      type: String,
-      default: require("@/assets/img/shop/12+.jpg"),
-    },
   },
   data() {
     return {
@@ -742,7 +380,19 @@ export default {
         simple: 40,
         rangeSlider: [20, 60],
       },
+      list: [],
+      errors: [],
     };
+  },
+  async created() {
+    try {
+      const response = await axios.get(
+        `https://homefurniture00.000webhostapp.com/api/products`
+      );
+      this.list = response.data;
+    } catch (e) {
+      this.errors.push(e);
+    }
   },
   methods: {},
   computed: {
@@ -830,12 +480,15 @@ export default {
   opacity: 1;
   transform: rotateY(0);
 }
+.card-body {
+  text-align: center;
+}
 .product-grid7 .social {
   padding: 0;
   margin: 0;
   list-style: none;
   position: absolute;
-  bottom: 3px;
+  bottom: 40%;
   left: -20%;
   z-index: 1;
   transition: all 0.5s ease 0s;
@@ -859,25 +512,6 @@ export default {
   color: #fff;
   background-color: #bdbdbd;
 }
-.product-grid7 .product-new-label {
-  color: #fff;
-  background-color: #333;
-  padding: 5px 10px;
-  border-radius: 5px;
-  display: block;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-.product-grid7 .product-content {
-  text-align: center;
-  padding: 20px 0 0;
-}
-.product-grid7 .title {
-  font-size: 15px;
-  font-weight: 600;
-  margin: 0 0 10px;
-}
 
 .product-grid7 .rating {
   color: #b60c0c;
@@ -886,21 +520,21 @@ export default {
   margin: 0 0 10px;
   list-style: none;
 }
-.product-grid7 .price {
-  color: #333;
-  font-size: 20px;
-  font-family: Lora, serif;
-  font-weight: 700;
-  margin-bottom: 8px;
-  text-align: center;
-  transition: all 0.3s;
-}
-.product-grid7 .price span {
-  color: #999;
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: line-through;
-  margin-left: 7px;
-  display: inline-block;
-}
+// .product-grid7 .price {
+//   color: #333;
+//   font-size: 20px;
+//   font-family: Lora, serif;
+//   font-weight: 700;
+//   margin-bottom: 8px;
+//   text-align: center;
+//   transition: all 0.3s;
+// }
+// .product-grid7 .price span {
+//   color: #999;
+//   font-size: 14px;
+//   font-weight: 700;
+//   text-decoration: line-through;
+//   margin-left: 7px;
+//   display: inline-block;
+// }
 </style>

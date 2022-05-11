@@ -79,7 +79,6 @@
               >
                 <i class="material-icons">store</i>
                 <p>Shop</p>
-
               </md-list-item>
               <li class="md-list-item">
                 <a
@@ -88,26 +87,28 @@
                 >
                   <div class="md-list-item-content">
                     <drop-down direction="down" class="profile-photo">
-                    
                       <ul class="dropdown-menu dropdown-menu-right">
                         <li class="dropdown-header">Categories</li>
                         <li>
                           <a href="/#/chair" class="dropdown-item">Chair</a>
                         </li>
-                        
-                          <li>
-                          <a href="javascript:void(0" class="dropdown-item">Tables</a>
-                        </li>
-                        
+
                         <li>
-                          <a href="javascript:void(0)" class="dropdown-item">Loung</a>
+                          <a href="javascript:void(0" class="dropdown-item"
+                            >Tables</a
+                          >
+                        </li>
+
+                        <li>
+                          <a href="javascript:void(0)" class="dropdown-item"
+                            >Loung</a
+                          >
                         </li>
                       </ul>
                     </drop-down>
                   </div>
                 </a>
               </li>
-
               <md-list-item
                 href="/#/post"
                 @click="scrollToElement()"
@@ -227,10 +228,10 @@
                                     >Settings and other stuff</a
                                   >
                                 </li> -->
-                          <li>
+                        <li>
                           <a href="/#/chat" class="dropdown-item">Messenger</a>
                         </li>
-                        
+
                         <li>
                           <a href="#pablo" class="dropdown-item">Sign Out</a>
                         </li>
@@ -240,14 +241,17 @@
                 </a>
               </li>
 
-              <md-list-item class="cart"
+              <md-list-item
+                class="cart"
                 href="/#/cart"
                 @click="scrollToElement()"
                 v-if="showDownload"
               >
                 <i class="material-icons">shopping_cart</i>
                 <p>Cart</p>
-                <b-badge><span style="position: fixed;
+                <b-badge
+                  ><span
+                    style="position: fixed;
                       top: -9px;
                       right: 6px;
                       padding: 3px 9px;
@@ -261,8 +265,10 @@
                       text-decoration: none;
                       text-shadow: 0 -1px 0 rgba(0,0,0,.6);
                                         
-                  ">3</span></b-badge>
-               
+                  "
+                    >3</span
+                  ></b-badge
+                >
               </md-list-item>
             </md-list>
           </div>
@@ -383,17 +389,16 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.sr-only .span{
+.sr-only .span {
   border-radius: 26px;
-    background-color: red;
-    color: white;
-    font-size: 14px;
-    padding: 3px;
-    margin: 5px;
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  padding: 3px;
+  margin: 5px;
 }
-.md-list-item-content{
-margin-left: -24px;
-
+.md-list-item-content {
+  margin-left: -24px;
 }
 </style>
 

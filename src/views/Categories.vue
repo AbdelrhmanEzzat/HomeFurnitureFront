@@ -33,10 +33,16 @@
       <div class="section section-basic">
         <div class="container">
           <div class="row" style="width:100%;">
-            <div class="col-sm-8" style="width:50%">
+            <div
+              class="col-lg-4 col-md-6 mb-4"
+              style="width:50%"
+              v-for="item in list"
+              v-bind:key="item.id"
+              v-bind:item="item"
+            >
               <div class="bg-image">
                 <div class="hov">
-                  <a href="#/chair">
+                  <a href="#">
                     <img :src="img1" alt="Sample" />
                     <div
                       class="mask"
@@ -45,66 +51,9 @@
                       <div
                         class="d-flex justify-content-center align-items-center h-100"
                       >
-                        <h2 class="text-white mb-0">Chairs</h2>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-8" style="width:50%">
-              <div class="bg-image">
-                <div class="hov">
-                  <a href="#/">
-                    <img :src="img2" alt="Sample" />
-                    <div
-                      class="mask"
-                      style="background-color: rgba(0, 0, 0, 0.5)"
-                    >
-                      <div
-                        class="d-flex justify-content-center align-items-center h-100"
-                      >
-                        <h2 class="text-white mb-0">Lounge</h2>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row" style="width:100%; padding-top:2%">
-            <div class="col-sm-8" style="width:50%">
-              <div class="bg-image">
-                <div class="hov">
-                  <a href="#/">
-                    <img :src="img3" class="w-100" alt="Sample" />
-                    <div
-                      class="mask"
-                      style="background-color: rgba(0, 0, 0, 0.5)"
-                    >
-                      <div
-                        class="d-flex justify-content-center align-items-center h-100"
-                      >
-                        <h2 class="text-white mb-0">Dining Table and Chair</h2>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-8" style="width:50%">
-              <div class="bg-image">
-                <div class="hov">
-                  <a href="#/">
-                    <img :src="img4" alt="Sample" />
-                    <div
-                      class="mask"
-                      style="background-color: rgba(0, 0, 0, 0.5)"
-                    >
-                      <div
-                        class="d-flex justify-content-center align-items-center h-100"
-                      >
-                        <h2 class="text-white mb-0">Office</h2>
+                        <h4 class="text-white mb-0">
+                          {{ item.category_name }}
+                        </h4>
                       </div>
                     </div>
                   </a>
@@ -123,6 +72,11 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"
 ></script>
 <script>
+import Vue from "vue";
+import axios from "axios";
+import VueAxios from "vue-axios";
+Vue.use(VueAxios, axios);
+
 export default {
   components: {},
   name: "categories",
@@ -150,7 +104,24 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      sliders: {
+        simple: 40,
+        rangeSlider: [20, 60],
+      },
+      list: [],
+      errors: [],
+    };
+  },
+  async created() {
+    try {
+      const response = await axios.get(
+        `https://homefurniture00.000webhostapp.com/api/categories`
+      );
+      this.list = response.data;
+    } catch (e) {
+      this.errors.push(e);
+    }
   },
   methods: {},
   computed: {
