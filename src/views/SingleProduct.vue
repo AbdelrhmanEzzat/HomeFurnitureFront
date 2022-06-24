@@ -7,10 +7,6 @@
             <div class="brand">
               <div style=" text-align: center; color: white;">
                 <h1 class="smain">Maysa Lounge</h1>
-                <p class="smain">
-                  The timeless luxury and craftsmanship, an elegant soft <br />
-                  seating and coffee table collection to enhance any space.
-                </p>
               </div>
             </div>
           </div>
@@ -66,35 +62,28 @@
                 </slide>
               </carousel>
             </div>
-            <div class="col-sm-8" style="width: 40%;">
+            <div
+              class="col-sm-8"
+              style="width:40%"
+              v-for="item in list"
+              v-bind:key="item.id"
+              v-bind:item="item"
+            >
               <div class="clearfix">
                 <div class="pull-right">
                   <h2 class="mt-5">
-                    $2,040.00<small class="text-success">(15%off)</small>
+                    {{ item.cost }}<small class="text-success"></small>
                   </h2>
                 </div>
                 <span class="h4">
-                  <strong class="text-success">Maysa Lounge</strong><br />
+                  <strong class="text-success">{{ item.product_name }}</strong
+                  ><br />
                   <small>70 Available</small>
                 </span>
               </div>
               <hr />
               <p>
-                The timeless luxury and craftmanship of Maysa creates an elegant
-                soft seating and coffee table collection that enhances any home.
-              </p>
-              <p>
-                Maysa has an inviting form that has been designed with comfort,
-                craftsmanship, elegance, and luxurious detail at its heart. Its
-                upholstery has a softness which has been designed to contrast
-                against the angular slim-line timber frame, whilst still
-                retaining the level of engineered ergonomic comfort we demand.
-              </p>
-              <p>
-                The generously proportioned arms, combined with panels and seams
-                that flow around the body, accentuate the curvature and overall
-                roundness of the body of Maysa, creating a form that commands
-                attention in any room.
+                {{ item.details }}
               </p>
 
               <hr />
@@ -111,6 +100,7 @@
           </div>
         </div>
       </div>
+
       <div class="section section-basic" style="    padding: 0;">
         <div class="row" style="width:100%">
           <div class="col-sm-8" style="width:50%;text-align:center">
@@ -124,6 +114,7 @@
               </p>
             </div>
           </div>
+
           <div class="col-sm-8" style="width:50%">
             <img :src="img1" alt="img1" />
           </div>
@@ -197,11 +188,18 @@
     </div>
   </div>
 </template>
+
 <script
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"
 ></script>
+
 <script>
+import Vue from "vue";
+import axios from "axios";
+import VueAxios from "vue-axios";
+Vue.use(VueAxios, axios);
+
 export default {
   components: {},
   name: "singleproduct",
@@ -234,8 +232,21 @@ export default {
       carousel2: require("@/assets/img/singleproduct/01.jpg"),
       carousel3: require("@/assets/img/singleproduct/001.jpg"),
       carousel4: require("@/assets/img/singleproduct/0001.jpg"),
+      list: undefined,
     };
   },
+
+  async created() {
+    try {
+      const response = await axios.get(
+        `https://homefurniture00.000webhostapp.com/api/products`
+      );
+      this.list = response.data;
+    } catch (e) {
+      this.errors.push(e);
+    }
+  },
+
   methods: {},
   computed: {
     headerStyle() {
