@@ -18,6 +18,7 @@ import SinglePost from "./views/SinglePost.vue";
 import SingleProduct from "./views/SingleProduct.vue";
 import Categories from "./views/Categories.vue";
 
+import Posts from "./views/components/Posts.vue";
 Vue.use(Router);
 
 export default new Router({
@@ -30,6 +31,19 @@ export default new Router({
                 footer: { backgroundColor: "black" },
             },
         },
+
+        //shop test route
+        {
+            path:'/posts/:id',
+            name:'posts',
+            component:Posts,
+            props:true,
+
+
+
+        },
+        //shop test route
+
         {
             path: "/home",
             name: "home",
