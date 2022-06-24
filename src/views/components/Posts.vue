@@ -1,8 +1,13 @@
-<template>
+<!-- <template>
   <div id="app">
     <header>
       <h1>Vue.js SPA</h1>
     </header>
+      <div class="post" v-if="post">
+    <h1 class="post__title">{{ post.title }}</h1>
+    <p class="post__body">{{ post.body }}</p>
+    <p class="post__id">{{ post.id }}</p>
+  </div>
 
  <main>
   <aside class="sidebar">
@@ -19,38 +24,42 @@
     <router-view></router-view>
   </div>
 </main>
-
-
+  </div>
+  
+</template> -->
+<template lang="html">
+  <div class="post" v-if="post">
+    <h1 class="post__title">{{ post.title }}</h1>
+    <p class="post__body">{{ post.body }}</p>
+    <p class="post__id">{{ post.id }}</p>
   </div>
 </template>
 
 
-
 <script>
- import axios from 'axios'
+import axios from 'axios';
 export default {
-  data () {
+  props: ['id'],
+  data() {
     return {
-      posts: null,
+      post: null,
       endpoint: 'https://jsonplaceholder.typicode.com/posts/',
     }
   },
-
-  created() {
-    this.getAllPosts();
-  },
-
   methods: {
-    getAllPosts() {
-      axios.get(this.endpoint)
-        .then(response => {
-          this.posts = response.data;
-        })
-        .catch(error => {
-          console.log('-----error-------');
-          console.log(error);
-        })
-    }
+  getPost(id) {
+    axios(this.endpoint + id)
+      .then(response => {
+        this.post = response.data
+      })
+      .catch( error => {
+        console.log(error)
+      })
   }
+},
+
+created() {
+  this.getPost(this.id);
+},
 }
 </script>
