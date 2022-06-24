@@ -27,73 +27,80 @@
                 class="col-lg-8 col-md-12 left-box"
                 style="width: 75%; padding: 0% 3%;"
               >
-                <div class="card" style="  background: #fcfcfc;">
-                  <div class="panel-blog-container">
-                    <div class="panel-body">
-                      <div class="image-wrapper">
-                        <carousel
-                          :per-page="1"
-                          loop
-                          :speed="700"
-                          :autoplay-timeout="5000"
-                          :mouse-drag="false"
-                          navigationEnabled
-                          navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
-                          navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
-                        >
-                          <slide>
-                            <div class="carousel-caption"></div>
-                            <img :src="carousel1" alt="carousel1" />
-                          </slide>
-                          <slide>
-                            <div class="carousel-caption"></div>
-                            <img :src="carousel2" alt="carousel2" />
-                          </slide>
-                        </carousel>
-                      </div>
-                      <!-------- Post1 -------->
-                      <div class="widget-blog-author">
-                        <div class="widget-blog-author-image">
-                          <img
-                            style="width:60px; height:60px"
-                            :src="img"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                      <h4>SÖDERHAMN Living Room</h4>
-                      <div class="text">
-                        <small class="text-muted"
-                          >By
-                          <a href="#/Profile"
-                            ><strong>Abdelraman Ezzet</strong></a
+                <post-p
+                  v-for="item in list"
+                  v-bind:key="item.id"
+                  v-bind:item="item"
+                >
+                  <div class="card" style="  background: #fcfcfc;">
+                    <div class="panel-blog-container">
+                      <div class="panel-body">
+                        <div class="image-wrapper">
+                          <carousel
+                            :per-page="1"
+                            loop
+                            :speed="700"
+                            :autoplay-timeout="5000"
+                            :mouse-drag="false"
+                            navigationEnabled
+                            navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
+                            navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
                           >
-                          | Post on January 20, 2022 | 70 comments</small
-                        >
-                        <p class="m-top-sm m-bottom-sm">
-                          Inspired by refined comfort and the minimalist
-                          aesthetic of Scandinavian Modernism, Bodie has been
-                          created to provide practical luxury in a softer space.
-                          Bodie creates an enduring first impression.
-                        </p>
-                        <a href="./#/SinglePost " style="color: firebrick"
-                          ><i class="fa fa-angle-double-right"></i> Continue
-                          reading</a
-                        >
-                        <span
-                          class="post-like text-muted tooltip-test"
-                          data-toggle="tooltip"
-                          data-original-title="I like this post!"
-                        >
-                          <i class="fa fa-heart" style="color: #e31c1c;"></i>
-                          <span class="like-count">43</span>
-                        </span>
+                            <slide>
+                              <div class="carousel-caption"></div>
+                              <img :src="carousel1" alt="carousel1" />
+                            </slide>
+                            <slide>
+                              <div class="carousel-caption"></div>
+                              <img :src="carousel2" alt="carousel2" />
+                            </slide>
+                          </carousel>
+                        </div>
+                        <!-------- Post1 -------->
+                        <div class="widget-blog-author">
+                          <div class="widget-blog-author-image">
+                            <img
+                              style="width:60px; height:60px"
+                              :src="img"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <h4>{{ item.post_title }}</h4>
+                        <div class="text">
+                          <small class="text-muted"
+                            >By
+                            <a href="#/Profile"
+                              ><strong>Abdelraman Ezzet</strong></a
+                            >
+                            | Post on {{ item.published_date }} | 70
+                            comments</small
+                          >
+                          <p class="m-top-sm m-bottom-sm">
+                            Inspired by refined comfort and the minimalist
+                            aesthetic of Scandinavian Modernism, Bodie has been
+                            created to provide practical luxury in a softer
+                            space. Bodie creates an enduring first impression.
+                          </p>
+                          <a href="./#/SinglePost " style="color: firebrick"
+                            ><i class="fa fa-angle-double-right"></i> Continue
+                            reading</a
+                          >
+                          <span
+                            class="post-like text-muted tooltip-test"
+                            data-toggle="tooltip"
+                            data-original-title="I like this post!"
+                          >
+                            <i class="fa fa-heart" style="color: #e31c1c;"></i>
+                            <span class="like-count">43</span>
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </post-p>
                 <!------------- Post2 ------------->
-                <div class="card" style="  background: #fcfcfc;">
+                <!-- <div class="card" style="  background: #fcfcfc;">
                   <div class="panel-blog-container">
                     <div class="panel-body">
                       <div class="image-wrapper">
@@ -159,9 +166,9 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!------------- Post3 ------------->
-                <div class="card" style="  background: #fcfcfc;">
+                <!-- <div class="card" style="  background: #fcfcfc;">
                   <div class="panel-blog-container">
                     <div class="panel-body">
                       <div class="image-wrapper">
@@ -211,9 +218,9 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!------------- Post4 ------------->
-                <div class="card" style="  background: #fcfcfc;">
+                <!-- <div class="card" style="  background: #fcfcfc;">
                   <div class="panel-blog-container">
                     <div class="panel-body">
                       <div class="image-wrapper">
@@ -278,7 +285,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>-->
               </div>
 
               <!-- -------------------Right Sidebar---------------------- -->
@@ -460,6 +467,11 @@
 </template>
 
 <script>
+import Vue from "vue";
+import axios from "axios";
+import VueAxios from "vue-axios";
+Vue.use(VueAxios, axios);
+
 export default {
   components: {},
   name: "post",
@@ -482,7 +494,18 @@ export default {
       carousel4: require("@/assets/img/c4.jpg"),
       carousel5: require("@/assets/img/blog-details-img25.jpg"),
       carousel6: require("@/assets/img/blog-details-img26.jpg"),
+      list: undefined,
     };
+  },
+  async created() {
+    try {
+      const response = await axios.get(
+        `https://homefurniture00.000webhostapp.com/api/posts`
+      );
+      this.list = response.data;
+    } catch (e) {
+      this.errors.push(e);
+    }
   },
   methods: {},
   computed: {
