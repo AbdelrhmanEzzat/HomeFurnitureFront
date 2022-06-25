@@ -148,9 +148,9 @@ import { Tabs } from "@/components";
 import axios from 'axios'
 export default {
   methods:{
-    handleSubmit(){
-      
-      const data = {
+   async handleSubmit(){
+    
+       const response  = await axios.post('api/register',{
           firstname: this.firstname,
           lastname: this.lastname,
           birthday: this.birthday,
@@ -162,18 +162,8 @@ export default {
           email: this.email,
           password: this.password,
            password_confirmation: this.password,
-         };
-
-        axios.post('http://127.0.0.1:8000/api/register',data)
-        .then(
-          res => {
-            console.log(res)
-          }
-        ).catch(
-          err => {
-            console.log(err)
-          }
-        )
+         });
+        this.$router.push('/login')
     }
   },
   components: {

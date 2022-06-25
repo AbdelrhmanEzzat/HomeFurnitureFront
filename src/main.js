@@ -6,6 +6,8 @@ import router from "./router";
 import MaterialKit from "./plugins/material-kit";
 import store from "./store";
 
+import './axios';
+
 Vue.config.productionTip = false;
 
 Vue.use(MaterialKit);
