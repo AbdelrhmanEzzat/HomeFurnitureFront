@@ -309,7 +309,7 @@
                   <div class="card h-100">
                     <div class="product-grid7">
                       <div class="product-image7">
-                        <a href="#/SingleProduct">
+                        <a :href="'#/posts/'+ item.prod_id">
                           <img class="pic-1" :src="img1" />
                           <img class="pic-2" :src="img01" />
                         </a>
@@ -322,6 +322,7 @@
                         <div class="card-body">
                           <h5 class="card-title">
                             <a href="#">{{ item.product_name }}</a>
+                            <a href="#">{{ item.prod_id }}</a>
                           </h5>
                           <ul class="rating">
                             <li class="fa fa-star"></li>
@@ -330,6 +331,7 @@
                             <li class="fa fa-star"></li>
                           </ul>
                           <h5>{{ item.cost }}</h5>
+                          
                         </div>
                       </div>
                     </div>
@@ -350,6 +352,7 @@
 ></script>
 
 <script>
+
 import Vue from "vue";
 import axios from "axios";
 import VueAxios from "vue-axios";
@@ -390,6 +393,7 @@ export default {
         `https://homefurniture00.000webhostapp.com/api/products`
       );
       this.list = response.data;
+
     } catch (e) {
       this.errors.push(e);
     }
@@ -403,6 +407,7 @@ export default {
     },
   },
 };
+
 </script>
 
 <style lang="scss">
