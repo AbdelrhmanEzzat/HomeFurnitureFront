@@ -42,7 +42,9 @@
                   >
                     <!-- here you can add your content for tab-content -->
                     <!----------------------- Tab-1 ------------------------>
+
                     <template slot="tab-pane-1">
+                      <form @submit="handleSubmit">
                       <md-field class="md-form-group" slot="inputs">
                         <md-icon>face</md-icon>
                         <label>First Name...</label>
@@ -56,7 +58,7 @@
                       </md-field>
 
                       <div class="md-form-group" slot="inputs">
-                        <md-datepicker v-model="selectedDate">
+                        <md-datepicker v-model="birthday">
                           <label>Select Birthdate</label>
                         </md-datepicker>
                       </div>
@@ -65,14 +67,15 @@
                         <md-icon>man</md-icon>
                         <md-radio
                           style="padding-left: 10px;"
-                          v-model="radio1"
-                          :value="true"
+                          v-model="gender"
+                          :value="'male'"
                           >Male</md-radio
                         >
                          <md-icon>woman</md-icon>
-                        <md-radio v-model="radio1" :value="false"
+                        <md-radio v-model="gender" :value="'female'"
                           >Female</md-radio
                         >
+                        
                       </md-field>
 
                       <div class="row-address">
@@ -98,6 +101,12 @@
                         <md-input v-model="street"></md-input>
                       </md-field>
 
+                       <md-field class="md-form-group" slot="inputs">
+                        <md-icon>location_on</md-icon>
+                        <label>phone...</label>
+                        <md-input v-model="phone"></md-input>
+                      </md-field>
+
                       <md-field class="md-form-group" slot="inputs">
                         <md-icon>email</md-icon>
                         <label>Email...</label>
@@ -109,90 +118,20 @@
                         <label>Password...</label>
                         <md-input v-model="password" type="password"></md-input>
                       </md-field>
-                    </template>
-                    <!----------------------- Tab-2 ------------------------>
-                    <template slot="tab-pane-2">
-                      <md-field class="md-form-group" slot="inputs">
-                        <md-icon>face</md-icon>
-                        <label>First Name...</label>
-                        <md-input v-model="firstname"></md-input>
-                      </md-field>
-
-                      <md-field class="md-form-group" slot="inputs">
-                        <md-icon>face</md-icon>
-                        <label>Last Name...</label>
-                        <md-input v-model="lastname"></md-input>
-                      </md-field>
-
-                      <div class="md-form-group" slot="inputs">
-                        <md-datepicker v-model="selectedDate">
-                          <label>Select Birthdate</label>
-                        </md-datepicker>
-                      </div>
-
-                      <md-field class="md-form-group" slot="inputs">
-                        <md-icon>man</md-icon>
-                        <md-radio
-                          style="padding-left: 10px;"
-                          v-model="radio1"
-                          :value="true"
-                          >Male</md-radio
-                        >
-                        <md-icon>woman</md-icon>
-                        <md-radio v-model="radio1" :value="false"
-                          >Female</md-radio
-                        >
-                      </md-field>
-
-                      <md-field class="md-form-group" slot="inputs">
-                        <md-icon>work</md-icon>
-                        <label>Job title</label>
-                        <md-input v-model="city"></md-input>
-                      </md-field>
-
-                  <div class="row-address">
-                    <div class="col-auto-address">
-                      <md-field class="md-form-group" slot="inputs">
-                        <md-icon>location_city</md-icon>
-                        <label>City...</label>
-                        <md-input v-model="city"></md-input>
-                      </md-field>
-                    </div>
-                    <div class="col-auto-address">
-                      <md-field class="md-form-group" slot="inputs">
-                        <md-icon>location_on</md-icon>
-                        <label>Region...</label>
-                        <md-input v-model="region"></md-input>
-                      </md-field>
-                     </div>
-                    </div>
-
-                      <md-field class="md-form-group" slot="inputs">
-                        <md-icon>location_on</md-icon>
-                        <label>Street...</label>
-                        <md-input v-model="street"></md-input>
-                      </md-field>
-                      <md-field class="md-form-group" slot="inputs">
-                        <md-icon>email</md-icon>
-                        <label>Email...</label>
-                        <md-input v-model="email" type="email"></md-input>
-                      </md-field>
-
-                      <md-field class="md-form-group" slot="inputs">
-                        <md-icon>lock_outline</md-icon>
-                        <label>Password...</label>
-                        <md-input v-model="password" type="password"></md-input>
-                      </md-field>
-                    </template>
-                  </tabs>
-                  <!------------------ Signup Button ------------------>
-                  <md-button
-                    slot="footer"
+                      
+                      <button
                     class="md-simple-2 md-success md-lg"
-                    style=" display: block;margin-left: auto;margin-right: auto;width: 40%;"
+                    style="  color:green;display: block;margin-left: auto;margin-right: auto;width: 40%;"
                   >
                     SignUp
-                  </md-button>
+                  </button>
+                      </form>
+                    </template>
+                    <!----------------------- Tab-2 ------------------------>
+                   
+                  </tabs>
+                  <!------------------ Signup Button ------------------>
+                  
                 </div>
               </div>
             </login-card>
@@ -206,8 +145,37 @@
 <script>
 import { LoginCard } from "@/components";
 import { Tabs } from "@/components";
-
+import axios from 'axios'
 export default {
+  methods:{
+    handleSubmit(){
+      
+      const data = {
+          firstname: this.firstname,
+          lastname: this.lastname,
+          birthday: this.birthday,
+          city:this.city,
+          region:this.region,
+          street:this.street,
+          gender: this.gender,
+          phone: this.phone,
+          email: this.email,
+          password: this.password,
+           password_confirmation: this.password,
+         };
+
+        axios.post('http://127.0.0.1:8000/api/register',data)
+        .then(
+          res => {
+            console.log(res)
+          }
+        ).catch(
+          err => {
+            console.log(err)
+          }
+        )
+    }
+  },
   components: {
     LoginCard,
     Tabs,
@@ -215,11 +183,22 @@ export default {
   bodyClass: "login-page",
   data() {
     return {
-      firstname: null,
-      email: null,
-      password: null,
-      radio1: true,
-      radio2: false,
+      
+      firstname: '',
+      lastname: '',
+      birthday: {
+				d: '',
+				m: '',
+				y: ''
+			},
+      city:'',
+      region:'',
+      street:'',
+       phone:'',
+      gender: '',
+      email: '',
+      password: '',
+     
     };
   },
   props: {
@@ -234,6 +213,15 @@ export default {
         backgroundImage: `url(${this.header})`,
       };
     },
+    //add new right
+    calculateAge: function() {
+          let currentDate = new Date();
+          let birthDate = new Date(age);
+          let difference = currentDate - birthDate;
+          let age = Math.floor(difference/31557600000);
+          return age
+        }
+         
   },
 };
 </script>
