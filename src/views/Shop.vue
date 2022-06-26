@@ -322,7 +322,7 @@
                         <div class="card-body">
                           <h5 class="card-title">
                             <a href="#">{{ item.product_name }}</a>
-                            <a href="#">{{ item.prod_id }}</a>
+                            <!-- <a href="#">{{ item.prod_id }}</a> -->
                           </h5>
                           <ul class="rating">
                             <li class="fa fa-star"></li>

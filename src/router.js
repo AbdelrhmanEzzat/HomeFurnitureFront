@@ -17,6 +17,7 @@ import Chat from "./views/Chat.vue";
 import SinglePost from "./views/SinglePost.vue";
 import SingleProduct from "./views/SingleProduct.vue";
 import Categories from "./views/Categories.vue";
+import Aboutus from "./views/Aboutus.vue";
 
 import product from "./views/components/Product.vue";
 Vue.use(Router);
@@ -50,6 +51,17 @@ export default new Router({
                 footer: { backgroundColor: "black" },
             },
         },
+
+        {
+            path: "/aboutus",
+            name: "aboutus",
+            components: { default: Aboutus, header: MainNavbar, footer: MainFooter },
+            props: {
+                header: { colorOnScroll: 400 },
+                footer: { backgroundColor: "black" },
+            },
+        },
+
         {
             path: "/landing",
             name: "landing",
