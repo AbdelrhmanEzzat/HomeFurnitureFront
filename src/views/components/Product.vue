@@ -29,47 +29,48 @@
 </template> -->
 <template lang="html">
   <div class="post" v-if="post">
-    <h1 class="post__title">{{ post.title }}</h1>
-    <p class="post__body">{{ post.body }}</p>
-    <p class="post__id">{{ post.id }}</p>
+    <h1 class="post__title">{{ post.product_name }}</h1>
+    <p class="post__body">{{ post.cost }}</p>
+    <p class="post__id">{{ post.prod_id }}</p>
   </div>
 </template>
 
-
 <script>
-import axios from 'axios';
+import axios from "axios";
 export default {
-  props: ['id'],
+  props: ["id"],
   data() {
     return {
       post: null,
-      endpoint: 'https://homefurniture00.000webhostapp.com/api/products',
-    }
+      endpoint: "/api/products/",
+    };
   },
   methods: {
-  getPost(id) {
-    axios(this.endpoint + id)
-      .then(response => {
-        this.post = response.data
-      })
- 
-      .catch( error => {
-        console.log(error)
-      })
-  }
-  
-},
-created() {
-  this.getPost(this.id);
-},
-}
-axios.get('https://homefurniture00.000webhostapp.com/api/products/').then(res=>{
-  const data = res.data;
-    const sampleId = 93;
-  const post = data.filter((obj)=>{
-    return obj.prod_id === sampleId;
-  }).pop();
-  console.log(post);
-})
+    getPost(id) {
+      axios(this.endpoint + id)
+        .then((response) => {
+          this.post = response.data;
+        })
 
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+  created() {
+    this.getPost(this.id);
+  },
+};
+// axios
+//   .get("https://homefurniture00.000webhostapp.com/api/products/")
+//   .then((res) => {
+//     const data = res.data;
+//     const sampleId = 93;
+//     const post = data
+//       .filter((obj) => {
+//         return obj.prod_id === sampleId;
+//       })
+//       .pop();
+//     console.log(post);
+//   });
 </script>

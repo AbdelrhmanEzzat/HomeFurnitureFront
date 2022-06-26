@@ -18,7 +18,7 @@ import SinglePost from "./views/SinglePost.vue";
 import SingleProduct from "./views/SingleProduct.vue";
 import Categories from "./views/Categories.vue";
 
-import Posts from "./views/components/Posts.vue";
+import product from "./views/components/Product.vue";
 Vue.use(Router);
 
 export default new Router({
@@ -34,13 +34,10 @@ export default new Router({
 
         //shop test route
         {
-            path:'/posts/:id',
-            name:'posts',
-            component:Posts,
-            props:true,
-
-
-
+            path: "/product/:id",
+            name: "product",
+            component: product,
+            props: true,
         },
         //shop test route
 

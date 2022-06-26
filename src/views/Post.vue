@@ -77,10 +77,7 @@
                             comments</small
                           >
                           <p class="m-top-sm m-bottom-sm">
-                            Inspired by refined comfort and the minimalist
-                            aesthetic of Scandinavian Modernism, Bodie has been
-                            created to provide practical luxury in a softer
-                            space. Bodie creates an enduring first impression.
+                            {{ item.details }}
                           </p>
                           <a href="./#/SinglePost " style="color: firebrick"
                             ><i class="fa fa-angle-double-right"></i> Continue
@@ -499,9 +496,7 @@ export default {
   },
   async created() {
     try {
-      const response = await axios.get(
-        `https://homefurniture00.000webhostapp.com/api/posts`
-      );
+      const response = await axios.get("api/posts");
       this.list = response.data;
     } catch (e) {
       this.errors.push(e);
