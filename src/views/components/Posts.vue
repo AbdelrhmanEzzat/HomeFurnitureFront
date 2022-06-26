@@ -43,7 +43,7 @@ export default {
   data() {
     return {
       post: null,
-      endpoint: 'https://jsonplaceholder.typicode.com/posts/',
+      endpoint: 'https://homefurniture00.000webhostapp.com/api/products',
     }
   },
   methods: {
@@ -52,14 +52,24 @@ export default {
       .then(response => {
         this.post = response.data
       })
+ 
       .catch( error => {
         console.log(error)
       })
   }
+  
 },
-
 created() {
   this.getPost(this.id);
 },
 }
+axios.get('https://homefurniture00.000webhostapp.com/api/products/').then(res=>{
+  const data = res.data;
+    const sampleId = 93;
+  const post = data.filter((obj)=>{
+    return obj.prod_id === sampleId;
+  }).pop();
+  console.log(post);
+})
+
 </script>

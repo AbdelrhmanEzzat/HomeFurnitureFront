@@ -4,7 +4,7 @@
       <div class="container">
         <div class="md-layout">
           <div
-            class="md-layout-item md-size-33 md-small-size-66 md-xsmall-size-100 md-medium-size-40 mx-auto"
+            class="md-layout-item md-size-33 md-small-size-66 md-xsmall-size-100 md-medium-size-40 mx-auto" style="background-color:white;"
           >
             <login-card header-color="green">
               <h4 slot="title" class="card-title">Login</h4>
@@ -29,12 +29,14 @@
               >
                 <i class="fab fa-google-plus-g"></i>
               </md-button>
+              <form @submit.prevent="handleSubmit">
               <p slot="description" class="description">Or Be Classical</p>
               <!-- <md-field class="md-form-group" slot="inputs">
                 <md-icon>face</md-icon>
                 <label>First Name...</label>
                 <md-input v-model="firstname"></md-input>
               </md-field> -->
+              
               <md-field class="md-form-group" slot="inputs">
                 <md-icon>email</md-icon>
                 <label>Email...</label>
@@ -45,16 +47,18 @@
                 <label>Password...</label>
                 <md-input v-model="password" type="password"></md-input>
               </md-field>
-              <md-button slot="footer" class="md-simple md-success md-lg">
+
+              <button slot="footer" class="md-simple md-success md-lg">
                 Get Started
-              </md-button>
-              <md-button
+              </button>
+              </form>
+              <button
                 href="/#/signup"
                 slot="footer"
                 class="md-simple md-success md-lg"
               >
                 Sign up
-              </md-button>
+              </button>
             </login-card>
           </div>
         </div>
@@ -65,19 +69,44 @@
 
 <script>
 import { LoginCard } from "@/components";
+import axios from 'axios'
+
 
 export default {
+  name: 'Login',
   components: {
-    LoginCard,
+    //LoginCard,
   },
   bodyClass: "login-page",
   data() {
     return {
-      firstname: null,
-      email: null,
-      password: null,
+      email: '',
+      password: ''
     };
   },
+  
+   methods: {
+    async handleSubmit(){
+
+      const response = await axios.post('api/login',{
+        email: this.email,
+        password: this.password,
+      });
+        localStorage.setItem('token',response.data.token);
+        //this.$router.push('/home');
+    }
+   },
+
+   
+  //  async created() {
+  //   await axios.get("api/users", {
+  //     headers: {
+  //        'Content-Type': 'application/json' ,
+  //       Authorization: "Bearer " + localStorage.getItem($token),
+         
+  //     }
+  //   });
+  // },
   props: {
     header: {
       type: String,
@@ -91,6 +120,7 @@ export default {
       };
     },
   },
+  
 };
 </script>
 

@@ -147,10 +147,32 @@ import { LoginCard } from "@/components";
 import { Tabs } from "@/components";
 import axios from 'axios'
 export default {
+  //
+   data() {
+    return {
+      
+      firstname: '',
+      lastname: '',
+      birthday: {
+				d: '',
+				m: '',
+				y: ''
+			},
+      city:'',
+      region:'',
+      street:'',
+       phone:'',
+      gender: '',
+      email: '',
+      password: '',
+     
+    };
+  },
+
   methods:{
    async handleSubmit(){
     
-       const response  = await axios.post('api/register',{
+       await axios.post('api/register',{
           firstname: this.firstname,
           lastname: this.lastname,
           birthday: this.birthday,
@@ -171,26 +193,7 @@ export default {
     Tabs,
   },
   bodyClass: "login-page",
-  data() {
-    return {
-      
-      firstname: '',
-      lastname: '',
-      birthday: {
-				d: '',
-				m: '',
-				y: ''
-			},
-      city:'',
-      region:'',
-      street:'',
-       phone:'',
-      gender: '',
-      email: '',
-      password: '',
-     
-    };
-  },
+ 
   props: {
     header: {
       type: String,
@@ -204,13 +207,7 @@ export default {
       };
     },
     //add new right
-    calculateAge: function() {
-          let currentDate = new Date();
-          let birthDate = new Date(age);
-          let difference = currentDate - birthDate;
-          let age = Math.floor(difference/31557600000);
-          return age
-        }
+    
          
   },
 };

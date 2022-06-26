@@ -314,10 +314,23 @@
 
 <script>
 //import BasicElements from "./components/BasicElementsSection";
+import axios from 'axios';
 
 export default {
   components: {},
-  name: "index",
+  name: "home",
+  //here auth user
+ async created(){
+  const response = await axios.get('api/user',{
+    headers: {
+      Authorization: 'Bearer' + localStorage.getItem('token')
+    }
+   
+  });
+  console.log(response);
+
+  },
+
   bodyClass: "index-page",
   props: {
     image: {
