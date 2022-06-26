@@ -388,6 +388,7 @@ export default {
   async created() {
     try {
       const response = await axios.get("api/products");
+
       this.list = response.data;
     } catch (e) {
       this.errors.push(e);
