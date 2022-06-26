@@ -390,7 +390,7 @@ export default {
   async created() {
     try {
       const response = await axios.get(
-        `https://homefurniture00.000webhostapp.com/api/products`
+        'https://homefurniture00.000webhostapp.com/api/products'
       );
       this.list = response.data;
 
