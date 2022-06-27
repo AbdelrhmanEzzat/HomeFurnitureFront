@@ -488,8 +488,6 @@ export default {
   margin: 0;
   list-style: none;
   position: absolute;
-  bottom: 40%;
-  left: -20%;
   z-index: 1;
   transition: all 0.5s ease 0s;
 }
