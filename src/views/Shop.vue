@@ -309,7 +309,7 @@
                   <div class="card h-100">
                     <div class="product-grid7">
                       <div class="product-image7">
-                        <a :href="'#/product/' + item.prod_id">
+                        <a :href="'#/shoop/' + item.prod_id">
                           <img class="pic-1" :src="img1" />
                           <img class="pic-2" :src="img01" />
                         </a>
@@ -381,8 +381,7 @@ export default {
         simple: 40,
         rangeSlider: [20, 60],
       },
-      list: [],
-      errors: [],
+      list: undefined,
     };
   },
   async created() {

@@ -1,3 +1,11 @@
+<!--<template lang="html">
+  <div class="post" v-if="post">
+    <h1 class="posttitle">{{ post.id }}</h1>
+    <p class="postbody">{{ post.email }}</p>
+    <p class="postid">{{ post.phone }}</p>
+  </div>
+</template>-->
+
 <template>
   <div class="wrapper">
     <parallax
@@ -7,8 +15,8 @@
     <div class="main main-raised">
       <div class="section profile-content">
         <div class="container">
-          <div class="md-layout">
-            <div class="md-layout-item md-size-50 mx-auto">
+          <div class="md-layout" style="width:80%;    padding-left: 28%;">
+            <div class="md-layout-item md-size-50 mx-auto" v-if="post">
               <div class="profile">
                 <div class="avatar">
                   <img
@@ -18,7 +26,7 @@
                   />
                 </div>
                 <div class="name">
-                  <h3 class="title">Abdelrahman Ezzat</h3>
+                  <h3 class="title">{{ post.firstname }}</h3>
                   <h6 style="color: brown;">
                     Designer
                   </h6>
@@ -42,7 +50,10 @@
             </div>
           </div>
           <div class="description text-center">
-            <h6>
+            <h6
+              style="
+    padding: 1% 22%;"
+            >
               An artist of considerable range, Chet Faker — the name taken by
               Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
               and records all of his own music, giving it a warm, intimate feel
@@ -144,7 +155,7 @@
                                     Abdelrahman Ezzat
                                   </h6>
                                   <p>
-                                    March 02,2022
+                                    January 20,2022
                                   </p>
                                 </div>
                               </div>
@@ -172,22 +183,18 @@
                             <h5
                               style="font-weight: bold;margin-top: -5px;margin-bottom: -5px;"
                             >
-                              Dining chair ideas
+                              WOODEN DISH
                             </h5>
                             <md-card-content>
                               <h7
                                 class="card-description"
                                 style="font-weight: bolder;"
                               >
-                                People come in different sizes and have
-                                different seating needs. So why force everyone
-                                to sit on the same type of chair? Combining
-                                different types of chairs will make sure
-                                everyone’s base is covered, and create a space
-                                where they can dine, work and play comfortably
-                                for hours.
+                                This versatile offering is ideally suited to the
+                                home, perfect for an office, dining and lounge
+                                environment. To achieve the comfort..
                               </h7>
-                              <a href="#/poost">Read More</a>
+                              <a href="#/SinglePost">Read More</a>
                               <div
                                 class="row"
                                 style="width:100%; padding-top: 2%;"
@@ -459,8 +466,9 @@
 
 <script>
 import { Tabs } from "@/components";
+import axios from "axios";
 export default {
-  name: "Counters",
+  // name: "Counters",
   data: () => ({
     regular: null,
     maxLength: null,
@@ -471,9 +479,13 @@ export default {
   components: {
     Tabs,
   },
-  bodyClass: "profile-page",
+  props: ["id"],
+
   data() {
     return {
+      post: [],
+      endpoint: "https://homefurniture00.000webhostapp.com/api/users/",
+
       tabPane1: [
         { image: require("@/assets/img/examples/studio-1.jpg") },
         { image: require("@/assets/img/examples/studio-2.jpg") },
@@ -496,26 +508,33 @@ export default {
       ],
     };
   },
-  props: {
-    header: {
-      type: String,
-      default: require("@/assets/img/car5.webp"),
+  components: {
+    Tabs,
+  },
+  methods: {
+    getPost(id) {
+      axios(this.endpoint + id)
+        .then((response) => {
+          this.post = response.data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
-    img: {
-      type: String,
-      default: require("@/assets/img/00.jpg"),
-    },
+  },
+
+  created() {
+    this.getPost(this.id);
   },
   computed: {
     headerStyle() {
       return {
-        backgroundImage: `url(${this.header})`,
+        backgroundImage: `url(${this.image})`,
       };
     },
   },
 };
 </script>
-
 <style lang="scss" scoped>
 .section {
   padding: 0;

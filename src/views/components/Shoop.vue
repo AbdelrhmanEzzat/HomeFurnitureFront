@@ -1,3 +1,11 @@
+<!--<template lang="html">
+  <div class="post" v-if="post">
+    <h1 class="posttitle">{{ post.prod_id }}</h1>
+    <p class="postbody">{{ post.product_name }}</p>
+    <p class="postid">{{ post.cost }}</p>
+  </div>
+</template>-->
+
 <template>
   <div class="wrapper">
     <parallax class="page-header header-filter" :style="headerStyle">
@@ -5,8 +13,8 @@
         <div class="md-layout-item">
           <div class="image-wrapper">
             <div class="brand">
-              <div style=" text-align: center; color: white;">
-                <h1 class="smain">Maysa Lounge</h1>
+              <div style=" text-align: center; color: Black;">
+                <h1 class="smain">{{ post.product_name }}</h1>
               </div>
             </div>
           </div>
@@ -62,25 +70,23 @@
                 </slide>
               </carousel>
             </div>
-            <div class="col-sm-8" style="width:40%">
-              <div class="clearfix">
-                <div class="pull-right">
-                  <h2 class="mt-5">
-                    3000 <small class="text-success"></small>
-                  </h2>
-                </div>
-                <span class="h4">
-                  <strong class="text-success">Masaya</strong><br />
-                  <small>70 Available</small>
-                </span>
-              </div>
+            <div
+              class="col-sm-8"
+              style="width:40%;align-self: center;"
+              v-if="post"
+            >
+              <span class="title">
+                <h2 class="text-success">{{ post.product_name }}</h2>
+                <!-- <small>70 Available</small> -->
+              </span>
+              <h2 class="mt-5">
+                {{ post.cost }}<small class="text-success"></small>
+              </h2>
+
               <hr />
-              <p>
-                Engineered and hand-finished using time-honoured techniques,
-                Maysa is a striking seating and coffee table collection that
-                beckons you to sit back and relax in style. Classic with a
-                twist, Maysa’s gene
-              </p>
+              <h5 style="font-size: initial;">
+                {{ post.details }}
+              </h5>
 
               <hr />
               <button
@@ -101,12 +107,8 @@
         <div class="row" style="width:100%">
           <div class="col-sm-8" style="width:50%;text-align:center">
             <div class="titleSP">
-              <h5 style="font-weight: bold;">Inspired by Nature</h5>
               <p style="padding-top: 3%;">
-                Described as ‘islands in the sky’, mesas are a bridge between
-                worlds. So it’s only fitting that the Maysa family should be
-                warm and welcoming as well as strong and sleek - the composite
-                foam upper complementing the legs’ sense of unshakable poise.
+                {{ post.extradetails }}
               </p>
             </div>
           </div>
@@ -185,42 +187,15 @@
   </div>
 </template>
 
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"
-></script>
-
 <script>
-import Vue from "vue";
-
+import axios from "axios";
 export default {
-  components: {},
-  name: "singleproduct",
-  bodyClass: "singleproduct-page",
-  props: {
-    image: {
-      type: String,
-      default: require("@/assets/img/singleproduct/singleproduct.jpg"),
-    },
-    img1: {
-      type: String,
-      default: require("@/assets/img/singleproduct/00001.jpg"),
-    },
-    img2: {
-      type: String,
-      default: require("@/assets/img/shop/2.jpg"),
-    },
-    img10: {
-      type: String,
-      default: require("@/assets/img/shop/10.jpg"),
-    },
-    img11: {
-      type: String,
-      default: require("@/assets/img/shop/11.jpg"),
-    },
-  },
+  props: ["id"],
+
   data() {
     return {
+      post: [],
+      endpoint: "https://homefurniture00.000webhostapp.com/api/products/",
       carousel1: require("@/assets/img/singleproduct/1.jpg"),
       carousel2: require("@/assets/img/singleproduct/01.jpg"),
       carousel3: require("@/assets/img/singleproduct/001.jpg"),
@@ -228,7 +203,21 @@ export default {
     };
   },
 
-  methods: {},
+  methods: {
+    getPost(id) {
+      axios(this.endpoint + id)
+        .then((response) => {
+          this.post = response.data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+
+  created() {
+    this.getPost(this.id);
+  },
   computed: {
     headerStyle() {
       return {
@@ -238,7 +227,6 @@ export default {
   },
 };
 </script>
-
 <style lang="scss" scoped>
 .titleSP {
   padding-top: 35%;

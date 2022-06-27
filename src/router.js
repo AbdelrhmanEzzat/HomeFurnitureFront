@@ -16,13 +16,15 @@ import Cart from "./views/Cart.vue";
 import Chat from "./views/Chat.vue";
 import SinglePost from "./views/SinglePost.vue";
 import SingleProduct from "./views/SingleProduct.vue";
+
 import Categories from "./views/Categories.vue";
 import Aboutus from "./views/Aboutus.vue";
 
-import product from "./views/components/Product.vue";
 import poost from "./views/components/Poost.vue";
-Vue.use(Router);
+import shoop from "./views/components/Shoop.vue";
+import user from "./views/components/User.vue";
 
+Vue.use(Router);
 export default new Router({
     routes: [{
             path: "/",
@@ -35,18 +37,28 @@ export default new Router({
         },
 
         //shop test route
-        {
-            path: "/product/:id",
-            name: "product",
-            component: product,
-            props: true,
-        },
+
         {
             path: "/poost/:id",
             name: "poost",
             component: poost,
             props: true,
         },
+
+        {
+            path: "/shoop/:id",
+            name: "shoop",
+            component: shoop,
+            props: true,
+        },
+
+        {
+            path: "/user/:id",
+            name: "user",
+            component: user,
+            props: true,
+        },
+
         //shop test route
 
         {
@@ -175,6 +187,7 @@ export default new Router({
                 footer: { backgroundColor: "black" },
             },
         },
+
         {
             path: "/categories",
             name: "categories",

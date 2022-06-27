@@ -6,7 +6,7 @@
           <div class="image-wrapper">
             <div class="brand">
               <div style=" text-align: center; color: white;">
-                <h1 class="smain">Maysa Lounge</h1>
+                <h1 class="smain">DNA</h1>
               </div>
             </div>
           </div>
@@ -66,20 +66,19 @@
               <div class="clearfix">
                 <div class="pull-right">
                   <h2 class="mt-5">
-                    3000 <small class="text-success"></small>
+                    4050 <small class="text-success"></small>
                   </h2>
                 </div>
                 <span class="h4">
-                  <strong class="text-success">Masaya</strong><br />
-                  <small>70 Available</small>
+                  <strong class="text-success">DNA</strong><br />
+                  <small>20 Available</small>
                 </span>
               </div>
               <hr />
               <p>
-                Engineered and hand-finished using time-honoured techniques,
-                Maysa is a striking seating and coffee table collection that
-                beckons you to sit back and relax in style. Classic with a
-                twist, Maysa’s gene
+                DNA makes us who we are. It’s in our genes. \r\nOur heritage.
+                Ultimately our very being. \r\nAnd Boss Design’s DNA has been
+                the \r\ninspiration for our latest luxury chair.
               </p>
 
               <hr />
@@ -103,10 +102,11 @@
             <div class="titleSP">
               <h5 style="font-weight: bold;">Inspired by Nature</h5>
               <p style="padding-top: 3%;">
-                Described as ‘islands in the sky’, mesas are a bridge between
-                worlds. So it’s only fitting that the Maysa family should be
-                warm and welcoming as well as strong and sleek - the composite
-                foam upper complementing the legs’ sense of unshakable poise.
+                DNA is engineered upholstery. It combines cutting edge
+                \r\nrobotic welding technology with more traditional foam
+                \r\ntechniques. The seat’s metal frame floats in molded \r\nfoam
+                with added springs, offering stability with the \r\nhighest
+                comfort levels, finished with a quality of sewing.
               </p>
             </div>
           </div>
@@ -195,8 +195,8 @@ import Vue from "vue";
 
 export default {
   components: {},
-  name: "singleproduct",
-  bodyClass: "singleproduct-page",
+  name: "singleproduct1",
+  bodyClass: "singleproduct1-page",
   props: {
     image: {
       type: String,
@@ -221,10 +221,9 @@ export default {
   },
   data() {
     return {
-      carousel1: require("@/assets/img/singleproduct/1.jpg"),
-      carousel2: require("@/assets/img/singleproduct/01.jpg"),
-      carousel3: require("@/assets/img/singleproduct/001.jpg"),
-      carousel4: require("@/assets/img/singleproduct/0001.jpg"),
+      carousel1: require("@/assets/img/shop/6.jpg"),
+      carousel2: require("@/assets/img/shop/6+.jpg"),
+      carousel3: require("@/assets/img/shop/6++.jpg"),
     };
   },
 
