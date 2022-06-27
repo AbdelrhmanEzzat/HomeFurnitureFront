@@ -49,9 +49,9 @@
                 class="md-just-icon md-simple md-white"
               >
                 <i class="fab fa-google-plus-g"></i>
-              </md-button>
+              </md-button> -->
               <form @submit.prevent="handleSubmit">
-                <p slot="description" class="description">Or Be Classical</p> -->
+               <!-- <p slot="description" class="description">Or Be Classical</p> -->
               <!-- <md-field class="md-form-group" slot="inputs">
                 <md-icon>face</md-icon>
                 <label>First Name...</label>
@@ -95,16 +95,27 @@
                   class="col-lg-8 col-md-12 left-box"
                   style="width: 40%;padding: 0% 7%;"
                 >
-                  <button
-                    href="#/signup"
-                    slot="footer"
-                    style="background-color: #4CAF50;color: white;padding: 12px 15px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;"
-                  >
-                    Sign up
-                  </button>
+                  
                 </div>
               </div>
+              </form>
+              
             </login-card>
+            <md-button
+                    href="#/signup"
+                    style="background-color: #4CAF50;
+                    color: white;
+                    padding: 12px 15px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    float: right;
+                    margin-top: -54px;
+                    "
+                  >
+                    Sign up
+                  </md-button>
             <div><br /></div>
           </div>
         </div>
