@@ -64,11 +64,7 @@
                   <div class="md-layout-item">
                     <h1>Welcome to Home Furniture Store amazing furniture</h1>
                     <br />
-                    <p
-                      style="
-    font-size: initial;
-"
-                    >
+                    <p style="font-size: initial;">
                       We believe in products that are built to last. It makes
                       sense for us and it makes sense for the planet. We have a
                       responsibility to limit the impact on the environment
