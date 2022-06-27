@@ -51,14 +51,16 @@
               <button slot="footer" class="md-simple md-success md-lg">
                 Get Started
               </button>
+              
               </form>
-              <button
+               <md-button
                 href="/#/signup"
                 slot="footer"
                 class="md-simple md-success md-lg"
               >
                 Sign up
-              </button>
+              </md-button>
+             
             </login-card>
           </div>
         </div>
@@ -88,25 +90,27 @@ export default {
    methods: {
     async handleSubmit(){
 
-      const response = await axios.post('api/login',{
-        email: this.email,
-        password: this.password,
-      });
-        localStorage.setItem('token',response.data.token);
+      // const response = await axios.post('https://homefurniture00.000webhostapp.com/api/login',{
+      //   email: this.email,
+      //   password: this.password
+      // });
+      //   window.localStorage.setItem('token', response.data.token);
         //this.$router.push('/home');
+
+         fetch("http://127.0.0.1:8000/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: this.username,
+          password: this.password,
+        }),
+      });
     }
    },
 
-   
-  //  async created() {
-  //   await axios.get("api/users", {
-  //     headers: {
-  //        'Content-Type': 'application/json' ,
-  //       Authorization: "Bearer " + localStorage.getItem($token),
-         
-  //     }
-  //   });
-  // },
+  
   props: {
     header: {
       type: String,
