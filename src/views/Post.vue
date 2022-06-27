@@ -73,11 +73,11 @@
                             <a href="#/Profile"
                               ><strong>Abdelraman Ezzet</strong></a
                             >
-                            | Post on {{ item.published_date }} | 70
-                            comments</small
-                          >
+                            | Post on {{ item.published_date }}
+                          </small>
+                          <h1>{{ item.extradetails }}</h1>
                           <p class="m-top-sm m-bottom-sm">
-                            {{ item.details }}
+                            {{ item.firstpost }}
                           </p>
                           <a href="./#/SinglePost " style="color: firebrick"
                             ><i class="fa fa-angle-double-right"></i> Continue

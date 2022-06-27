@@ -45,67 +45,66 @@
 
                     <template slot="tab-pane-1">
                       <form @submit="handleSubmit">
-                      <md-field class="md-form-group" slot="inputs">
-                        <md-icon>face</md-icon>
-                        <label>First Name...</label>
-                        <md-input v-model="firstname"></md-input>
-                      </md-field>
+                        <md-field class="md-form-group" slot="inputs">
+                          <md-icon>face</md-icon>
+                          <label>First Name...</label>
+                          <md-input v-model="firstname"></md-input>
+                        </md-field>
 
-                      <md-field class="md-form-group" slot="inputs">
-                        <md-icon>face</md-icon>
-                        <label>Last Name...</label>
-                        <md-input v-model="lastname"></md-input>
-                      </md-field>
+                        <md-field class="md-form-group" slot="inputs">
+                          <md-icon>face</md-icon>
+                          <label>Last Name...</label>
+                          <md-input v-model="lastname"></md-input>
+                        </md-field>
 
-                      <div class="md-form-group" slot="inputs">
-                        <md-datepicker v-model="birthday">
-                          <label>Select Birthdate</label>
-                        </md-datepicker>
-                      </div>
+                        <div class="md-form-group" slot="inputs">
+                          <md-datepicker v-model="birthday">
+                            <label>Select Birthdate</label>
+                          </md-datepicker>
+                        </div>
 
-                      <md-field class="md-form-group" slot="inputs">
-                        <md-icon>man</md-icon>
-                        <md-radio
-                          style="padding-left: 10px;"
-                          v-model="gender"
-                          :value="'male'"
-                          >Male</md-radio
-                        >
-                         <md-icon>woman</md-icon>
-                        <md-radio v-model="gender" :value="'female'"
-                          >Female</md-radio
-                        >
-                        
-                      </md-field>
+                        <md-field class="md-form-group" slot="inputs">
+                          <md-icon>man</md-icon>
+                          <md-radio
+                            style="padding-left: 10px;"
+                            v-model="gender"
+                            :value="'male'"
+                            >Male</md-radio
+                          >
+                          <md-icon>woman</md-icon>
+                          <md-radio v-model="gender" :value="'female'"
+                            >Female</md-radio
+                          >
+                        </md-field>
 
-                      <div class="row-address">
-                    <div class="col-auto-address">
-                      <md-field class="md-form-group" slot="inputs">
-                        <md-icon>location_city</md-icon>
-                        <label>City...</label>
-                        <md-input v-model="city"></md-input>
-                      </md-field>
-                    </div>
-                    <div class="col-auto-address">
-                      <md-field class="md-form-group" slot="inputs">
-                        <md-icon>location_on</md-icon>
-                        <label>Region...</label>
-                        <md-input v-model="region"></md-input>
-                      </md-field>
-                     </div>
-                    </div>
+                        <div class="row-address">
+                          <div class="col-auto-address">
+                            <md-field class="md-form-group" slot="inputs">
+                              <md-icon>location_city</md-icon>
+                              <label>City...</label>
+                              <md-input v-model="city"></md-input>
+                            </md-field>
+                          </div>
+                          <div class="col-auto-address">
+                            <md-field class="md-form-group" slot="inputs">
+                              <md-icon>location_on</md-icon>
+                              <label>Region...</label>
+                              <md-input v-model="region"></md-input>
+                            </md-field>
+                          </div>
+                        </div>
 
-                      <md-field class="md-form-group" slot="inputs">
-                        <md-icon>location_on</md-icon>
-                        <label>Street...</label>
-                        <md-input v-model="street"></md-input>
-                      </md-field>
+                        <md-field class="md-form-group" slot="inputs">
+                          <md-icon>location_on</md-icon>
+                          <label>Street...</label>
+                          <md-input v-model="street"></md-input>
+                        </md-field>
 
-                       <md-field class="md-form-group" slot="inputs">
-                        <md-icon>location_on</md-icon>
-                        <label>phone...</label>
-                        <md-input v-model="phone"></md-input>
-                      </md-field>
+                        <md-field class="md-form-group" slot="inputs">
+                          <md-icon>location_on</md-icon>
+                          <label>phone...</label>
+                          <md-input v-model="phone"></md-input>
+                        </md-field>
 
                        <md-field class="md-form-group" slot="inputs">
                         <md-icon>man</md-icon>
@@ -127,25 +126,33 @@
                         <md-input v-model="email" type="email"></md-input>
                       </md-field>
 
-                      <md-field class="md-form-group" slot="inputs">
-                        <md-icon>lock_outline</md-icon>
-                        <label>Password...</label>
-                        <md-input v-model="password" type="password"></md-input>
-                      </md-field>
-                      
-                      <button
-                    class="md-simple-2 md-success md-lg"
-                    style="  color:green;display: block;margin-left: auto;margin-right: auto;width: 40%;"
-                  >
-                    SignUp
-                  </button>
+                        <md-field class="md-form-group" slot="inputs">
+                          <md-icon>lock_outline</md-icon>
+                          <label>Password...</label>
+                          <md-input
+                            v-model="password"
+                            type="password"
+                          ></md-input>
+                        </md-field>
+                        <br /><br />
+                        <div class="row" style="width:100%;align-items: center">
+                          <div
+                            class="col-lg-8 col-md-12 left-box"
+                            style="width: 85%;padding: 0% 37%;"
+                          >
+                            <button
+                              class="md-simple-2 md-success md-lg"
+                              style="background-color: #4CAF50;color: white;padding: 12px 15px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;"
+                            >
+                              SignUp
+                            </button>
+                          </div>
+                        </div>
                       </form>
                     </template>
                     <!----------------------- Tab-2 ------------------------>
-                   
                   </tabs>
                   <!------------------ Signup Button ------------------>
-                  
                 </div>
               </div>
             </login-card>
@@ -159,14 +166,13 @@
 <script>
 import { LoginCard } from "@/components";
 import { Tabs } from "@/components";
-import axios from 'axios'
+import axios from "axios";
 export default {
   //
-   data() {
+  data() {
     return {
-      
-      firstname: '',
-      lastname: '',
+      firstname: "",
+      lastname: "",
       birthday: {
 				d: '',
 				m: '',
@@ -209,7 +215,7 @@ export default {
     Tabs,
   },
   bodyClass: "login-page",
- 
+
   props: {
     header: {
       type: String,
@@ -223,19 +229,13 @@ export default {
       };
     },
     //add new right
-    
-         
   },
 };
 </script>
 
 <style lang="scss" scoped>
- .col-auto-address{
- display: inline-block;
+.col-auto-address {
+  display: inline-block;
   width: 50%;
- }
+}
 </style>
-
-
-
-

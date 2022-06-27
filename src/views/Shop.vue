@@ -258,7 +258,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="widget">
+                <!--<div class="widget">
                   <div class="widget-title widget-collapse">
                     <h6>Filter By Price</h6>
 
@@ -272,7 +272,7 @@
                     >
                     </a>
                   </div>
-                  <div class="collapse show" id="jobtype">
+                   <div class="collapse show" id="jobtype">
                     <div class="widget-content">
                       <div class="custom-control custom-checkbox fulltime-job">
                         <div id="sliders">
@@ -293,8 +293,8 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  </div> 
+                </div>-->
               </div>
             </div>
             <!-- ------------------- -->
@@ -322,7 +322,7 @@
                         <div class="card-body">
                           <h5 class="card-title">
                             <a href="#">{{ item.product_name }}</a>
-                            <a href="#">{{ item.prod_id }}</a>
+                            <!-- <a href="#">{{ item.prod_id }}</a> -->
                           </h5>
                           <ul class="rating">
                             <li class="fa fa-star"></li>
@@ -488,8 +488,6 @@ export default {
   margin: 0;
   list-style: none;
   position: absolute;
-  bottom: 40%;
-  left: -20%;
   z-index: 1;
   transition: all 0.5s ease 0s;
 }

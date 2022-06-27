@@ -8,12 +8,12 @@
       <nav>
         <ul>
           <li>
-            <a href="https://www.creative-tim.com">
+            <a href="#/home">
               Home Furniture
             </a>
           </li>
           <li>
-            <a href="https:///presentation.creative-tim.com">
+            <a href="#/aboutus">
               About Us
             </a>
           </li>
@@ -22,7 +22,6 @@
               Blog
             </a>
           </li> -->
-      
         </ul>
       </nav>
       <div class="copyright">
@@ -37,13 +36,13 @@
 export default {
   props: {
     backgroundColor: String,
-    type: String
+    type: String,
   },
   data() {
     return {
-      year: new Date().getFullYear()
+      year: new Date().getFullYear(),
     };
-  }
+  },
 };
 </script>
 <style></style>
