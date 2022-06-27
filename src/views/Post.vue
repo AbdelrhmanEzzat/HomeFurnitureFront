@@ -79,7 +79,7 @@
                           <p class="m-top-sm m-bottom-sm">
                             {{ item.firstpost }}
                           </p>
-                          <a href="./#/SinglePost " style="color: firebrick"
+                          <a :href="'#/poost/' + item.post_id" style="color: firebrick"
                             ><i class="fa fa-angle-double-right"></i> Continue
                             reading</a
                           >

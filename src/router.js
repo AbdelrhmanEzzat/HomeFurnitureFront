@@ -20,6 +20,7 @@ import Categories from "./views/Categories.vue";
 import Aboutus from "./views/Aboutus.vue";
 
 import product from "./views/components/Product.vue";
+import poost from "./views/components/Poost.vue";
 Vue.use(Router);
 
 export default new Router({
@@ -38,6 +39,12 @@ export default new Router({
             path: "/product/:id",
             name: "product",
             component: product,
+            props: true,
+        },
+        {
+            path: "/poost/:id",
+            name: "poost",
+            component: poost,
             props: true,
         },
         //shop test route
