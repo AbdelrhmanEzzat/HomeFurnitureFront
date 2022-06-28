@@ -100,117 +100,7 @@
                     <br />
                     <hr />
 
-                    <!-- Comments -->
-                    <div class="header" style="padding-top:3%">
-                      <h3 style="font-weight: 500;text-align: center;">
-                        Comments
-                      </h3>
-                    </div>
-                    <div class="body">
-                      <ul class="comment-reply list-unstyled">
-                        <!-- First comment -->
-                        <li class="row clearfix">
-                          <div
-                            class="md-layout-item md-size-10 md-xsmall-size-50 ml-auto"
-                          >
-                            <img
-                              class="img-fluid img-thumbnail"
-                              src="https://bootdey.com/img/Content/avatar/avatar7.png"
-                              alt="Awesome Image"
-                            />
-                          </div>
-                          <div class="text-box col-md-10 col-8 p-l-0 p-r0">
-                            <a href="#/Profile"
-                              ><h5 class="m-b-0">Gems Nekil</h5></a
-                            >
-                            <p>
-                              Why are there so many tutorials on how to decouple
-                              WordPress? how fast and easy it is to get it
-                              running (and keep it running!) and its massive
-                              ecosystem.
-                            </p>
-                            <ul class="list-inline">
-                              <li>
-                                <a href="javascript:void(0);">Mar 09 2021</a>
-                              </li>
-                              <li><a href="javascript:void(0);">Reply</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <!-- Second comment -->
-                        <li class="row clearfix">
-                          <div
-                            class="md-layout-item md-size-10 md-xsmall-size-50 ml-auto"
-                          >
-                            <img
-                              class="img-fluid img-thumbnail"
-                              src="https://bootdey.com/img/Content/avatar/avatar3.png"
-                              alt="Awesome Image"
-                            />
-                          </div>
-                          <div class="text-box col-md-10 col-8 p-l-0 p-r0">
-                            <a href="#/Profile"
-                              ><h5 class="m-b-0">Gigi Hadid</h5></a
-                            >
-                            <p>
-                              Why are there so many tutorials on how to decouple
-                              WordPress? how fast and easy it is to get it
-                              running (and keep it running!) and its massive
-                              ecosystem.
-                            </p>
-                            <ul class="list-inline">
-                              <li>
-                                <a href="javascript:void(0);">Oct 30 2020</a>
-                              </li>
-                              <li><a href="javascript:void(0);">Reply</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li class="row clearfix">
-                          <div
-                            class="md-layout-item md-size-10 md-xsmall-size-50 ml-auto"
-                          >
-                            <img
-                              class="img-fluid img-thumbnail"
-                              src="https://bootdey.com/img/Content/avatar/avatar4.png"
-                              alt="Awesome Image"
-                            />
-                          </div>
-                          <div class="text-box col-md-10 col-8 p-l-0 p-r0">
-                            <a href="#/Profile">
-                              <h5 class="m-b-0">Tony Marko</h5></a
-                            >
-                            <p>
-                              Very nice and informative article. In all the
-                              years I've done small and side-projects as a
-                              freelancer, I've ran into a few problems here and
-                              there.
-                            </p>
-                            <ul class="list-inline">
-                              <li>
-                                <a href="javascript:void(0);">Jun 20 2022</a>
-                              </li>
-                              <li><a href="javascript:void(0);">Reply</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- Add Comment -->
-                    <md-field maxlength="5">
-                      <label>Your Comment</label>
-                      <md-textarea v-model="message"></md-textarea>
-                    </md-field>
-                    <div class="md-layout">
-                      <div
-                        class="md-layout-item md-size-33 mx-auto text-center"
-                      >
-                        <md-button class="md-primary">Send Comment</md-button>
-                      </div>
-                    </div>
-
-                    <!-- Profile Card -->
+                    <!-- Profile Card
                     <div
                       class="card1"
                       style="margin-top: 10%;    margin-bottom: 7%;"
@@ -245,7 +135,7 @@
                           >All Author Posts</md-button
                         >
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>

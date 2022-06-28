@@ -228,9 +228,9 @@
                                     >Settings and other stuff</a
                                   >
                                 </li> -->
-                        <li>
+                        <!-- <li>
                           <a href="/#/chat" class="dropdown-item">Messenger</a>
-                        </li>
+                        </li> -->
 
                         <li>
                           <a href="#pablo" class="dropdown-item">Sign Out</a>
@@ -249,26 +249,6 @@
               >
                 <i class="material-icons">shopping_cart</i>
                 <p>Cart</p>
-                <b-badge
-                  ><span
-                    style="position: fixed;
-                      top: -9px;
-                      right: 6px;
-                      padding: 3px 9px;
-                    
-                      border-radius:100px;
-                      background: -webkit-linear-gradient(top, #FF6969 0%,#ff0000 100%);
-                      box-shadow: 0 1px 2px rgba(0,0,0,.5), 0 1px 4px rgba(0,0,0,.4), 0 0 1px rgba(0,0,0,.7) inset, 0 10px 0px rgba(255,255,255,.11) inset; 
-                      -webkit-background-clip: padding-box;
-                      font:bold 16px/20px  sans-serif; 
-                      color: white;
-                      text-decoration: none;
-                      text-shadow: 0 -1px 0 rgba(0,0,0,.6);
-                                        
-                  "
-                    >3</span
-                  ></b-badge
-                >
               </md-list-item>
             </md-list>
           </div>

@@ -80,14 +80,14 @@
               </h4>
             </div>
           </div>
-          <div
+          <!-- `<div
             class="md-layout-item md-medium-size-33 md-small-size-100"
             style="display: block;margin-left: auto;margin-right: auto"
           >
             <a href="#/categories">
               <md-button class="md-primary">Our Collection</md-button>
             </a>
-          </div>
+          </div>` -->
           <!-- ------------------------Sections--------------------------------- -->
           <div class="features text-center">
             <div class="md-layout" style="padding-top: 5%;">
@@ -314,21 +314,19 @@
 
 <script>
 //import BasicElements from "./components/BasicElementsSection";
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   components: {},
   name: "home",
   //here auth user
- async created(){
-  const response = await axios.get('api/user',{
-    headers: {
-      Authorization: 'Bearer' + localStorage.getItem('token')
-    }
-   
-  });
-  console.log(response);
-
+  async created() {
+    const response = await axios.get("api/user", {
+      headers: {
+        Authorization: "Bearer" + localStorage.getItem("token"),
+      },
+    });
+    console.log(response);
   },
 
   bodyClass: "index-page",

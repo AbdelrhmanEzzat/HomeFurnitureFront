@@ -106,25 +106,25 @@
                           <md-input v-model="phone"></md-input>
                         </md-field>
 
-                       <md-field class="md-form-group" slot="inputs">
-                        <md-icon>man</md-icon>
-                        <md-radio
-                          style="padding-left: 10px;"
-                          v-model="role_as"
-                          :value="'0'"
-                          >Customer</md-radio
-                        >
-                         <md-icon>man</md-icon>
-                        <md-radio v-model="role_as" :value="'2'"
-                          >Desginer</md-radio
-                        >
-                      </md-field>
+                        <md-field class="md-form-group" slot="inputs">
+                          <md-icon>man</md-icon>
+                          <md-radio
+                            style="padding-left: 10px;"
+                            v-model="role_as"
+                            :value="'0'"
+                            >Customer</md-radio
+                          >
+                          <md-icon>man</md-icon>
+                          <md-radio v-model="role_as" :value="'2'"
+                            >Desginer</md-radio
+                          >
+                        </md-field>
 
-                      <md-field class="md-form-group" slot="inputs">
-                        <md-icon>email</md-icon>
-                        <label>Email...</label>
-                        <md-input v-model="email" type="email"></md-input>
-                      </md-field>
+                        <md-field class="md-form-group" slot="inputs">
+                          <md-icon>email</md-icon>
+                          <label>Email...</label>
+                          <md-input v-model="email" type="email"></md-input>
+                        </md-field>
 
                         <md-field class="md-form-group" slot="inputs">
                           <md-icon>lock_outline</md-icon>
@@ -174,41 +174,39 @@ export default {
       firstname: "",
       lastname: "",
       birthday: {
-				d: '',
-				m: '',
-				y: ''
-			},
-      city:'',
-      region:'',
-      street:'',
-       phone:'',
-      gender: '',
-      role_as:'',
-      email: '',
-      password: '',
-     
+        d: "",
+        m: "",
+        y: "",
+      },
+      city: "",
+      region: "",
+      street: "",
+      phone: "",
+      gender: "",
+      role_as: "",
+      email: "",
+      password: "",
     };
   },
 
-  methods:{
-   async handleSubmit(){
-    
-       await axios.post('api/register',{
-          firstname: this.firstname,
-          lastname: this.lastname,
-          birthday: this.birthday,
-          city:this.city,
-          region:this.region,
-          street:this.street,
-          gender: this.gender,
-          phone: this.phone,
-          email: this.email,
-          role_as: this.role_as,
-          password: this.password,
-           password_confirmation: this.password,
-         });
-       // this.$router.push('/login')
-    }
+  methods: {
+    async handleSubmit() {
+      await axios.post("api/register", {
+        firstname: this.firstname,
+        lastname: this.lastname,
+        birthday: this.birthday,
+        city: this.city,
+        region: this.region,
+        street: this.street,
+        gender: this.gender,
+        phone: this.phone,
+        email: this.email,
+        role_as: this.role_as,
+        password: this.password,
+        password_confirmation: this.password,
+      });
+      // this.$router.push('/login')
+    },
   },
   components: {
     LoginCard,
