@@ -51,61 +51,57 @@
                 <i class="fab fa-google-plus-g"></i>
               </md-button> -->
               <form @submit.prevent="handleSubmit">
-               <!-- <p slot="description" class="description">Or Be Classical</p> -->
-              <!-- <md-field class="md-form-group" slot="inputs">
+                <!-- <p slot="description" class="description">Or Be Classical</p> -->
+                <!-- <md-field class="md-form-group" slot="inputs">
                 <md-icon>face</md-icon>
                 <label>First Name...</label>
                 <md-input v-model="firstname"></md-input>
               </md-field> -->
 
-              <md-field
-                class="md-form-group"
-                slot="inputs"
-                style="align-items: baseline;"
-              >
-                <md-icon>email</md-icon>
-                <label>Email...</label>
-                <md-input v-model="email" type="email"></md-input>
-              </md-field>
-              <md-field
-                class="md-form-group"
-                slot="inputs"
-                style="align-items: baseline;"
-              >
-                <md-icon>lock_outline</md-icon>
-                <label>Password...</label>
-                <md-input v-model="password" type="password"></md-input>
-              </md-field>
-              <br />
-              <div class="row" style="width:100%;align-items: center">
-                <div
-                  class="col-lg-8 col-md-12 left-box"
-                  style="width: 60%;padding: 0% 8%;"
+                <md-field
+                  class="md-form-group"
+                  slot="inputs"
+                  style="align-items: baseline;"
                 >
-                  <button
-                    slot="footer"
-                    style="background-color: #4CAF50;color: white;padding: 12px 15px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;"
+                  <md-icon>email</md-icon>
+                  <label>Email...</label>
+                  <md-input v-model="email" type="email"></md-input>
+                </md-field>
+                <md-field
+                  class="md-form-group"
+                  slot="inputs"
+                  style="align-items: baseline;"
+                >
+                  <md-icon>lock_outline</md-icon>
+                  <label>Password...</label>
+                  <md-input v-model="password" type="password"></md-input>
+                </md-field>
+                <br />
+                <div class="row" style="width:100%;align-items: center">
+                  <div
+                    class="col-lg-8 col-md-12 left-box"
+                    style="width: 60%;padding: 0% 8%;"
                   >
-                    Get Started
-                  </button>
-                </div>
-                <!-- </form> -->
+                    <button
+                      slot="footer"
+                      style="background-color: rgb(154 161 154);color: white;padding: 12px 15px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;"
+                    >
+                      Get Started
+                    </button>
+                  </div>
+                  <!-- </form> -->
 
-                <div
-                  class="col-lg-8 col-md-12 left-box"
-                  style="width: 40%;padding: 0% 7%;"
-                >
-                  
+                  <div
+                    class="col-lg-8 col-md-12 left-box"
+                    style="width: 40%;padding: 0% 7%;"
+                  ></div>
                 </div>
-              </div>
               </form>
-              
             </login-card>
             <md-button
-                    href="#/signup"
-                    style="background-color: #4CAF50;
+              href="#/signup"
+              style="background-color: #4CAF50;
                     color: white;
-                    padding: 12px 15px;
                     text-align: center;
                     text-decoration: none;
                     display: inline-block;
@@ -113,9 +109,9 @@
                     float: right;
                     margin-top: -54px;
                     "
-                  >
-                    Sign up
-                  </md-button>
+            >
+              Sign up
+            </md-button>
             <div><br /></div>
           </div>
         </div>
